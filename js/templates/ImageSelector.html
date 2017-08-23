@@ -1,0 +1,58 @@
+
+<div class="titleBar"><span class="titleBarTextSpan">${config.i18n.imageSelector.title}</span></div><br />
+<div style="margin: 5px;overflow: auto;">
+    <input tabindex=4 data-dojo-type="dijit/form/CheckBox" id="imageSelector"/> <label for="imageSelector">${config.i18n.imageSelector.enable}</label>
+    <div id="selectorDiv" style="display:none;">
+        <br />
+        <div id="imageSelectorLayerTitle" style="line-height: 17px;"></div>
+        <div>
+            <br/>
+
+            <div id="imageRange" style="display:inline-block"></div>
+            [<div id="imageCount" style="display:inline-block"></div>]
+
+            <button tabindex=4 data-dojo-type="dijit/form/Button" type="button" id="saveSceneBtn" style="float: right;margin-top: -10px;"><img id='savePushDownImage' src="images/down.png" class="iconHeight"/></button>
+
+        </div>
+        <div>
+            <br/>
+            <div  id="imageSelectContainer" style="float:left;display:none;margin-right: 5px;">
+                <button tabindex=4 data-dojo-type="dijit/form/Button" type="button" id="dropDownImageList"><img src="images/dropdownlist.png" id="switchDisplayImage" class="iconHeight"/></button>
+
+            </div>
+            <div id="dropDownOption" style="display: none;">
+                <select tabindex=4 id="imageSelectorDropDown" data-dojo-type="dijit/form/Select" style="/*width :50px;height: 12px;*/"></select>
+            </div>
+            <div  style="float:right;display:inline-block;">
+                <button tabindex=4 data-dojo-type="dijit/form/Button" type="button" id="refreshImageSliderBtn"><img src="images/refresh.png" class="iconHeight"/></button>
+
+            </div>
+            <div  id='imageSliderDiv'>
+            </div> 
+
+        </div>
+        <div style="margin:5px;">
+            <br/>
+            ${config.i18n.imageSelector.show}: 
+            <select tabindex=4 id="show" data-dojo-type="dijit/form/Select" style="/*width:50px;height:12px;*/">
+                <option value="image">Image</option>
+                <option value="footprint">Footprint</option>
+            </select>
+            <div id='ageDiv' style='display: inline-block;'>
+                &nbsp;${config.i18n.imageSelector.age}: 
+                <input tabindex=4 id="subtractValue" data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0,max:31}, value:0" style="width:60px;height:28px;"/>
+                <select tabindex=4 id="subtractDateString" data-dojo-type="dijit/form/Select" style="/*width:50px;height:12px;*/">
+                    <option value="days" selected>Day(s)</option>
+                    <option value="weeks">Week(s)</option>
+                    <option value="months">Month(s)</option>
+                    <option value="years">Year(s)</option>
+                </select> </div>
+        </div>
+    </div>
+    <div>
+        <br/>
+        <div id="errorDiv" style="color:red;"></div>
+
+    </div>
+    <br/>
+</div>
