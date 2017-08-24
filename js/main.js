@@ -20,7 +20,7 @@ define([
     "dojo/_base/lang",
     "dojo/_base/kernel",
     "dojo/on",
-    "dojo/query",
+    "dojo/query","dijit/focus",
     "dojo/Deferred",
     "esri/dijit/Scalebar",
     "esri/dijit/Search", "esri/tasks/locator", "application/SearchSources",
@@ -39,7 +39,7 @@ define([
     "dojo/domReady!"
 ], function (
         declare, lang, kernel,
-        on, query,
+        on, query,focus,
         Deferred, Scalebar, Search, Locator, SearchSources,
         dom, domConstruct, domStyle, html, domClass, Dialog, parser,
         registry, rendererHtml, exportHtml, compareHtml, layerSelectorHtml, imageSelectorHtml, changeDetectionHtml, Tooltip,
@@ -412,7 +412,7 @@ define([
                 if (iconNodes[a]) {
                     iconNodes[a].style.width = iconWH;
                     iconNodes[a].style.height = iconWH;
-                    iconNodes[a].style.margin = iconMargin;
+                   
                 }
                 if (titleBar[a])
                     titleBar[a].style.height = titleHeight;
@@ -487,9 +487,8 @@ define([
                 }
 
                 var search = new Search(createdOptions, domConstruct.create("div", {
-                    id: "search",
-                    tabindex: 11
-                }, "mapDiv_container"));
+                    id: "search"
+                }, "mapDiv_root"));
 
                 search.on("select-result", lang.hitch(this, function () {
                     on.once(this.map.infoWindow, "hide", lang.hitch(this, function () {
@@ -504,15 +503,12 @@ define([
                 this._updateTheme();
 
                 search.startup();
-                if (query(".searchBtn.searchSubmit").length > 0)
-                    query(".searchBtn.searchSubmit")[0].tabIndex = 12;
+            
                 if (query(".searchBtn.searchToggle").length > 0)
                     query(".searchBtn.searchToggle")[0].tabIndex = -1;
                 if (query(".arcgisSearch .searchGroup .searchInput").length > 0)
                     query(".arcgisSearch .searchGroup .searchInput")[0].tabIndex = -1;
-                if (query(".arcgisSearch .searchClear").length > 0)
-                    query(".arcgisSearch .searchClear")[0].tabIndex = 12;
-
+                
 
             } else {
                 domClass.add(document.body, "nosearch");
@@ -537,7 +533,7 @@ define([
             }));
             this.basemapFunction = new Basemap({map: this.map});
             this.basemapFunction.initBasemaps();
-            on(dom.byId("basemapContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("basemapContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("basemapIconNode", "basemapSelected")) {
                         domClass.remove("basemapIconNode", "basemapSelected");
@@ -584,7 +580,7 @@ define([
                 label: this.config.i18n.operationalLayers.title,
                 position: ['after']
             });
-            var node = domConstruct.create("div", {innerHTML: '<div class="titleBar"><span class="titleBarTextSpan">' + this.config.i18n.operationalLayers.title + '</span></div><br /><div style="margin: 5px;overflow: auto;"><div tabindex=1 id="operationalLayerList"></div><br /></div>', id: "operationalLayersNode", style: "display:none;"});
+            var node = domConstruct.create("div", {innerHTML: '<div class="titleBar"><span class="titleBarTextSpan">' + this.config.i18n.operationalLayers.title + '</span></div><br /><div style="margin: 5px;overflow: auto;"><div id="operationalLayerList"></div><br /></div>', id: "operationalLayersNode", style: "display:none;"});
             parser.parse(node);
             domConstruct.place(node, "toolsContentContainer");
             var openForFirstTime = true;
@@ -603,8 +599,8 @@ define([
 
             this.operationalLayersFunction = new OperationalLayers({map: this.map, layers: layersList, i18n: this.config.i18n.operationalLayers});
 
-            on(dom.byId("operationalLayersContainer"), "click, keyup", lang.hitch(this, function (event) {
-
+            on(dom.byId("operationalLayersContainer"), "click", lang.hitch(this, function (event) {
+                console.log(event);
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("operationalLayersContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -639,7 +635,7 @@ define([
             var openForFirstTime = true;
             this.layerSelectorFunction = new LayerSelector({map: this.map, itemInfo: this.config.itemInfo, primaryLayerID: this.config.primaryLayer.id, secondaryLayerID: this.config.secondaryLayer.id, i18n: this.config.i18n.layerSelector});
 
-            on(dom.byId("layerSelectorContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("layerSelectorContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("layerSelectorContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -657,7 +653,7 @@ define([
                         }
                         this.layerSelectorFunction.onOpen();
                         domStyle.set("layerSelectorNode", "display", "block");
-                        document.getElementById("primaryShow").focus();
+                     
                     }
                 }
             }));
@@ -678,7 +674,7 @@ define([
 
             this.changeDetectionFunction = new ChangeDetection({map: this.map, changeModes: {difference: this.config.difference, veg: this.config.veg, savi: this.config.savi, water: this.config.water, burn: this.config.burn}, i18n: this.config.i18n.changeDetection});
 
-            on(dom.byId("changeDetectionContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("changeDetectionContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("changeDetectionContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -737,7 +733,7 @@ define([
             }
 
             this.editorFunction = new Editor({map: this.map, itemInfo: (layer.length > 0 ? layer : null), i18n: this.config.i18n.editor});
-            on(dom.byId("editorContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("editorContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("editorContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -779,7 +775,7 @@ define([
             };
             this.measurementFunction = new Measurement({map: this.map, config: config});
 
-            on(dom.byId("measurementContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("measurementContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("measurementContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -818,7 +814,7 @@ define([
             this.exportFunction = new Export({map: this.map,
                 exportMode: this.config.exportType, i18n: this.config.i18n.export});
 
-            on(dom.byId("exportContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("exportContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("exportContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -885,7 +881,7 @@ define([
 
             this.imageSelectorFunction = new ImageSelector({map: this.map, config: temp, layers: layer, i18n: this.config.i18n.imageSelector});
             var openForFirstTime = true;
-            on(dom.byId("imageSelectorContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("imageSelectorContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("imageSelectorContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -903,6 +899,7 @@ define([
                         }
                         this.imageSelectorFunction.onOpen();
                         domStyle.set("imageSelectorNode", "display", "block");
+                      
                     }
                 }
             }));
@@ -936,7 +933,7 @@ define([
 
             var openForFirstTime = true;
             this.rendererFunction = new Renderer({map: this.map, i18n: this.config.i18n.renderer});
-            on(dom.byId("rendererContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("rendererContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("rendererContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -957,6 +954,7 @@ define([
                         }
                         this.rendererFunction.onOpen();
                         domStyle.set("rendererNode", "display", "block");
+                     
                     }
                 }
             }));
@@ -974,7 +972,7 @@ define([
             var openForFirstTime = true;
             this.compareFunction = new Compare({map: this.map, compareTool: this.config.compareMode, i18n: this.config.i18n.compare});
 
-            on(dom.byId("compareContainer"), "click, keyup", lang.hitch(this, function (event) {
+            on(dom.byId("compareContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("compareContainer", "selected-widget")) {
                         domClass.remove("compareContainer", "selected-widget");
@@ -1024,6 +1022,7 @@ define([
                 strings = matches[1].split(".");
                 html = html.replace(matches[0], this.config.i18n[tool][strings[3]]);
             }
+            
             return html;
         },
         showLoading: function () {
@@ -1031,7 +1030,7 @@ define([
         },
         hideLoading: function () {
             domStyle.set("loadingMap", "display", "none");
-            query(".esriAttribution")[0].tabIndex = 14;
+         
 
         },
         _updateTheme: function () {
@@ -1079,10 +1078,7 @@ define([
                 "background": this.config.background,
                 opacity: this.config.backgroundOpacity
             });
-            query(".esriSimpleSliderIncrementButton")[0].tabIndex = 10;
-            query(".esriSimpleSliderDecrementButton")[0].tabIndex = 11;
-            query(".logo-med")[0].tabIndex = 15;
-
+          
 
 
         }

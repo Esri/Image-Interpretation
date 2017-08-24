@@ -54,10 +54,7 @@ define([
                             this.map.measuredHeight = response.measureResult.height.value;
                         }
                     }));
-                    var nodes = query(".esriImageServiceMeasure .dijitButtonContents");
-                    for (var a = 0; a < nodes.length; a++) {
-                        nodes[a].tabIndex = 8;
-                    }
+                  
                 },
                 onOpen: function () {
                     this.refreshData();

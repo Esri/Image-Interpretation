@@ -27,26 +27,26 @@
             <div class="loading-message" id="loading_message"></div>
         </div>
         <div id="titleContainer">
-            <div id="titleText" style="display: inline-block;">Image Interpretation</div>
+            <h1 id="titleText" style="display: inline-block;">Image Interpretation</h1>
             <div id="primaryDate" style="margin-left: 30px;display: inline-block;"></div>
 
         </div>
 
         <div id="dockContainer" style='display: none;'><div id='widgetsContainer'>
-                <div id='operationalLayersContainer' tabindex=1 class="toolContainers"><img src='images/operationalLayer.png' class='iconNode'/></div>
-                <div id='layerSelectorContainer' tabindex=2 class="toolContainers"><img src='images/layerSelector.png' class='iconNode'/></div>
-                <div id='rendererContainer' tabindex=3 class="toolContainers"><img src='images/renderer.png' class='iconNode'/></div>
-                <div id='imageSelectorContainer' tabindex=4 class="toolContainers"><img src='images/imageSelector.png' class='iconNode'/></div>
-                <div id='compareContainer' tabindex=5 class="toolContainers"><img src='images/compare.png' class='iconNode'/></div>
-                <div id='changeDetectionContainer' tabindex=6 class="toolContainers"><img src='images/change.png' class='iconNode'/></div>
-                <div id='exportContainer' tabindex=7 class="toolContainers"><img src='images/export.png' class='iconNode'/></div>
-                <div id='measurementContainer' tabindex=8 class="toolContainers"><img src='images/measurement.png' class='iconNode'/></div>
-                <div id='editorContainer' tabindex=9 class="toolContainers"><img src='images/edit.png' class='iconNode'/></div>
+                <button id='operationalLayersContainer'  class="toolContainers"><img alt="Operational Layers" src='images/operationalLayer.png' class='iconNode'/></button>
+                <button  id='layerSelectorContainer'  class="toolContainers"><img alt="Layer Selector" src='images/layerSelector.png' class='iconNode'/></button>
+                <button  id='rendererContainer'  class="toolContainers"><img alt="Renderer" src='images/renderer.png' class='iconNode'/></button>
+                <button  id='imageSelectorContainer'  class="toolContainers"><img alt="Image Selector" src='images/imageSelector.png' class='iconNode'/></button>
+                <button  id='compareContainer'  class="toolContainers"><img alt="Compare" src='images/compare.png' class='iconNode'/></button>
+                <button  id='changeDetectionContainer'  class="toolContainers"><img alt="Change Detection" src='images/change.png' class='iconNode'/></button>
+                <button  id='exportContainer' class="toolContainers"><img alt="Export" src='images/export.png' class='iconNode'/></button>
+                <button  id='measurementContainer'  class="toolContainers"><img alt="Image Measurement" src='images/measurement.png' class='iconNode'/></button>
+                <button  id='editorContainer'  class="toolContainers"><img alt="Editor" src='images/edit.png' class='iconNode'/></button>
 
             </div></div>
         <div id="toolsContentContainer" class="toolsContentContainer toolsContentContainerClosed"></div>
         <div id="mapDiv" dir="ltr"></div>
-        <div id="basemapContainer" tabindex=13><div id="basemapIconNode" class="basemapIcon"><img src='images/basemap.png' height="20" width='20' style='margin: 5px;'/></div></div>
+        <div role="button" tabindex="0" aria-label="BasemapGallery" id="basemapContainer"><div id="basemapIconNode" class="basemapIcon"><img alt="Basemap Gallery" src='images/basemap.png' height="20" width='20' style='margin: 5px;'/></div></div>
         <script type="text/javascript">
             var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
             var dojoConfig = {

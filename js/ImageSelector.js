@@ -508,7 +508,6 @@ define([
                             minimum: 0,
                             maximum: this.featureLength - 1,
                             discreteValues: this.featureLength,
-                            tabIndex: 4,
                             onChange: lang.hitch(this, this.sliderDropDownSelection, "slider")
                         }, sliderNode);
                         this.slider.startup();

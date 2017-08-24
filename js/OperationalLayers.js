@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////////////////////////////
+            ///////////////////////////////////////////////////////////////////////////
 // Copyright (c) 2013 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -62,22 +62,7 @@ define([
                             removeUnderscores: true
                         }, "operationalLayerList").startup();
 
-                        var nodes = query(".esriLayerList .esriCheckbox");
-                        for (var a = 0; a < nodes.length; a++) {
-                            nodes[a].tabIndex = 1;
-                        }
-                        var nodes = query(".esriToggleButton.esri-icon-right");
-                        for (var a = 0; a < nodes.length; a++) {
-                            nodes[a].tabIndex = 1;
-                        }
-                        var nodes = query(".esriLayerList .dijitSliderImageHandle");
-                        for (var a = 0; a < nodes.length; a++) {
-                            nodes[a].tabIndex = 1;
-                        }
-                        nodes = query(".esriLayerList .esriTabMenu .esriTabMenuItem");
-                        for (a = 0; a < nodes.length; a++) {
-                            nodes[a].tabIndex = 1;
-                        }
+                   
                         this.map.on("update-end", lang.hitch(this, function () {
                             if (this.layerList)
                                 this.layerList.refresh();

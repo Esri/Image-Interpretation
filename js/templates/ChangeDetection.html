@@ -3,11 +3,11 @@
 <div style="margin: 5px;overflow: auto;">
     <div id="changeDetectionDisplay" style="display: block;">
         <label for='method'>${config.i18n.changeDetection.method}: </label>
-        <select tabindex=6 id="method" data-dojo-type="dijit/form/Select">
+        <select autofocus="autofocus"  id="method" data-dojo-type="dijit/form/Select">
         </select>
         <div id="changeMode" style="display:none;">
             <br />
-            <label for="changeModeList">${config.i18n.changeDetection.mode}: </label><select tabindex=6 id="changeModeList" data-dojo-type="dijit/form/Select">
+            <label for="changeModeList">${config.i18n.changeDetection.mode}: </label><select  id="changeModeList" data-dojo-type="dijit/form/Select">
                 <option value="image">Difference Image</option>
                 <option value="mask">Difference Mask</option>
                 <option value="threshold">Threshold Mask</option>
@@ -16,17 +16,17 @@
         <div id="bandInputs" style="display: none;">
             <br />
             <table style="border: 0 solid transparent;"><tr><td><div id="bandName1" style="display: inline-block;font-weight: bolder;"></div></td>
-                    <td><select tabindex=6 data-dojo-type="dijit/form/Select" id="band1">
+                    <td><select  data-dojo-type="dijit/form/Select" id="band1">
                         </select>
                     </td></tr>
                 <tr><td><div id="bandName2" style="display: inline-block;font-weight: bolder;"></div></td>
-                    <td><select tabindex=6 data-dojo-type="dijit/form/Select" id="band2">
+                    <td><select data-dojo-type="dijit/form/Select" id="band2">
                         </select></td></tr></table>
         </div>
         <div id="maskRangeSpinners" style="display: none;">
             <br />
             <div style="font-weight: bolder;vertical-align: top;display: inline-block;width: 43%;">${config.i18n.changeDetection.positive}: </div>
-            <div id="positiveRange" tabindex=6  style="width:55%;display: inline-block;" data-dojo-type="dojox/form/HorizontalRangeSlider" data-dojo-props="value:[0,1],minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
+            <div id="positiveRange"   style="width:55%;display: inline-block;" data-dojo-type="dojox/form/HorizontalRangeSlider" data-dojo-props="value:[0,1],minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
                 <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
                 <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
                     <li>0</li>
@@ -38,7 +38,7 @@
                 </ol>
             </div><br/>
             <div style="font-weight: bolder;vertical-align: top;display: inline-block;margin-top: 5px;width: 43%;">${config.i18n.changeDetection.negative}: </div>
-            <div id="negativeRange" tabindex=6  style="width:55%;display: inline-block;margin-top: 5px;" data-dojo-type="dojox/form/HorizontalRangeSlider" data-dojo-props="value:[-1,0],minimum: -1,maximum:0,intermediateChanges:true,showButtons:true">
+            <div id="negativeRange"   style="width:55%;display: inline-block;margin-top: 5px;" data-dojo-type="dojox/form/HorizontalRangeSlider" data-dojo-props="value:[-1,0],minimum: -1,maximum:0,intermediateChanges:true,showButtons:true">
                 <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
                 <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
                     <li>-1</li>
@@ -52,7 +52,7 @@
         <div id="thresholdRangeSpinners" style="display: none;">
             <br/>
             <div style="font-weight: bolder;vertical-align: top;display: inline-block;width: 23%;">${config.i18n.changeDetection.threshold}: </div>
-            <div id="thresholdValue" tabindex=6  style="width:70%;display: inline-block;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
+            <div id="thresholdValue"  style="width:70%;display: inline-block;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
                 <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
                 <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
                     <li>0</li>
@@ -64,7 +64,7 @@
                 </ol>
             </div>  <br />
             <div style="font-weight: bolder;vertical-align: top;display: inline-block;margin-top: 5px;width: 23%;">${config.i18n.changeDetection.difference}: </div>
-            <div id="differenceValue" tabindex=6  style="width:70%;display: inline-block;margin-top: 5px;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
+            <div id="differenceValue"   style="width:70%;display: inline-block;margin-top: 5px;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
                 <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
                 <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
                     <li>0</li>
@@ -76,9 +76,9 @@
                 </ol>
             </div>  </div>
         <br/>
-        <button tabindex=6 data-dojo-type="dijit/form/Button" type="button" id="changeDetectionApply" style="margin-left: 40%;">${config.i18n.changeDetection.apply}</button>
+        <button  data-dojo-type="dijit/form/Button" type="button" id="changeDetectionApply" style="margin-left: 40%;">${config.i18n.changeDetection.apply}</button>
     </div>
-    <div id="setPrimarySecondaryLayers" style="color: #0080C0;word-wrap: break-word;">
+    <div id="setPrimarySecondaryLayers" style="word-wrap: break-word;">
     </div>
     <br />
 

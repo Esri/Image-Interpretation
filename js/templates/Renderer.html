@@ -3,56 +3,56 @@
 <div style="margin: 5px;overflow: auto;">
     <div id="rendererSelectorContainer">
         <br/>
-        ${config.i18n.renderer.layer}:&nbsp;<div id="activeLayerName" style="display: inline-block;color: #0080C0;font-weight: bold;"></div>
+        ${config.i18n.renderer.layer}:&nbsp;<div id="activeLayerName" style="display: inline-block;font-weight: bold;"></div>
         <br/>
         <br/>
-        <select tabindex=3 id="service_functions" data-dojo-type="dijit/form/Select" style="/*width:80px;height:12px;*/">
+        <select  id="service_functions" data-dojo-type="dijit/form/Select" style="/*width:80px;height:12px;*/">
         </select>
         <div id="stretchDiv" style="display:inline">
-            <div  tabindex=3 id="stretchTooltipDialogBtn" data-dojo-type="dijit/form/DropDownButton">
-                <span><img src="images/props.png" class="iconHeight"/></span>
+            <div   id="stretchTooltipDialogBtn" data-dojo-type="dijit/form/DropDownButton">
+                <span><img alt=${config.i18n.renderer.stretch} src="images/props.png" class="iconHeight"/></span>
                 <div id="stretchRendererTooltipDialog" data-dojo-type="dijit/TooltipDialog">
                     <h4>${config.i18n.renderer.stretch}</h4>
                     <hr>
                     <br />
-                    <img src="images/red.png" height="12" width="12" >  <div style="width:10px;display:inline-block">R</div> 
-                    <select tabindex=3 data-dojo-type="dijit/form/Select" id="Red" style="width:20px;height:12px;position: relative;top: -2px;;">
+                    <img alt="red" src="images/red.png" height="12" width="12" >  <div style="width:10px;display:inline-block">R</div> 
+                    <select  data-dojo-type="dijit/form/Select" id="Red" style="width:20px;height:12px;position: relative;top: -2px;;">
                     </select>
-                    <img src="images/green.png" height="12" width="12" style="margin-left: 10px;">  <div style="width:10px;display:inline-block;">G</div>
-                    <select tabindex=3 data-dojo-type="dijit/form/Select" id="Green" style="width:20px;height:12px;position: relative;top: -2px;">
+                    <img alt="green" src="images/green.png" height="12" width="12" style="margin-left: 10px;">  <div style="width:10px;display:inline-block;">G</div>
+                    <select data-dojo-type="dijit/form/Select" id="Green" style="width:20px;height:12px;position: relative;top: -2px;">
                     </select>
-                    <img src="images/blue.png" height="12" width="12" style="margin-left: 10px;">  <div style="width:10px;display:inline-block;">B</div>
-                    <select tabindex=3 data-dojo-type="dijit/form/Select" id="Blue" style="width:20px;height:12px;position: relative;top: -2px;">
+                    <img alt="blue" src="images/blue.png" height="12" width="12" style="margin-left: 10px;">  <div style="width:10px;display:inline-block;">B</div>
+                    <select  data-dojo-type="dijit/form/Select" id="Blue" style="width:20px;height:12px;position: relative;top: -2px;">
                     </select>
                     <br/>
                     <br/>
                     <div style="display:inline-block;"><label for="StretchType">${config.i18n.renderer.stretchType}</label></div>:
-                    <select tabindex=3 id="StretchType" data-dojo-type="dijit/form/Select" style="/*width:100px;height:12px;*/">
+                    <select  id="StretchType" data-dojo-type="dijit/form/Select" style="/*width:100px;height:12px;*/">
                         <option value=5>Minimum and Maximum</option>
                         <option value=3>Standard Deviation</option>
                         <option value=6>Percent Clip</option>
                     </select>
 
-                    <input tabindex=3 id="DRA" data-dojo-type="dijit/form/CheckBox" style="margin-left:10px;"/> <label for="DRA">${config.i18n.renderer.dra}</label>
+                    <input  id="DRA" data-dojo-type="dijit/form/CheckBox" style="margin-left:10px;"/> <label for="DRA">${config.i18n.renderer.dra}</label>
                     <div id="StdDev">
                         <br/>      
                         <br/>
                         <div style="display:inline-block;"><label for="NumberOfStandardDeviations">${config.i18n.renderer.stdDev}.</label></div>:
-                        <div tabindex=3 data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0}, value:2" id="NumberOfStandardDeviations" style="width:60px;height:28px;"></div>
+                        <div  data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0}, value:2" id="NumberOfStandardDeviations" style="width:60px;height:28px;"></div>
                     </div>
                     <div id="PercentClip">
                         <br/>
                         <br/>
                         <div style="display:inline-block;"><label for="MaxPercent">${config.i18n.renderer.top}</label></div>:
-                        <div tabindex=3 data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0,max:100}, value:2" id="MaxPercent" style="width:60px;height:28px;"></div>
+                        <div  data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0,max:100}, value:2" id="MaxPercent" style="width:60px;height:28px;"></div>
 
                         <div style="display:inline-block;"> <label for="MinPercent">${config.i18n.renderer.bottom}</label></div>:
-                        <div tabindex=3 data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0,max:100}, value:2" id="MinPercent" style="width:60px;height:28px;"></div>
+                        <div  data-dojo-type="dijit/form/NumberSpinner" data-dojo-props="intermediateChanges:true, constraints:{min:0,max:100}, value:2" id="MinPercent" style="width:60px;height:28px;"></div>
                     </div>
                     <br/>
                     <br/>
                     <div style="display:inline-block;"><label for="Gamma">${config.i18n.renderer.gamma}</label></div>:
-                    <div tabindex=3 style="width:150px;display:inline-block;position: relative;top: 8px;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum:-1,maximum:1,intermediateChanges:true,showButtons:true" id="Gamma">
+                    <div style="width:150px;display:inline-block;position: relative;top: 8px;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum:-1,maximum:1,intermediateChanges:true,showButtons:true" id="Gamma">
                         <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="5" style="height:5px;"></div>
                         <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray;">
                             <li>-1</li>
@@ -61,13 +61,13 @@
                             <li>0.5</li>
                             <li>1</li>
                         </ol>
-                    </div><div tabindex=3 data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="constraints:{min:0.1,max:10}, value:1" id="Gamma_label" style="width:55px;height:28px;position: relative;top: -4px;"></div>
+                    </div><div  data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="constraints:{min:0.1,max:10}, value:1" id="Gamma_label" style="width:55px;height:28px;position: relative;top: -4px;"></div>
 
                 </div>
             </div>
         </div>
         <div style="display:inline-block;">
-            <button tabindex=3 data-dojo-type="dijit/form/Button" type="button" id="idapply">${config.i18n.renderer.apply}</button>
+            <button  data-dojo-type="dijit/form/Button" type="button" id="idapply">${config.i18n.renderer.apply}</button>
             <div>
             </div>
         </div>

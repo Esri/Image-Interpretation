@@ -2,27 +2,27 @@
 <div style="margin: 5px;overflow: auto;">   
     <div id="result" style="display:none;">
         <br/>
-        <input  tabindex=2 id="resultShow" data-dojo-type="dijit/form/CheckBox" checked/><label for="resultShow">${config.i18n.layerSelector.result}</label> 
-        <button tabindex=2 data-dojo-type="dijit/form/Button" type="button" id="saveIconBtn"><img src="images/down.png" class="iconHeight"/></button>
+        <input   id="resultShow" data-dojo-type="dijit/form/CheckBox" checked/><label for="resultShow">${config.i18n.layerSelector.result}</label> 
+        <button  data-dojo-type="dijit/form/Button" type="button" id="saveIconBtn"><img alt="${config.i18n.layerSelector.resultSave}" src="images/down.png" class="iconHeight"/></button>
 
     </div>
     <div>
         <br/>
-        <label for="primaryShow">${config.i18n.layerSelector.active}: </label><br/><input tabindex=2 id="primaryShow" data-dojo-type="dijit/form/CheckBox" />
+        <label for="primaryShow">${config.i18n.layerSelector.active}: </label><br/><input  id="primaryShow" data-dojo-type="dijit/form/CheckBox" />
 
-        <select  tabindex=2 id="imageView" data-dojo-type="dijit/form/Select" style="/*width:130px;height:12px;*/">
+        <select   id="imageView" data-dojo-type="dijit/form/Select" style="/*width:130px;height:12px;*/">
         </select>
-        <button tabindex=2 data-dojo-type="dijit/form/Button" type="button" id="secondaryBtn"><img src="images/down.png" class="iconHeight" /></button>
+        <button data-dojo-type="dijit/form/Button" type="button" id="secondaryBtn"><img alt="${config.i18n.layerSelector.copy}" src="images/down.png" class="iconHeight" /></button>
 
     </div>
     <div>
         <br/>
-        <label for="secondaryShow">${config.i18n.layerSelector.comparison}: </label><br/><input tabindex=2 id="secondaryShow" data-dojo-type="dijit/form/CheckBox" />
+        <label for="secondaryShow">${config.i18n.layerSelector.comparison}: </label><br/><input  id="secondaryShow" data-dojo-type="dijit/form/CheckBox" />
 
-        <select tabindex=2 id="secondary" data-dojo-type="dijit/form/Select" style="/*width:130px;height:12px;*/">
+        <select id="secondary" data-dojo-type="dijit/form/Select" style="/*width:130px;height:12px;*/">
         </select>
 
-        <button tabindex=2 data-dojo-type="dijit/form/Button" type="button" id="toggleLayers"><img src="images/toggle.png" class="iconHeight"/></button>
+        <button  data-dojo-type="dijit/form/Button" type="button" id="toggleLayers"><img alt="${config.i18n.layerSelector.swap}" src="images/toggle.png" class="iconHeight"/></button>
 
     </div>
 
