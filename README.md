@@ -4,9 +4,7 @@ Imagery Interpretation is a configurable app template that offers a range of too
 
 [View it live](http://edn1.esri.com/quickstart-map-js/)
 
-![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Screenshot_Compare.png)
-![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Screenshot_Difference.png)
-![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Screenshot_Terrain.png)
+![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Screenshots_Combined.png)
 
 
 ## Features
