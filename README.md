@@ -4,7 +4,10 @@ Imagery Interpretation is a configurable app template that offers a range of too
 
 [View it live](http://edn1.esri.com/quickstart-map-js/)
 
-![App](https://raw.github.com/Esri/quickstart-map-js/master/quickstart-map-js.png)?
+![App](https://raw.github.com/ArcGIS/Image-Interpretation/master/Screenshot_Compare.png)?
+![App](https://raw.github.com/ArcGIS/Image-Interpretation/master/Screenshot_Difference.png)?
+![App](https://raw.github.com/ArcGIS/Image-Interpretation/master/Screenshot_Terrain.png)?
+
 
 ## Features
 * Visualize both imagery layers and non-imagery layers from the app’s web map 
@@ -70,4 +73,4 @@ http://www.apache.org/licenses/LICENSE-2.0.
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/Imagery-Interpretation/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt](https://raw.github.com/ArcGIS/Imagery-Interpretation/master/license.txt) file.
