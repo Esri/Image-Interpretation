@@ -2,7 +2,6 @@
 
 Imagery Interpretation is a configurable app template that offers a range of tools that enable users to better extract meaning from imagery.
 
-[View it live](http://edn1.esri.com/quickstart-map-js/)
 
 ![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Screenshots_Combined.png)
 
