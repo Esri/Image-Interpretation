@@ -35,7 +35,8 @@ define([
                     var defaults = {
                         map: null,
                         exportMode: null,
-                        i18n: null
+                        i18n: null,
+                        portalUrl: "www.arcgis.com"
                     };
                     lang.mixin(this, defaults, parameters);
                 },
@@ -217,10 +218,7 @@ define([
                             "format": format,
                             "compressionQuality": compressionQuality
                         };
-                        if (this.appConfig && this.appConfig.portalUrl)
-                            var portalUrl = this.appConfig.portalUrl.includes("arcgis.com") ? "http://www.arcgis.com" : this.appConfig.portalUrl;
-                        else
-                            var portalUrl = "http://www.arcgis.com";
+                        var portalUrl = this.portalUrl.includes("arcgis.com") ? "http://www.arcgis.com" : this.appConfig.portalUrl;
                         var portal = new arcgisPortal.Portal(portalUrl);
                         bundle.identity.lblItem = "Account";
                         var tempText = (bundle.identity.info).split("access the item on");
@@ -472,7 +470,7 @@ define([
                         this.imageServiceLayer = null;
                         if ((this.map.resultLayer && this.map.getLayer(this.map.resultLayer).visible) || (this.map.getLayer("resultLayer") && this.map.getLayer("resultLayer").visible)) {
                             this.imageServiceLayer = this.map.resultLayer ? this.map.getLayer(this.map.resultLayer) : this.map.getLayer("resultLayer");
-                        } else if (this.map.primaryLayer && this.map.getLayer(this.map.primaryLayer).visible) {
+                        } else if (this.map.primaryLayer && this.map.getLayer(this.map.primaryLayer).visible && this.map.getLayer(this.map.primaryLayer).serviceDataType && this.map.getLayer(this.map.primaryLayer).serviceDataType.substr(0, 16) === "esriImageService") {
                             this.imageServiceLayer = this.map.getLayer(this.map.primaryLayer);
                         } else if (this.map.secondaryLayer && this.map.getLayer(this.map.secondaryLayer).visible && this.map.getLayer(this.map.secondaryLayer).serviceDataType && this.map.getLayer(this.map.secondaryLayer).serviceDataType.substr(0, 16) === "esriImageService") {
                             this.imageServiceLayer = this.map.getLayer(this.map.secondaryLayer);

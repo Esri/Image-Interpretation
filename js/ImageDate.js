@@ -48,23 +48,23 @@ define([
                 },
                 setPrimaryLayer: function () {
 
-                    if (this.map.primaryLayer && this.map.getLayer(this.map.primaryLayer).visible) {
+                    if (this.map.primaryLayer && this.map.getLayer(this.map.primaryLayer).visible && this.map.getLayer(this.map.primaryLayer).serviceDataType && this.map.getLayer(this.map.primaryLayer).serviceDataType.substr(0, 16) === "esriImageService") {
                         this.primaryLayer = this.map.getLayer(this.map.primaryLayer);
                         if (document.getElementById("swipewidget")) {
-                            if (this.map.secondaryLayer && this.map.getLayer(this.map.secondaryLayer).visible) {
+                            if (this.map.secondaryLayer && this.map.getLayer(this.map.secondaryLayer).visible && this.map.getLayer(this.map.secondaryLayer).serviceDataType && this.map.getLayer(this.map.secondaryLayer).serviceDataType.substr(0, 16) === "esriImageService") {
                                 this.secondaryLayer = this.map.getLayer(this.map.secondaryLayer);
                             } else
                                 this.secondaryLayer = null;
                         } else
                             this.secondaryLayer = null;
-                    } else if (this.map.secondaryLayer && this.map.getLayer(this.map.secondaryLayer).visible) {
+                    } else if (this.map.secondaryLayer && this.map.getLayer(this.map.secondaryLayer).visible && this.map.getLayer(this.map.secondaryLayer).serviceDataType && this.map.getLayer(this.map.secondaryLayer).serviceDataType.substr(0, 16) === "esriImageService") {
                         this.primaryLayer = this.map.getLayer(this.map.secondaryLayer);
                         this.secondaryLayer = null;
                     } else {
                         for (var a = this.map.layerIds.length - 1; a >= 0; a--) {
                             var layerObject = this.map.getLayer(this.map.layerIds[a]);
                             var title = layerObject.arcgisProps && layerObject.arcgisProps.title ? layerObject.arcgisProps.title : layerObject.title;
-                            if (layerObject && layerObject.visible && layerObject.serviceDataType && layerObject.serviceDataType.substr(0, 16) === "esriImageService" && layerObject.id !== "resultLayer" && layerObject.id !== "scatterResultLayer" && layerObject.id !== this.map.resultLayer && (!title || ((title).charAt(title.length - 1)) !== "_")) {
+                            if (layerObject && layerObject.visible && layerObject.serviceDataType && layerObject.serviceDataType.substr(0, 16) === "esriImageService" && layerObject.id !== "resultLayer" && layerObject.id !== "scatterResultLayer" && layerObject.id !== this.map.resultLayer && (!title || ((title).substr(title.length - 2)) !== "__")) {
                                 this.primaryLayer = layerObject;
                                 break;
                             } else
@@ -74,7 +74,7 @@ define([
                             for (var a = this.map.layerIds.length - 1; a >= 0; a--) {
                                 var layerObject = this.map.getLayer(this.map.layerIds[a]);
                                 var title = layerObject.arcgisProps && layerObject.arcgisProps.title ? layerObject.arcgisProps.title : layerObject.title;
-                                if (layerObject && layerObject.id !== this.primaryLayer.id && layerObject.visible && layerObject.serviceDataType && layerObject.serviceDataType.substr(0, 16) === "esriImageService" && layerObject.id !== "resultLayer" && layerObject.id !== "scatterResultLayer" && layerObject.id !== this.map.resultLayer && (!title || ((title).charAt(title.length - 1)) !== "_")) {
+                                if (layerObject && layerObject.id !== this.primaryLayer.id && layerObject.visible && layerObject.serviceDataType && layerObject.serviceDataType.substr(0, 16) === "esriImageService" && layerObject.id !== "resultLayer" && layerObject.id !== "scatterResultLayer" && layerObject.id !== this.map.resultLayer && (!title || ((title).substr(title.length - 2)) !== "__")) {
                                     this.secondaryLayer = layerObject;
                                     break;
                                 } else

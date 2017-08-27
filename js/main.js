@@ -20,7 +20,7 @@ define([
     "dojo/_base/lang",
     "dojo/_base/kernel",
     "dojo/on",
-    "dojo/query","dijit/focus",
+    "dojo/query", "dijit/focus",
     "dojo/Deferred",
     "esri/dijit/Scalebar",
     "esri/dijit/Search", "esri/tasks/locator", "application/SearchSources",
@@ -39,7 +39,7 @@ define([
     "dojo/domReady!"
 ], function (
         declare, lang, kernel,
-        on, query,focus,
+        on, query, focus,
         Deferred, Scalebar, Search, Locator, SearchSources,
         dom, domConstruct, domStyle, html, domClass, Dialog, parser,
         registry, rendererHtml, exportHtml, compareHtml, layerSelectorHtml, imageSelectorHtml, changeDetectionHtml, Tooltip,
@@ -238,7 +238,32 @@ define([
                 this.setVisibilityEventOnImageryLayer();
                 this._setupAppTools();
                 this._updateTheme();
+                registry.byId("toolsContentContainer").show();
                 this.resizeTemplate();
+                dojo.connect(registry.byId("toolsContentContainer"), "hide", lang.hitch(this, function (event) {
+                    var left = document.getElementById("toolsContentContainer").style.left;
+                    var top = document.getElementById("toolsContentContainer").style.top;
+                    registry.byId("toolsContentContainer").show();
+                    domStyle.set("toolsContentContainer", "top", top);
+                    domStyle.set("toolsContentContainer", "left", left);
+                    var toolNodesActive = document.getElementsByClassName("selected-widget");
+                    if (toolNodesActive.length > 1) {
+                        for (var a = 0; a < toolNodesActive.length; a++) {
+                            if (toolNodesActive[a].id !== "compareContainer")
+                                toolNodesActive[a].click();
+                            setTimeout(function () {
+                                focus.focus(dom.byId("compareContainer"))
+                            }, 100);
+                        }
+
+                    } else if (toolNodesActive.length > 0) {
+                        var id = toolNodesActive[0].id;
+                        toolNodesActive[0].click();
+                        setTimeout(function () {
+                            focus.focus(dom.byId(id))
+                        }, 1500);
+                    }
+                }));
                 return response;
             }), this.reportError);
         },
@@ -253,8 +278,11 @@ define([
                     document.getElementById("mapDiv").style.width = "calc(100% - 80px)";
 
                 }
-                document.getElementById("toolsContentContainer").style.top = "44px";
-                document.getElementById("toolsContentContainer").style.left = "85px";
+
+                domConstruct.destroy("toolsContentContainer_underlay");
+                domStyle.set("toolsContentContainer", "top", "45px");
+                domStyle.set("toolsContentContainer", "left", "85px");
+
                 this.resizeDockContainer("80px", "30px", "25px", "39px", "16px", "5px 9px", "15px", "5px", "-6px", "14px", "3px 2px", "100px", "67px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -272,8 +300,8 @@ define([
                     document.getElementById("mapDiv").style.width = "calc(100% - 60px)";
 
                 }
-                document.getElementById("toolsContentContainer").style.top = "40px";
-                document.getElementById("toolsContentContainer").style.left = "65px";
+                domStyle.set("toolsContentContainer", "top", "40px");
+                domStyle.set("toolsContentContainer", "left", "65px");
                 this.resizeDockContainer("60px", "26px", "17px", "35px", "14px", "4px 7px", "14px", "4px", "-6px", "14px", "3px 2px", "80px", "57px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -291,8 +319,8 @@ define([
                     document.getElementById("mapDiv").style.width = "calc(100% - 40px)";
 
                 }
-                document.getElementById("toolsContentContainer").style.top = "36px";
-                document.getElementById("toolsContentContainer").style.left = "45px";
+                domStyle.set("toolsContentContainer", "top", "36px");
+                domStyle.set("toolsContentContainer", "left", "45px");
                 this.resizeDockContainer("40px", "20px", "10px", "31px", "13px", "3px 5px", "13px", "3px", "-7px", "13px", "2px 2px", "80px", "52px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -310,8 +338,8 @@ define([
                     document.getElementById("mapDiv").style.width = "calc(100% - 30px)";
 
                 }
-                document.getElementById("toolsContentContainer").style.top = "32px";
-                document.getElementById("toolsContentContainer").style.left = "35px";
+                domStyle.set("toolsContentContainer", "top", "32px");
+                domStyle.set("toolsContentContainer", "left", "35px");
                 this.resizeDockContainer("30px", "16px", "7px", "27px", "12px", "2px 4px", "11px", "2px", "-8px", "12px", "1px 2px", "70px", "52px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -329,8 +357,8 @@ define([
                     document.getElementById("mapDiv").style.width = "calc(100% - 25px)";
 
                 }
-                document.getElementById("toolsContentContainer").style.top = "27px";
-                document.getElementById("toolsContentContainer").style.left = "30px";
+                domStyle.set("toolsContentContainer", "top", "27px");
+                domStyle.set("toolsContentContainer", "left", "30px");
                 this.resizeDockContainer("25px", "13px", "6px", "22px", "11px", "1px 2px", "9px", "0px", "-8px", "11px", "0px 1px", "60px", "47px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -343,8 +371,8 @@ define([
                 document.getElementById("dockContainer").style.top = "21px";
                 document.getElementById("mapDiv").style.marginTop = "21px";
                 document.getElementById("mapDiv").style.height = "calc(100% - 21px)";
-                document.getElementById("toolsContentContainer").style.top = "26px";
-                document.getElementById("toolsContentContainer").style.left = "25px";
+                domStyle.set("toolsContentContainer", "top", "26px");
+                domStyle.set("toolsContentContainer", "left", "25px");
                 if (domStyle.get("dockContainer", "display") === "block") {
                     document.getElementById("mapDiv").style.marginLeft = "20px";
                     document.getElementById("mapDiv").style.width = "calc(100% - 20px)";
@@ -412,7 +440,7 @@ define([
                 if (iconNodes[a]) {
                     iconNodes[a].style.width = iconWH;
                     iconNodes[a].style.height = iconWH;
-                   
+
                 }
                 if (titleBar[a])
                     titleBar[a].style.height = titleHeight;
@@ -503,12 +531,12 @@ define([
                 this._updateTheme();
 
                 search.startup();
-            
+
                 if (query(".searchBtn.searchToggle").length > 0)
                     query(".searchBtn.searchToggle")[0].tabIndex = -1;
                 if (query(".arcgisSearch .searchGroup .searchInput").length > 0)
                     query(".arcgisSearch .searchGroup .searchInput")[0].tabIndex = -1;
-                
+
 
             } else {
                 domClass.add(document.body, "nosearch");
@@ -582,13 +610,13 @@ define([
             });
             var node = domConstruct.create("div", {innerHTML: '<div class="titleBar"><span class="titleBarTextSpan">' + this.config.i18n.operationalLayers.title + '</span></div><br /><div style="margin: 5px;overflow: auto;"><div id="operationalLayerList"></div><br /></div>', id: "operationalLayersNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             var layers = this.config.itemInfo.itemData.operationalLayers;
             var layersList = [];
             for (var a = layers.length - 1; a >= 0; a--) {
                 var title = layers[a].title || layers[a].layerObject.name || layers[a].id;
-                if ((title && (title.charAt(title.length - 1)) !== "_") && ((layers[a].layerObject && layers[a].layerObject.serviceDataType && layers[a].layerObject.serviceDataType.substr(0, 16) !== "esriImageService") || (layers[a].layerType && layers[a].layerType !== "ArcGISImageServiceLayer"))) {
+                if ((title && (title.charAt(title.length - 1)) !== "_") && (title && (title.substr(title.length - 2)) !== "__") && ((layers[a].layerObject && layers[a].layerObject.serviceDataType && layers[a].layerObject.serviceDataType.substr(0, 16) !== "esriImageService") || (layers[a].layerType && layers[a].layerType !== "ArcGISImageServiceLayer"))) {
                     layersList.push({
                         layer: layers[a].layerObject,
                         title: layers[a].title,
@@ -600,7 +628,7 @@ define([
             this.operationalLayersFunction = new OperationalLayers({map: this.map, layers: layersList, i18n: this.config.i18n.operationalLayers});
 
             on(dom.byId("operationalLayersContainer"), "click", lang.hitch(this, function (event) {
-                console.log(event);
+
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("operationalLayersContainer", "selected-widget")) {
                         this.hideContentPanel();
@@ -609,6 +637,7 @@ define([
                     } else {
                         this.closeOtherWidgets();
                         this.showContentPanel();
+
                         this.openedWidget = "operationalLayersNode";
                         domClass.add("operationalLayersContainer", "selected-widget");
                         if (openForFirstTime) {
@@ -631,7 +660,7 @@ define([
             layerSelectorHtml = this.findAndReplaceStrings(layerSelectorHtml, "layerSelector");
             var node = domConstruct.create("div", {innerHTML: layerSelectorHtml, id: "layerSelectorNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             this.layerSelectorFunction = new LayerSelector({map: this.map, itemInfo: this.config.itemInfo, primaryLayerID: this.config.primaryLayer.id, secondaryLayerID: this.config.secondaryLayer.id, i18n: this.config.i18n.layerSelector});
 
@@ -653,7 +682,7 @@ define([
                         }
                         this.layerSelectorFunction.onOpen();
                         domStyle.set("layerSelectorNode", "display", "block");
-                     
+
                     }
                 }
             }));
@@ -667,7 +696,7 @@ define([
             changeDetectionHtml = this.findAndReplaceStrings(changeDetectionHtml, "changeDetection");
             var node = domConstruct.create("div", {innerHTML: changeDetectionHtml, id: "changeDetectionNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             if (!this.config.veg && !this.config.savi && !this.config.water && !this.config.burn)
                 this.config.difference = true;
@@ -719,7 +748,7 @@ define([
             });
             var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.editor.title + "</span></div><br/><div style='margin:5px;overflow: auto;'><div id='templateDiv'></div><div id='editorDiv'></div><div id='errorEditor'></div><br /></div>", id: "editorNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
 
             var openForFirstTime = true;
             var layer = [];
@@ -759,7 +788,7 @@ define([
 
             var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.measurement.title + "</span></div><br/><div id='measurementDivContainer' style='margin:5px;overflow: auto;'><div tabindex=8 id='measureWidgetDiv'></div><div id='errorMeasurementDiv' style='color: red;'>" + this.config.i18n.measurement.error + "</div></div><br/>", id: "measurementNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             new Tooltip({
                 connectId: ["measurementContainer"],
                 label: this.config.i18n.measurement.title,
@@ -809,10 +838,10 @@ define([
             exportHtml = this.findAndReplaceStrings(exportHtml, "export");
             var node = domConstruct.create("div", {innerHTML: exportHtml, id: "exportNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             this.exportFunction = new Export({map: this.map,
-                exportMode: this.config.exportType, i18n: this.config.i18n.export});
+                exportMode: this.config.exportType, i18n: this.config.i18n.export, portalUrl: this.config.sharinghost});
 
             on(dom.byId("exportContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
@@ -844,7 +873,7 @@ define([
             imageSelectorHtml = this.findAndReplaceStrings(imageSelectorHtml, "imageSelector");
             var node = domConstruct.create("div", {innerHTML: imageSelectorHtml, id: "imageSelectorNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             new Tooltip({
                 connectId: ["imageSelectorContainer"],
                 label: this.config.i18n.imageSelector.title,
@@ -899,7 +928,7 @@ define([
                         }
                         this.imageSelectorFunction.onOpen();
                         domStyle.set("imageSelectorNode", "display", "block");
-                      
+
                     }
                 }
             }));
@@ -923,7 +952,7 @@ define([
             rendererHtml = this.findAndReplaceStrings(rendererHtml, "renderer");
             var node = domConstruct.create("div", {innerHTML: rendererHtml, id: "rendererNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
 
             new Tooltip({
                 connectId: ["rendererContainer"],
@@ -954,7 +983,7 @@ define([
                         }
                         this.rendererFunction.onOpen();
                         domStyle.set("rendererNode", "display", "block");
-                     
+
                     }
                 }
             }));
@@ -968,7 +997,7 @@ define([
             compareHtml = this.findAndReplaceStrings(compareHtml, "compare");
             var node = domConstruct.create("div", {innerHTML: compareHtml, id: "compareNode", style: "display:none;"});
             parser.parse(node);
-            domConstruct.place(node, "toolsContentContainer");
+            domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             this.compareFunction = new Compare({map: this.map, compareTool: this.config.compareMode, i18n: this.config.i18n.compare});
 
@@ -1022,7 +1051,7 @@ define([
                 strings = matches[1].split(".");
                 html = html.replace(matches[0], this.config.i18n[tool][strings[3]]);
             }
-            
+
             return html;
         },
         showLoading: function () {
@@ -1030,7 +1059,7 @@ define([
         },
         hideLoading: function () {
             domStyle.set("loadingMap", "display", "none");
-         
+
 
         },
         _updateTheme: function () {
@@ -1078,7 +1107,7 @@ define([
                 "background": this.config.background,
                 opacity: this.config.backgroundOpacity
             });
-          
+
 
 
         }

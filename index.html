@@ -13,9 +13,9 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
         <!-- End Responsive -->
         <!-- Use protocol relative urls that way if the browser is viewing the page via HTTPS the js/css file will be requested using the HTTPS protocol -->
-        <link rel="stylesheet" href="//js.arcgis.com/3.21/dijit/themes/claro/claro.css">
-        <link rel="stylesheet" href="//js.arcgis.com/3.21/esri/css/esri.css">
-        <link rel="shortcut icon" href="http://www.arcgis.com/favicon.ico">
+        <link rel="stylesheet" href="https://jsdev.arcgis.com/3.22/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="https://jsdev.arcgis.com/3.22/esri/css/esri.css">
+        <link rel="shortcut icon" href="https://www.arcgis.com/favicon.ico">
         <!-- Load any application specific styles -->
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -33,18 +33,18 @@
         </div>
 
         <div id="dockContainer" style='display: none;'><div id='widgetsContainer'>
-                <button id='operationalLayersContainer'  class="toolContainers"><img alt="Operational Layers" src='images/operationalLayer.png' class='iconNode'/></button>
-                <button  id='layerSelectorContainer'  class="toolContainers"><img alt="Layer Selector" src='images/layerSelector.png' class='iconNode'/></button>
-                <button  id='rendererContainer'  class="toolContainers"><img alt="Renderer" src='images/renderer.png' class='iconNode'/></button>
-                <button  id='imageSelectorContainer'  class="toolContainers"><img alt="Image Selector" src='images/imageSelector.png' class='iconNode'/></button>
-                <button  id='compareContainer'  class="toolContainers"><img alt="Compare" src='images/compare.png' class='iconNode'/></button>
-                <button  id='changeDetectionContainer'  class="toolContainers"><img alt="Change Detection" src='images/change.png' class='iconNode'/></button>
-                <button  id='exportContainer' class="toolContainers"><img alt="Export" src='images/export.png' class='iconNode'/></button>
-                <button  id='measurementContainer'  class="toolContainers"><img alt="Image Measurement" src='images/measurement.png' class='iconNode'/></button>
-                <button  id='editorContainer'  class="toolContainers"><img alt="Editor" src='images/edit.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='operationalLayersContainer'  class="toolContainers"><img alt="Operational Layers" src='images/operationalLayer.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false"  id='layerSelectorContainer'  class="toolContainers"><img alt="Layer Selector" src='images/layerSelector.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='rendererContainer'  class="toolContainers"><img alt="Renderer" src='images/renderer.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='imageSelectorContainer'  class="toolContainers"><img alt="Image Selector" src='images/imageSelector.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='compareContainer'  class="toolContainers"><img alt="Compare" src='images/compare.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='changeDetectionContainer'  class="toolContainers"><img alt="Change Detection" src='images/change.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='exportContainer' class="toolContainers"><img alt="Export" src='images/export.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='measurementContainer'  class="toolContainers"><img alt="Image Measurement" src='images/measurement.png' class='iconNode'/></button>
+                <button role="button" aria-pressed="false" id='editorContainer'  class="toolContainers"><img alt="Editor" src='images/edit.png' class='iconNode'/></button>
 
             </div></div>
-        <div id="toolsContentContainer" class="toolsContentContainer toolsContentContainerClosed"></div>
+        <div data-dojo-type="dijit/Dialog" id="toolsContentContainer" class="toolsContentContainer toolsContentContainerClosed"></div>
         <div id="mapDiv" dir="ltr"></div>
         <div role="button" tabindex="0" aria-label="BasemapGallery" id="basemapContainer"><div id="basemapIconNode" class="basemapIcon"><img alt="Basemap Gallery" src='images/basemap.png' height="20" width='20' style='margin: 5px;'/></div></div>
         <script type="text/javascript">
@@ -69,7 +69,7 @@
             }
 
         </script>
-        <script type="text/javascript" src="//js.arcgis.com/3.21/"></script>
+        <script type="text/javascript" src="https://jsdev.arcgis.com/3.22"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript">
             require([

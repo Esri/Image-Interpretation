@@ -116,7 +116,7 @@ define([
                             {
                                 this.secondaryLayer = this.map.getLayer(value);
                                 this.map.secondaryLayer = value;
-                                if ((!this.secondaryLayer.arcgisProps || ((this.secondaryLayer.arcgisProps.title).charAt(this.secondaryLayer.arcgisProps.title.length - 1)) !== "_") && (!this.secondaryLayer.title || ((this.secondaryLayer.title).charAt(this.secondaryLayer.title.length - 1)) !== "_"))
+                                if ((!this.secondaryLayer.arcgisProps || ((this.secondaryLayer.arcgisProps.title).substr(this.secondaryLayer.arcgisProps.title.length - 2)) !== "__") && (!this.secondaryLayer.title || ((this.secondaryLayer.title).substr(this.secondaryLayer.title.length - 2)) !== "__"))
                                     this.map.reorderLayer(this.secondaryLayer, this.secondaryIndex);
                                 else
                                     this.map.reorderLayer(this.secondaryLayer, this.resultIndex);
@@ -176,7 +176,7 @@ define([
                 getPrimaryPositionIndex: function () {
                     for (var a = this.map.layerIds.length - 1; a >= 0; a--) {
                         var layer = this.map.getLayer(this.map.layerIds[a]);
-                        if (layer && layer.serviceDataType && layer.serviceDataType.substr(0, 16) === "esriImageService" && layer.id !== "resultLayer" && layer.id !== this.map.resultLayer && (!layer.arcgisProps || ((layer.arcgisProps.title).charAt(layer.arcgisProps.title.length - 1)) !== "_") && (!layer.title || ((layer.title).charAt(layer.title.length - 1)) !== "_")) {
+                        if (layer && ((layer.serviceDataType && layer.serviceDataType.substr(0, 16) === "esriImageService" && layer.id !== "resultLayer" && layer.id !== this.map.resultLayer && (!layer.arcgisProps || ((layer.arcgisProps.title).substr(layer.arcgisProps.title.length - 2)) !== "__") && (!layer.title || ((layer.title).substr(layer.title.length - 2)) !== "__")) || (layer.arcgisProps && ((layer.arcgisProps.title).charAt(layer.arcgisProps.title.length - 1)) === "_") || (layer.title && ((layer.title).charAt(layer.title.length - 1)) === "_"))) {
                             this.primaryIndex = (a === 0 ? 1 : a);
                             this.secondaryIndex = this.primaryIndex - 1;
                             this.resultIndex = this.primaryIndex + 1;
@@ -237,12 +237,12 @@ define([
 
                         for (var i = mainLayers.length - 1; i >= 0; i--) {
                             title = mainLayers[i].title || mainLayers[i].layerObject.name || mainLayers[i].id;
-                            if ((title && (title.charAt(title.length - 1)) === "_") || (mainLayers[i].layerObject && mainLayers[i].layerObject.serviceDataType && mainLayers[i].layerObject.serviceDataType.substr(0, 16) === "esriImageService") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISImageServiceLayer")) {
+                            if ((title && title.substr(title.length - 2) === "__") || (title && (title.charAt(title.length - 1)) === "_") || (mainLayers[i].layerObject && mainLayers[i].layerObject.serviceDataType && mainLayers[i].layerObject.serviceDataType.substr(0, 16) === "esriImageService") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISImageServiceLayer")) {
                                 skipLayer = false;
                                 this.map.getLayer(mainLayers[i].layerObject.id).hide();
                                 this.layerList1[k] = mainLayers[i].layerObject;
                                 this.layerList1[k].title = title;
-                                if (((this.layerList1[k].title).charAt(this.layerList1[k].title.length - 1)) !== "_")
+                                if (((this.layerList1[k].title).substr(this.layerList1[k].title.length - 2)) !== "__")
                                     registry.byId("imageView").addOption({label: this.layerList1[k].title, value: mainLayers[i].id});
                                 registry.byId("secondary").addOption({label: this.layerList1[k].title, value: mainLayers[i].id});
                                 k++;
@@ -299,13 +299,13 @@ define([
                     secondLayer = new ArcGISImageServiceLayer(
                             layer.url,
                             {
-                                id: layer.title + "_result_",
+                                id: layer.title + "_result__",
                                 imageServiceParameters: params,
                                 visible: false,
                                 infoTemplate: popupInfo
 
                             });
-                    secondLayer.title = layer.title + "_result_";
+                    secondLayer.title = layer.title + "_result__";
 
                     this.map.addLayer(secondLayer, this.resultIndex + 1);
                     registry.byId("secondary").addOption({label: secondLayer.id, value: secondLayer.id});

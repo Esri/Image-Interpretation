@@ -751,6 +751,13 @@ g#mapDiv_graphics_layer path {
     max-height: 85%;
     overflow-y: auto;
 }
+#toolsContentContainer .dijitDialogTitleBar {
+    display:none;
+}
+#toolsContentContainer .dijitDialogPaneContent{
+    padding:0px;
+    overflow: hidden;
+}
 .titleBarTextSpan {
     margin-left: 5px; 
     line-height: 40px;

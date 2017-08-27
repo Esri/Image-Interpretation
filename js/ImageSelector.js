@@ -43,7 +43,7 @@ define([
     "esri/tasks/ImageServiceIdentifyParameters",
     "esri/geometry/Polygon",
     "esri/geometry/Point",
-    "esri/request","dijit/Tooltip",
+    "esri/request", "dijit/Tooltip",
     "dijit/form/Select",
     "dijit/form/Button",
     "dijit/form/NumberSpinner",
@@ -51,13 +51,12 @@ define([
     "dijit/form/TextBox",
     "dijit/form/DropDownButton",
     "dijit/TooltipDialog",
-    
 ], function (declare, lang, Evented, registry,
         html,
         domClass,
         dom,
         MosaicRule,
-        Query, QueryTask, Extent, locale, html, domConstruct, HorizontalSlider, HorizontalRule, HorizontalRuleLabels, Graphic, SimpleLineSymbol, SimpleFillSymbol, Color, InfoTemplate, mathUtils, domStyle, ArcGISImageServiceLayer, ImageServiceParameters, ImageServiceIdentifyTask, ImageServiceIdentifyParameters, Polygon, Point, esriRequest,Tooltip) {
+        Query, QueryTask, Extent, locale, html, domConstruct, HorizontalSlider, HorizontalRule, HorizontalRuleLabels, Graphic, SimpleLineSymbol, SimpleFillSymbol, Color, InfoTemplate, mathUtils, domStyle, ArcGISImageServiceLayer, ImageServiceParameters, ImageServiceIdentifyTask, ImageServiceIdentifyParameters, Polygon, Point, esriRequest, Tooltip) {
 
     return declare("application.ImageSelector", [Evented], {
         constructor: function (parameters) {
@@ -113,25 +112,25 @@ define([
                 domStyle.set("imageSelectContainer", "display", "none");
             }
             this.resizeBtn();
-            
+
         },
-        setTooltips: function(){
-         this.switchDisplayTooltip =  new Tooltip({
-                       connectId:['dropDownImageList'],
-                       position:['below'],
-                       label: this.i18n.dropDown
-                    });
-                    
-                     new Tooltip({
-                       connectId:['refreshImageSliderBtn'],
-                       position:['below'],
-                       label: this.i18n.refresh
-                    });
-                     new Tooltip({
-                       connectId:['saveSceneBtn'],
-                       position:['above'],
-                       label: this.i18n.secondary
-                    });
+        setTooltips: function () {
+            this.switchDisplayTooltip = new Tooltip({
+                connectId: ['dropDownImageList'],
+                position: ['below'],
+                label: this.i18n.dropDown
+            });
+
+            new Tooltip({
+                connectId: ['refreshImageSliderBtn'],
+                position: ['below'],
+                label: this.i18n.refresh
+            });
+            new Tooltip({
+                connectId: ['saveSceneBtn'],
+                position: ['above'],
+                label: this.i18n.secondary
+            });
         },
         resizeBtn: function () {
             var subtractValue = registry.byId("subtractValue").domNode;
@@ -213,13 +212,13 @@ define([
         refreshData: function () {
             if (this.map.layerIds && this.map.getLevel() >= this.config.zoomLevel) {
                 this.prevPrimary = this.primaryLayer;
-                if (this.map.primaryLayer) {
+                if (this.map.primaryLayer && this.map.getLayer(this.map.primaryLayer).serviceDataType && this.map.getLayer(this.map.primaryLayer).serviceDataType.substr(0, 16) === "esriImageService") {
                     this.primaryLayer = this.map.getLayer(this.map.primaryLayer);
                 } else {
                     for (var a = this.map.layerIds.length - 1; a >= 0; a--) {
                         var layerObject = this.map.getLayer(this.map.layerIds[a]);
                         var title = layerObject.arcgisProps && layerObject.arcgisProps.title ? layerObject.arcgisProps.title : layerObject.title;
-                        if (layerObject && layerObject.visible && layerObject.serviceDataType && layerObject.serviceDataType.substr(0, 16) === "esriImageService" && layerObject.id !== "scatterResultLayer" && layerObject.id !== "resultLayer" && layerObject.id !== this.map.resultLayer && (!title || ((title).charAt(title.length - 1)) !== "_")) {
+                        if (layerObject && layerObject.visible && layerObject.serviceDataType && layerObject.serviceDataType.substr(0, 16) === "esriImageService" && layerObject.id !== "scatterResultLayer" && layerObject.id !== "resultLayer" && layerObject.id !== this.map.resultLayer && (!title || ((title).substr(title.length - 2)) !== "__")) {
                             this.primaryLayer = layerObject;
                             break;
                         } else
@@ -306,9 +305,9 @@ define([
                                     this.prevPrimary.setMosaicRule(new MosaicRule(this.prevMosaicBackup));
                                 else
                                     this.prevPrimary.setMosaicRule(new MosaicRule(this.prevPrimary.defaultMosaicRule));
-                                   if(this.prevPrimary.title){
-                        this.prevPrimary.title = this.prevPrimary.title.split("-")[0];
-                    }
+                                if (this.prevPrimary.title) {
+                                    this.prevPrimary.title = this.prevPrimary.title.split("-")[0];
+                                }
                             }
                         }
                     }
@@ -318,9 +317,9 @@ define([
                             this.prevPrimary.setMosaicRule(new MosaicRule(this.prevMosaicBackup));
                         else
                             this.prevPrimary.setMosaicRule(new MosaicRule(this.prevPrimary.defaultMosaicRule));
-                        if(this.prevPrimary.title){
-                        this.prevPrimary.title = this.prevPrimary.title.split("-")[0];
-                    }
+                        if (this.prevPrimary.title) {
+                            this.prevPrimary.title = this.prevPrimary.title.split("-")[0];
+                        }
                     }
                     registry.byId("imageSelector").set("checked", false);
                     registry.byId("imageSelector").set("disabled", true);
@@ -366,7 +365,7 @@ define([
         setFilterDiv: function () {
 
             if (registry.byId("imageSelector").get("checked")) {
-                
+
                 if (!this.slider) {
                     this.imageSliderShow();
                 } else {
@@ -375,31 +374,31 @@ define([
                 domStyle.set("selectorDiv", "display", "block");
 
             } else {
-                
+
                 domStyle.set("selectorDiv", "display", "none");
                 this.map.graphics.clear();
                 if (this.mosaicBackup)
                     var mr = new MosaicRule(this.mosaicBackup);
                 else
                     var mr = new MosaicRule(this.defaultMosaicRule);
-                if (this.primaryLayer){
+                if (this.primaryLayer) {
                     this.primaryLayer.setMosaicRule(mr);
-                if(this.primaryLayer.title){
+                    if (this.primaryLayer.title) {
                         this.primaryLayer.title = this.primaryLayer.title.split("-")[0];
                     }
                 }
-                    this.map.activeDate = null;
+                this.map.activeDate = null;
             }
         },
         imageDisplayFormat: function () {
             if (domClass.contains(registry.byId("dropDownImageList").domNode, "dropDownSelected")) {
 
                 domClass.remove(registry.byId("dropDownImageList").domNode, "dropDownSelected");
-                this.switchDisplayTooltip.set("label",this.i18n.dropDown);
+                this.switchDisplayTooltip.set("label", this.i18n.dropDown);
                 document.getElementById("switchDisplayImage").src = "images/dropdownlist.png";
             } else {
                 domClass.add(registry.byId("dropDownImageList").domNode, "dropDownSelected");
-                this.switchDisplayTooltip.set("label",this.i18n.slider);
+                this.switchDisplayTooltip.set("label", this.i18n.slider);
                 document.getElementById("switchDisplayImage").src = "images/slider.png";
             }
             this.imageDisplayFormat2();
@@ -435,11 +434,11 @@ define([
                 var extentnew = new Extent(xminnew, yminnew, xmaxnew, ymaxnew, extent.spatialReference);
                 var query = new Query();
                 query.geometry = extentnew;
-                query.outFields =[this.imageField];
+                query.outFields = [this.imageField];
                 if (this.primaryLayer.mosaicRule && this.primaryLayer.mosaicRule.where)
-                var layerFilter = this.primaryLayer.mosaicRule.where;
-                else if(this.mosaicBackup && this.mosaicBackup.where)
-                var layerFilter = this.mosaicBackup.where;    
+                    var layerFilter = this.primaryLayer.mosaicRule.where;
+                else if (this.mosaicBackup && this.mosaicBackup.where)
+                    var layerFilter = this.mosaicBackup.where;
                 query.where = layerFilter ? this.categoryField + " = 1 AND " + layerFilter : this.categoryField + " = 1";
                 query.orderByFields = [this.imageField];
                 query.returnGeometry = true;
@@ -538,27 +537,27 @@ define([
                             var maxVisible = bestScene.samples[0].attributes[this.imageField];
                             var index = null;
                             if (this.previousValue !== null) {
-                               
+
                                 for (var i in this.orderedDates) {
                                     if (this.orderedDates[i] === this.previousValue) {
                                         index = i;
                                         break;
-                                    }else if(this.orderedDates[i] < this.previousValue){
+                                    } else if (this.orderedDates[i] < this.previousValue) {
                                         index = i;
                                     }
                                 }
-                            
-                            }else {
+
+                            } else {
                                 for (var z in this.orderedDates) {
-                                if (this.orderedDates[z] === maxVisible) {
-                                    index = z;
-                                    break;
+                                    if (this.orderedDates[z] === maxVisible) {
+                                        index = z;
+                                        break;
+                                    }
                                 }
-                            }
                             }
                             if (!index)
                                 var index = this.orderedDates.length - 1;
-                            
+
                             this.imageDisplayFormat2();
                             registry.byId("imageSelectorDropDown").set("value", index);
                             this.slider.set("value", index);
@@ -579,18 +578,18 @@ define([
                             imageParams.returnGeometry = false;
                             imageTask.execute(imageParams, lang.hitch(this, function (data) {
                                 var index;
-                                 if (this.previousValue !== null) {
-                               
-                                for (var i in this.orderedDates) {
-                                    if (this.orderedDates[i] === this.previousValue) {
-                                        index = i;
-                                        break;
-                                    }else if(this.orderedDates[i] < this.previousValue){
-                                        index = i;
+                                if (this.previousValue !== null) {
+
+                                    for (var i in this.orderedDates) {
+                                        if (this.orderedDates[i] === this.previousValue) {
+                                            index = i;
+                                            break;
+                                        } else if (this.orderedDates[i] < this.previousValue) {
+                                            index = i;
+                                        }
                                     }
-                                }
-                            
-                            }else if (data.catalogItems.features[0]) {
+
+                                } else if (data.catalogItems.features[0]) {
                                     var maxVisible = data.catalogItems.features[0].attributes[this.imageField];
                                     for (var z in this.orderedDates) {
                                         if (this.orderedDates[z] === maxVisible) {
@@ -598,9 +597,9 @@ define([
                                         }
                                     }
                                 }
-                            if (!index)
-                                var index = this.orderedDates.length - 1;
-                            
+                                if (!index)
+                                    var index = this.orderedDates.length - 1;
+
                                 this.imageDisplayFormat2();
                                 registry.byId("imageSelectorDropDown").set("value", index);
                                 this.slider.set("value", index);
@@ -613,18 +612,18 @@ define([
                             }), lang.hitch(this, function (error) {
                                 this.hideLoading();
                                 var index;
-                                 if (this.previousValue !== null) {
-                               
-                                for (var i in this.orderedDates) {
-                                    if (this.orderedDates[i] === this.previousValue) {
-                                        index = i;
-                                        break;
-                                    }else if(this.orderedDates[i] < this.previousValue){
-                                        index = i;
+                                if (this.previousValue !== null) {
+
+                                    for (var i in this.orderedDates) {
+                                        if (this.orderedDates[i] === this.previousValue) {
+                                            index = i;
+                                            break;
+                                        } else if (this.orderedDates[i] < this.previousValue) {
+                                            index = i;
+                                        }
                                     }
-                                }
-                            
-                            } else
+
+                                } else
                                     index = 0;
                                 this.imageDisplayFormat2();
                                 this.slider.set("value", index);
@@ -665,7 +664,7 @@ define([
         },
         sliderChange: function () {
             if (registry.byId("imageSelector").get("checked")) {
-                
+
                 var aqDate = this.orderedDates[this.valueSelected];
                 this.previousValue = aqDate;
                 var featureSelect = [];
@@ -704,8 +703,8 @@ define([
                             if ((locale.format(new Date(this.orderedFeatures[i].attributes[this.imageField]), {selector: "date", datePattern: "yyyy/MM/dd"}) <= locale.format(new Date(aqDate), {selector: "date", datePattern: "yyyy/MM/dd"})) && (locale.format(new Date(this.orderedFeatures[i].attributes[this.imageField]), {selector: "date", datePattern: "yyyy/MM/dd"}) >= locale.format(compareDate, {selector: "date", datePattern: "yyyy/MM/dd"}))) {
                                 featureSelect.push(this.orderedFeatures[i]);
                                 this.featureIds.push(this.orderedFeatures[i].attributes[this.objectID]);
-                                if(this.nameField)
-                              this.featureNames.push(this.orderedFeatures[i].attributes[this.nameField]);
+                                if (this.nameField)
+                                    this.featureNames.push(this.orderedFeatures[i].attributes[this.nameField]);
                             }
                         }
 
@@ -718,8 +717,8 @@ define([
                             if (tempValue === tempCurrentValue) {
                                 featureSelect.push(this.orderedFeatures[c]);
                                 this.featureIds.push(this.orderedFeatures[c].attributes[this.objectID]);
-                                if(this.nameField)
-                              this.featureNames.push(this.orderedFeatures[c].attributes[this.nameField]);
+                                if (this.nameField)
+                                    this.featureNames.push(this.orderedFeatures[c].attributes[this.nameField]);
                             }
                         }
                         html.set(document.getElementById("imageRange"), "Date(s): <b>" + locale.format(new Date(aqDate), {selector: "date", formatLength: "long"}) + "</b>");
@@ -733,8 +732,8 @@ define([
                         if (this.orderedFeatures[c].attributes[this.imageField] === this.orderedDates[this.valueSelected]) {
                             featureSelect.push(this.orderedFeatures[c]);
                             this.featureIds.push(this.orderedFeatures[c].attributes[this.objectID]);
-                            if(this.nameField)
-                              this.featureNames.push(this.orderedFeatures[c].attributes[this.nameField]);  
+                            if (this.nameField)
+                                this.featureNames.push(this.orderedFeatures[c].attributes[this.nameField]);
                         }
                     }
                     html.set(document.getElementById("imageRange"), this.imageField + ": <b>" + aqDate + "</b>");
@@ -774,12 +773,12 @@ define([
                     mr.operation = "MT_FIRST";
                     mr.lockRasterIds = this.featureIds;
                     this.primaryLayer.setMosaicRule(mr);
-                    var title =(this.primaryLayer.arcgisProps && this.primaryLayer.arcgisProps.title) ? this.primaryLayer.arcgisProps.title : (this.primaryLayer.title || this.primaryLayer.name || this.primaryLayer.id);
-                      if (this.imageFieldType !== "esriFieldTypeDate")
-                this.primaryLayer.title = title + "-"+ this.previousValue;
-                else
-                this.primaryLayer.title = title + "-" + locale.format(new Date(this.previousValue), {selector: "date", formatLength: "long"});
-                    
+                    var title = (this.primaryLayer.arcgisProps && this.primaryLayer.arcgisProps.title) ? this.primaryLayer.arcgisProps.title : (this.primaryLayer.title || this.primaryLayer.name || this.primaryLayer.id);
+                    if (this.imageFieldType !== "esriFieldTypeDate")
+                        this.primaryLayer.title = title + "-" + this.previousValue;
+                    else
+                        this.primaryLayer.title = title + "-" + locale.format(new Date(this.previousValue), {selector: "date", formatLength: "long"});
+
                 } else {
                     if (this.mosaicBackup) {
                         var mr = new MosaicRule(this.mosaicBackup);
@@ -787,7 +786,7 @@ define([
                         var mr = new MosaicRule(this.defaultMosaicRule);
                     }
                     this.primaryLayer.setMosaicRule(mr);
-                    if(this.primaryLayer && this.primaryLayer.title){
+                    if (this.primaryLayer && this.primaryLayer.title) {
                         this.primaryLayer.title = this.primaryLayer.title.split("-")[0];
                     }
                 }
@@ -833,7 +832,7 @@ define([
                     });
             var title = (layer.arcgisProps && layer.arcgisProps.title) ? layer.arcgisProps.title : (layer.title || layer.name || layer.id);
             if (this.imageFieldType !== "esriFieldTypeDate")
-                secondLayer.title = title + "-"+ this.previousValue;
+                secondLayer.title = title + "-" + this.previousValue;
             else
                 secondLayer.title = title + "-" + locale.format(new Date(this.previousValue), {selector: "date", formatLength: "long"});
 

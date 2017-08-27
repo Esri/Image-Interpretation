@@ -54,7 +54,7 @@ define([
                             this.map.measuredHeight = response.measureResult.height.value;
                         }
                     }));
-                  
+
                 },
                 onOpen: function () {
                     this.refreshData();
