@@ -1,66 +1,54 @@
-/*
- | Copyright 2017 Esri
- |
- | Licensed under the Apache License, Version 2.0 (the "License");
- | you may not use this file except in compliance with the License.
- | You may obtain a copy of the License at
- |
- |    http://www.apache.org/licenses/LICENSE-2.0
- |
- | Unless required by applicable law or agreed to in writing, software
- | distributed under the License is distributed on an "AS IS" BASIS,
- | WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- | See the License for the specific language governing permissions and
- | limitations under the License.
- */
- {
+{
 "configurationSettings":[
         {
-        "category": "Map",
+        "category":"Map",
                 "fields":[
                 {
-                "type":"webmap"
+                "type":"webmap",
+                        "conditions":["imagelayer"]
                 },
                 {
                 "type":"appproxies"
                 }
                 ]
-                }, {
-"category":"Theme",
-        "fields":[
+                },
         {
-        "type":"paragraph",
-                "value":"Define title header color for the app"
-        },
-        {
-        "type":"color",
-                "fieldName":"background",
-                "tooltip":"Choose a title header color",
-                "label":"Title Header color"
-        },
-        {
-        "type":"string",
-                "fieldName":"backgroundOpacity",
-                "tooltip":"Specify title header color opacity using a value between 0 and 1",
-                "label":"Title Header opacity"
-        },
-        {
-        "type":"color",
-                "fieldName":"color",
-                "tooltip":"Choose a text color for the app",
-                "label":"Text color"
-        }, {
-        "type": "paragraph",
-                "value": "Use the Custom css option to paste css that overwrites rules in the app."
-        },
-        {
-        "type":"string",
-                "fieldName":"customstyle",
-                "tooltip":"Enter custom css",
-                "label":"Custom css"
-        }
-        ]
-        },
+        "category":"Theme",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"Define title header color for the app"
+                },
+                {
+                "type":"color",
+                        "fieldName":"background",
+                        "tooltip":"Choose a title header color",
+                        "label":"Title Header color"
+                },
+                {
+                "type":"string",
+                        "fieldName":"backgroundOpacity",
+                        "tooltip":"Specify title header color opacity using a value between 0 and 1",
+                        "label":"Title Header opacity"
+                },
+                {
+                "type":"color",
+                        "fieldName":"color",
+                        "tooltip":"Choose a text color for the app",
+                        "label":"Text color"
+                },
+                {
+                "type":"paragraph",
+                        "value":"Use the Custom css option to paste css that overwrites rules in the app."
+                },
+                {
+                "type":"string",
+                        "fieldName":"customstyle",
+                        "tooltip":"Enter custom css",
+                        "label":"Custom css"
+                }
+                ]
+                },
         {
         "category":"General",
                 "fields":[
@@ -80,23 +68,24 @@
                         "stringFieldOption":"textarea"
                 },
                 {
-                  "type":"boolean",
-                  "label":"Enable Basemap Gallery",
-                  "fieldName":"basemapFlag",
-                  "tooltip": "Basemap Selector"
+                "type":"boolean",
+                        "label":"Enable Basemap Gallery",
+                        "fieldName":"basemapFlag",
+                        "tooltip":"Basemap Selector"
                 },
                 {
-                "type": "conditional",
-                        "condition": false,
-                        "fieldName": "scalebarFlag",
-                        "label": "Enable Scalebar",
-                        "tooltip": "Display Scalebar",
-                        "items": [{
-                        "type": "options",
-                                "fieldName": "scalebarPosition",
-                                "label": "Scalebar Position",
-                                "toolbar": "Select the Scalebar position on the map.",
-                                "options": [
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"scalebarFlag",
+                        "label":"Enable Scalebar",
+                        "tooltip":"Display Scalebar",
+                        "items":[
+                        {
+                        "type":"options",
+                                "fieldName":"scalebarPosition",
+                                "label":"Scalebar Position",
+                                "toolbar":"Select the Scalebar position on the map.",
+                                "options":[
                                 {
                                 "label":"Top Left",
                                         "value":"top-left"
@@ -122,13 +111,13 @@
                                         "value":"bottom-center"
                                 }
                                 ]
-
-                        }, {
-                        "type": "options",
-                                "fieldName": "scalebarStyle",
-                                "label": "Scalebar Style",
-                                "toolbar": "Select the style for the scalebar.",
-                                "options": [
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"scalebarStyle",
+                                "label":"Scalebar Style",
+                                "toolbar":"Select the style for the scalebar.",
+                                "options":[
                                 {
                                 "label":"Ruler",
                                         "value":"ruler"
@@ -138,13 +127,13 @@
                                         "value":"line"
                                 }
                                 ]
-
-                        }, {
-                        "type": "options",
-                                "fieldName": "scalebarUnit",
-                                "label": "Scalebar Unit",
-                                "toolbar": "Select the Scalebar units.",
-                                "options": [
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"scalebarUnit",
+                                "label":"Scalebar Unit",
+                                "toolbar":"Select the Scalebar units.",
+                                "options":[
                                 {
                                 "label":"English",
                                         "value":"english"
@@ -156,532 +145,585 @@
                                 {
                                 "label":"Both",
                                         "value":"dual"
-                                }]
-
-                        }]
-                }, {
+                                }
+                                ]
+                        }
+                        ]
+                },
+                {
                 "type":"paragraph",
                         "value":"Enable search to allow users to find a location or data in the map. Configure the search settings to refine the experience in your app by setting the default search resource, placeholder text, etc."
                 },
                 {
                 "type":"conditional",
-                        "condition": false,
+                        "condition":false,
                         "fieldName":"search",
                         "label":"Enable search tool",
-                        "items":[ {
+                        "items":[
+                        {
                         "type":"search",
                                 "fieldName":"searchConfig",
                                 "label":"Configure search tool"
-                        }]
-
-
-                }
-                ]
-                }, {
-                  "category": "Operational Layers",
-                  "fields": [
-                      {
-        "type": "paragraph",
-                "value": "<p style='text-align: justify;font-family: verdana;'>The Operational Layers tool allows users to change the visibility of non-imagery layers (feature layers or tile layers, for example), as well as to view the legend of each non-imagery layer. This tool is not required if the user will be working with one operational layer and not turning it on and off.</p>"
-        },
-                      {
-                          "type": "boolean",
-                          "fieldName": "operationalLayersFlag",
-                          "label": "Enable Operational Layers tool"
-                      }
-                  ]
-                },{
-"category": "Imagery Layers",
-        "fields":[
-
-        {
-        "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Select and configure the tools users will be able to access to visualize imagery layers in the app.<br/><br>If the Layer Selector tool is enabled, users will be able to change the active and comparison layers in the app using two dropdown menus that list all the imagery layers from the associated web map.</p>"
-        }, {
-        "type":"conditional",
-                "condition": false,
-                "fieldName":"layersFlag",
-                "label":"Enable Layer Selector",
-                "tooltip":"Imagery Layer Selector.",
-                "items":[
-                    {
-                      "type":"paragraph",
-                      "value": "<p style='text-align:justify;font-family:verdana;margin-bottom:0px;'>Use the dropdown lists to set the default active and comparison layers in the app.</p>"
-                    },{
-        "type":"layerAndFieldSelector",
-                "fieldName":"primaryLayer",
-                "label":"Active Layer: ",
-                "tooltip":"Select the Active Layer",
-                "layerOptions":{
-                "supportedTypes":[
-                        "ImageServiceLayer"
-                ]
-                }
-        },
-        {
-        "type":"layerAndFieldSelector",
-                "fieldName":"secondaryLayer",
-                "label":"Comparison Layer: ",
-                "tooltip":"Select the Comparison Layer",
-                "layerOptions":{
-                "supportedTypes":[
-                        "ImageServiceLayer"
-                ]
-                }
-        }]
-        },
-        {
-        "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Renderer tool allows the user to set service functions and stretch on the active layer in the app. In the app, a dropdown menu will be automatically populated with any service functions associated with the active layer.</p>"
-        },
-        {
-        "type": "boolean",
-                "fieldName": "rendererFlag",
-                "label": "Enable Renderer Tool",
-                "tooltip": ""
-        }, 
-        {
-        "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Compare tool enables a vertical swipe to compare the active layer with the comparison layer. If a Results layer is present (after performing change detection in the app, for example), you can choose whether a transparency slider or a horizontal swipe will be available to compare the results with those layers, as well.</p>"
-        },
-                {
-        "type":"conditional",
-                "condition": false,
-                "fieldName":"compareFlag",
-                "label":"Enable Compare",
-                "tooltip":"Compare tool",
-                "items":[
-                    {
-        "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Choose the tools you wish to use to compare the active layer with results and comparison layers, respectively</p>"
-        },
-                {
-                "type": "options",
-                        "fieldName": "compareMode",
-                        "tooltip": "Select compare tools",
-                        "label": "Compare Tools",
-                        "options": [{
-                        "label": "Transparency Slider and Vertical Swipe",
-                                "value": "slider"
-                        }, {
-                        "label": "Horizontal Swipe and Vertical Swipe",
-                                "value": "swipe"
-                        }]
-                }
-                ]
-        }, {
-        "type": "paragraph",
-                "value" :"<p style='text-align: justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Export tool saves the topmost visible imagery layer, either to the user’s ArcGIS Online account as an imagery layer item or to the user’s computer as a TIFF file of the current area of interest.</p>"
-        },
-        {
-        "type": "conditional",
-                "condition" :false,
-                "label":"Enable Export Tool",
-                "fieldName": "exportFlag",
-                "items": [
-                    {
-        "type": "paragraph",
-                "value" :"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Select which export options will be available to the user.</p>"
-        },
-                {
-                "type": "options",
-                        "fieldName": "exportType",
-                        "label": "Set default Mode: ",
-                        "options": [
-                        {
-                        "label": "Save to Portal",
-                                "value": "agol"
-                        },
-                        {
-                        "label": "Save to Disk",
-                                "value": "disk"
-                        },
-                        {
-                        "label": "Select in app",
-                                "value": "both"
                         }
                         ]
-
                 }
                 ]
-        }
-
-
-
-
-        ]
-        }, {
-"category":"Image Selector",
-        "fields":[
-        {
-        "type": "paragraph",
-                "value": "<p style='text-align: justify;font-family: verdana;'>The Image Selector Tool allows users to filter and set specific images as the active and comparison layers. In the app, the tool will display all the rasters from the active imagery layer that intersect with the current area of interest (AOI) on a slider, as a dropdown list, or both.<br><br><br/>When configuring the tool, choose the following:<br><br>(1) A display option,<br>(2) The minimum zoom level at which the tool will be available. At low zoom levels, no filtering is applied.<br>(3) The Search Screen Extent (%). If a small value is chosen, searches will return imagery only from the central part of the screen.<br>(4) Whether to activate Enable AutoRefresh. If the viewing extent changes, Enable AutoRefresh will update the display list and find similar images for the new extent.</p>"
-        },
-        {
-        "type":"conditional",
-                "fieldName":"imageSelectorFlag",
-                "tooltip":"",
-                "condition": false,
-                "label":"Enable Image Selector Tool",
-                "items" :[
-                
-                {
-                "type": "options",
-                        "fieldName": "displayOptions",
-                        "tooltip": "",
-                        "label": "Display:",
-                        "options": [{
-                        "label": "Slider",
-                                "value": "slider"
-                        }, {
-                        "label": "Dropdown List",
-                                "value": "dropdown"
-                        }, {
-                        "label": "Slider and Dropdown List",
-                                "value": "both"
-                        }]
-
-
                 },
-                {
-                "type": "Number",
-                        "fieldName": "zoomLevel",
-                        "label": "Minimum Zoom Level",
-                        "tooltip": "",
-                        "constraints": {"min":0, "max":23, "places":0}
-                },
-                {
-                "type": "Number",
-                        "fieldName": "searchScreenExtent",
-                        "label": "Search Screen Extent (%)",
-                        "tooltip": "",
-                        "constraints": {"min":1, "max":100, "places":0}
-                },
-                {
-                "type": "boolean",
-                        "fieldName": "enableAutoRefresh",
-                        "label": "Enable AutoRefresh",
-                        "toottip": ""
-                },{
-          "type": "paragraph",
-          "value": "<p style='text-align: justify;font-family: verdana;margin:20px 0px -10px; 0px;'>Check the box by each imagery layer you wish to be searchable, then select one attribute per imagery layer by which to sort the images (for example, you might select AcquisitionDate to sort satellite imagery chronologically).</p>"
-        },{
-        "type":"multilayerandfieldselector",
-                "fieldName":"imageSelectorLayer",
-                "label":"Imagery Layers",
-                "tooltip":"Set imagery layers properties.",
-                "layerOptions":{
-                "supportedTypes":[
-                        "ImageServiceLayer"
-                ]
-                }, "fieldOptions":{
-        "supportedTypes":[
-                "esriFieldTypeSmallInteger",
-                "esriFieldTypeInteger",
-                "esriFieldTypeSingle",
-                "esriFieldTypeDouble",
-                "esriFieldTypeString",
-                "esriFieldTypeDate",
-                "esriFieldTypeOID",
-                "esriFieldTypeGeometry",
-                "esriFieldTypeBlob",
-                "esriFieldTypeRaster",
-                "esriFieldTypeGUID",
-                "esriFieldTypeGlobalID",
-                "esriFieldTypeXML"
-        ]
-        }
-        }
-        
-                ]
-        }
-
-        ]
-        }, {
-"category": "Image Date",
-        "fields": [
-             {
-        "type": "paragraph",
-                "value": "<p style='text-align: justify;font-family: verdana;'>Image Date will display the date of the most central image from the active layer in the theme header next to the app name.</p>"
-        },
         {
-        "type":"conditional",
-                "condition": false,
-                "fieldName": "imageDateFlag",
-                "label": "Enable Image Date",
-                "items":[{
-        "type": "paragraph",
-                "value": "<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Check the box next to all the imagery layers that will display a date when selected as the app’s active layer, then select one date field for each layer.</p>"
-        },{
-        "type":"multilayerandfieldselector",
-                "fieldName":"imageDateLayer",
-                "label":"Imagery Layers",
-                "tooltip":"Select date field for each imagery layer.",
-                "layerOptions":{
-                "supportedTypes":[
-                        "ImageServiceLayer"
-                ]
-                }, "fieldOptions":{
-        "supportedTypes":[
-                "esriFieldTypeDate"
-        ]
-        }
-        }]
-        }
-        
-        ]
-
-}, {
-"category": "Change Detection",
-        "fields": [
-             {
-        "type": "paragraph",
-                "value": "<p style='text-align: justify;font-family: verdana;'>The Change Detection widget allows users to calculate the difference between the active and comparison layers. The result of the tool will be added as a new Results layer, which can be added to the dropdown list of image services available to your app using the Layer Selector tool. Assuming the active layer date is later than the comparison date, increases are shown in green and decreases are shown in magenta.<br><br>To use this tool, Image Selector must be enabled.<br></p>"
-        },
-        {
-        "type": "conditional",
-                "condition": false,
-                "fieldName": "changeDetectionFlag",
-                "label": "Enable Change Detection Tool",
-                "tooltip":"",
-                "items": [
-                  {
-        "type": "paragraph",
-                "value": "<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Select which change detection options you wish to be available to app users.</p>"
-        },   
+        "category":"Operational Layers",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align: justify;font-family: verdana;'>The Operational Layers tool allows users to change the visibility of non-imagery layers (feature layers or tile layers, for example), as well as to view the legend of each non-imagery layer. This tool is not required if the user will be working with one operational layer and not turning it on and off.</p>"
+                },
                 {
                 "type":"boolean",
-                        "fieldName":"difference",
-                        "label":"Difference"
-                },
-                {
-                "type": "boolean",
-                        "fieldName": "veg",
-                        "label": "Vegetation Index",
-                        "tooltip":"Normalized Difference Vegetation Index, or NDVI"
-                },
-                {
-                "type": "boolean",
-                        "fieldName": "savi",
-                        "label": "Soil Adjusted Vegetation Index",
-                        "tooltip":"SAVI"
-                },
-                {
-                "type": "boolean",
-                        "fieldName": "water",
-                        "label": "Water Index",
-                        "tooltip":"Normalized Difference Water Index, or NDWI"
-                },
-                {
-                "type": "boolean",
-                        "fieldName": "burn",
-                        "label": "Burn Index",
-                        "tooltip":"Normalized Burn Ratio, or NBR"
+                        "fieldName":"operationalLayersFlag",
+                        "label":"Enable Operational Layers tool"
                 }
                 ]
-
-        }
-        ]
-        }, {
-"category": "Image Measurement",
-        "fields": [
-        {
-        "type": "paragraph",
-                "value": "<p style='text-align:justify;font-family: verdana;'>The Image Measurement tool allows you to perform measurements on image services with mensuration capability. Mensuration applies geometric rules to find the height, area, or location of a feature.</p>"
-        },
-        {
-        "type":"conditional",
-                "condition": false,
-                "fieldName": "measurementFlag",
-                "label": "Enable Image Measurement",
-                "items": [
-                     {
-        "type": "paragraph",
-                "value": "<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Select the units that will be displayed in-app using the dropdown menus.</p>"
-        },
-                {
-                "type": "options",
-                        "fieldName" :"angularUnit",
-                        "label": "Default Angular Unit",
-                        "tooltip": "Unit of measure for angular measurement.",
-                        "options": [
-                        {
-                        "label": "Radians",
-                                "value": "esriDURadians"
-                        }, {
-                        "label": "Degrees",
-                                "value": "esriDUDecimalDegrees"
-                        }
-                        ]
-                }, {
-                "type": "options",
-                        "fieldName" :"linearUnit",
-                        "label": "Default Linear Unit",
-                        "tooltip": "Unit of measure for linear measurement.",
-                        "options": [
-                        {
-                        "label": "Inches",
-                                "value": "esriInches"
-                        }, {
-                        "label": "Feet",
-                                "value": "esriFeet"
-                        }, {
-                        "label": "Yards",
-                                "value": "esriYards"
-                        }, {
-                        "label": "Miles",
-                                "value": "esriMiles"
-                        }, {
-                        "label": "Nautical Miles",
-                                "value": "esriNauticalMiles"
-                        }, {
-                        "label": "Millimeters",
-                                "value": "esriMillimeters"
-                        }, {
-                        "label": "Centimeters",
-                                "value": "esriCentimeters"
-                        }, {
-                        "label": "Decimeters",
-                                "value": "esriDecimeters"
-                        }, {
-                        "label": "Meters",
-                                "value": "esriMeters"
-                        }, {
-                        "label": "Kilometers",
-                                "value": "esriKilometers"
-                        }
-                        ]
-                }, {
-                "type": "options",
-                        "fieldName" :"areaUnit",
-                        "label": "Default Area Unit",
-                        "tooltip": "Unit of measure for area measurement.",
-                        "options": [
-                        {
-                        "label": "Sq Inches",
-                                "value": "esriSquareInches"
-                        }, {
-                        "label": "Sq Feet",
-                                "value": "esriSquareFeet"
-                        }, {
-                        "label": "Sq Yards",
-                                "value": "esriSquareYards"
-                        }, {
-                        "label": "Acres",
-                                "value": "esriAcres"
-                        }, {
-                        "label": "Sq Miles",
-                                "value": "esriSquareMiles"
-                        }, {
-                        "label": "Sq Millimeters",
-                                "value": "esriSquareMillimeters"
-                        }, {
-                        "label": "Sq Centimeters",
-                                "value": "esriSquareCentimeters"
-                        }, {
-                        "label": "Sq Decimeters",
-                                "value": "esriSquareDecimeters"
-                        }, {
-                        "label": "Sq Meters",
-                                "value": "esriSquareMeters"
-                        }, {
-                        "label": "Ares",
-                                "value": "esriAres"
-                        }, {
-                        "label": "Hectares",
-                                "value": "esriHectares"
-                        }, {
-                        "label": "Sq Kilometers",
-                                "value": "esriSquareKilometers"
-                        }
-                        ]
-                }, {
-                "type" :"boolean",
-                        "fieldName": "popupMeasurementFlag",
-                        "label": "Display Measure Results in a Pop-up."
-                }, {
-                "type": "paragraph",
-                        "value": "<p style='text-align:justify;font-family: verdana;'>If you check Display Measure Results in a Pop-up, the measurements will be displayed in a pop-up window instead of within the image measurement tool.</p>"
-                }
-                ]
-        }
-        ]
-        }, {
-"category": "Editor",
-        "fields": [
-            {
-                "type": "paragraph",
-                        "value": "<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Editor tool allows users to edit feature layers (to pinpoint locations, delineate boundaries, or add additional notes, among other uses).<br><br><br>Enable the Editor tool and select the feature layers that users will be able to edit in-app. This tool requires editable feature layers in the app’s web map.</p>"
                 },
         {
-        "type": "conditional",
-                "condition": false,
-                "fieldName": "editFlag",
-                "label": "Enable Edit Tool",
-                "items":[
+        "category":"Imagery Layers",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Select and configure the tools users will be able to access to visualize imagery layers in the app.<br/><br>If the Layer Selector tool is enabled, users will be able to change the active and comparison layers in the app using two dropdown menus that list all the imagery layers from the associated web map.</p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"layersFlag",
+                        "label":"Enable Layer Selector",
+                        "tooltip":"Imagery Layer Selector.",
+                        "items":[
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align:justify;font-family:verdana;margin-bottom:0px;'>Use the dropdown lists to set the default active and comparison layers in the app.</p>"
+                        },
+                        {
+                        "type":"layerAndFieldSelector",
+                                "fieldName":"primaryLayer",
+                                "label":"Active Layer: ",
+                                "tooltip":"Select the Active Layer",
+                                "layerOptions":{
+                                "supportedTypes":[
+                                        "ImageServiceLayer"
+                                ]
+                                }
+                        },
+                        {
+                        "type":"layerAndFieldSelector",
+                                "fieldName":"secondaryLayer",
+                                "label":"Comparison Layer: ",
+                                "tooltip":"Select the Comparison Layer",
+                                "layerOptions":{
+                                "supportedTypes":[
+                                        "ImageServiceLayer"
+                                ]
+                                }
+                        }
+                        ]
+                },
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Renderer tool allows the user to set service functions and stretch on the active layer in the app. In the app, a dropdown menu will be automatically populated with any service functions associated with the active layer.</p>"
+                },
+                {
+                "type":"boolean",
+                        "fieldName":"rendererFlag",
+                        "label":"Enable Renderer Tool",
+                        "tooltip":""
+                },
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Compare tool enables a vertical swipe to compare the active layer with the comparison layer. If a Results layer is present (after performing change detection in the app, for example), you can choose whether a transparency slider or a horizontal swipe will be available to compare the results with those layers, as well.</p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"compareFlag",
+                        "label":"Enable Compare",
+                        "tooltip":"Compare tool",
+                        "items":[
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Choose the tools you wish to use to compare the active layer with results and comparison layers, respectively</p>"
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"compareMode",
+                                "tooltip":"Select compare tools",
+                                "label":"Compare Tools",
+                                "options":[
+                                {
+                                "label":"Transparency Slider and Vertical Swipe",
+                                        "value":"slider"
+                                },
+                                {
+                                "label":"Horizontal Swipe and Vertical Swipe",
+                                        "value":"swipe"
+                                }
+                                ]
+                        }
+                        ]
+                },
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Export tool saves the topmost visible imagery layer, either to the userÂ’s ArcGIS Online account as an imagery layer item or to the userÂ’s computer as a TIFF file of the current area of interest.</p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "label":"Enable Export Tool",
+                        "fieldName":"exportFlag",
+                        "items":[
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Select which export options will be available to the user.</p>"
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"exportType",
+                                "label":"Set default Mode: ",
+                                "options":[
+                                {
+                                "label":"Save to Portal",
+                                        "value":"agol"
+                                },
+                                {
+                                "label":"Save to Disk",
+                                        "value":"disk"
+                                },
+                                {
+                                "label":"Select in app",
+                                        "value":"both"
+                                }
+                                ]
+                        }
+                        ]
+                }
+                ]
+                },
         {
-        "label": "Turn on the layers to allow editing.",
-                "fieldName": "featureLayers",
-                "type": "multilayerandfieldselector",
-                "tooltip": "Select the editable layers from the list.",
-                "layerOptions" :{
-                "supportedTypes": [
-                        "FeatureLayer"
+        "category":"Image Selector",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align: justify;font-family: verdana;'>The Image Selector Tool allows users to filter and set specific images as the active and comparison layers. In the app, the tool will display all the rasters from the active imagery layer that intersect with the current area of interest (AOI) on a slider, as a dropdown list, or both.<br><br><br/>When configuring the tool, choose the following:<br><br>(1) A display option,<br>(2) The minimum zoom level at which the tool will be available. At low zoom levels, no filtering is applied.<br>(3) The Search Screen Extent (%). If a small value is chosen, searches will return imagery only from the central part of the screen.<br>(4) Whether to activate Enable AutoRefresh. If the viewing extent changes, Enable AutoRefresh will update the display list and find similar images for the new extent.</p>"
+                },
+                {
+                "type":"conditional",
+                        "fieldName":"imageSelectorFlag",
+                        "tooltip":"",
+                        "condition":false,
+                        "label":"Enable Image Selector Tool",
+                        "items":[
+                        {
+                        "type":"options",
+                                "fieldName":"displayOptions",
+                                "tooltip":"",
+                                "label":"Display:",
+                                "options":[
+                                {
+                                "label":"Slider",
+                                        "value":"slider"
+                                },
+                                {
+                                "label":"Dropdown List",
+                                        "value":"dropdown"
+                                },
+                                {
+                                "label":"Slider and Dropdown List",
+                                        "value":"both"
+                                }
+                                ]
+                        },
+                        {
+                        "type":"Number",
+                                "fieldName":"zoomLevel",
+                                "label":"Minimum Zoom Level",
+                                "tooltip":"",
+                                "constraints":{
+                                "min":0,
+                                        "max":23,
+                                        "places":0
+                                }
+                        },
+                        {
+                        "type":"Number",
+                                "fieldName":"searchScreenExtent",
+                                "label":"Search Screen Extent (%)",
+                                "tooltip":"",
+                                "constraints":{
+                                "min":1,
+                                        "max":100,
+                                        "places":0
+                                }
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"enableAutoRefresh",
+                                "label":"Enable AutoRefresh",
+                                "toottip":""
+                        },
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px -10px; 0px;'>Check the box by each imagery layer you wish to be searchable, then select one attribute per imagery layer by which to sort the images (for example, you might select AcquisitionDate to sort satellite imagery chronologically).</p>"
+                        },
+                        {
+                        "type":"multilayerandfieldselector",
+                                "fieldName":"imageSelectorLayer",
+                                "label":"Imagery Layers",
+                                "tooltip":"Set imagery layers properties.",
+                                "layerOptions":{
+                                "supportedTypes":[
+                                        "ImageServiceLayer"
+                                ]
+                                },
+                                "fieldOptions":{
+                                "supportedTypes":[
+                                        "esriFieldTypeSmallInteger",
+                                        "esriFieldTypeInteger",
+                                        "esriFieldTypeSingle",
+                                        "esriFieldTypeDouble",
+                                        "esriFieldTypeString",
+                                        "esriFieldTypeDate",
+                                        "esriFieldTypeOID",
+                                        "esriFieldTypeGeometry",
+                                        "esriFieldTypeBlob",
+                                        "esriFieldTypeRaster",
+                                        "esriFieldTypeGUID",
+                                        "esriFieldTypeGlobalID",
+                                        "esriFieldTypeXML"
+                                ]
+                                }
+                        }
+                        ]
+                }
+                ]
+                },
+        {
+        "category":"Image Date",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align: justify;font-family: verdana;'>Image Date will display the date of the most central image from the active layer in the theme header next to the app name.</p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"imageDateFlag",
+                        "label":"Enable Image Date",
+                        "items":[
+                        {
+                        "type": "string",
+                                "fieldName": "imageDateLabel",
+                                "label": "Label: ",
+                                "tooltip": "",
+                                "stringFieldOption": "textbox",
+                                "placeHolder": ""
+                        },
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Check the box next to all the imagery layers that will display a date when selected as the appÂ’s active layer, then select one date field for each layer.</p>"
+                        },
+                        {
+                        "type":"multilayerandfieldselector",
+                                "fieldName":"imageDateLayer",
+                                "label":"Imagery Layers",
+                                "tooltip":"Select date field for each imagery layer.",
+                                "layerOptions":{
+                                "supportedTypes":[
+                                        "ImageServiceLayer"
+                                ]
+                                },
+                                "fieldOptions":{
+                                "supportedTypes":[
+                                        "esriFieldTypeDate"
+                                ]
+                                }
+                        }
+                        ]
+                }
+                ]
+                },
+        {
+        "category":"Change Detection",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align: justify;font-family: verdana;'>The Change Detection widget allows users to calculate the difference between the active and comparison layers. The result of the tool will be added as a new Results layer, which can be added to the dropdown list of image services available to your app using the Layer Selector tool. Assuming the active layer date is later than the comparison date, increases are shown in green and decreases are shown in magenta.<br><br>To use this tool, Image Selector must be enabled.<br></p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"changeDetectionFlag",
+                        "label":"Enable Change Detection Tool",
+                        "tooltip":"",
+                        "items":[
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Select which change detection options you wish to be available to app users.</p>"
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"difference",
+                                "label":"Difference"
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"veg",
+                                "label":"Vegetation Index",
+                                "tooltip":"Normalized Difference Vegetation Index, or NDVI"
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"savi",
+                                "label":"Soil Adjusted Vegetation Index",
+                                "tooltip":"SAVI"
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"water",
+                                "label":"Water Index",
+                                "tooltip":"Normalized Difference Water Index, or NDWI"
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"burn",
+                                "label":"Burn Index",
+                                "tooltip":"Normalized Burn Ratio, or NBR"
+                        }
+                        ]
+                }
+                ]
+                },
+        {
+        "category":"Image Measurement",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align:justify;font-family: verdana;'>The Image Measurement tool allows you to perform measurements on image services with mensuration capability. Mensuration applies geometric rules to find the height, area, or location of a feature.</p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"measurementFlag",
+                        "label":"Enable Image Measurement",
+                        "items":[
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Select the units that will be displayed in-app using the dropdown menus.</p>"
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"angularUnit",
+                                "label":"Default Angular Unit",
+                                "tooltip":"Unit of measure for angular measurement.",
+                                "options":[
+                                {
+                                "label":"Radians",
+                                        "value":"esriDURadians"
+                                },
+                                {
+                                "label":"Degrees",
+                                        "value":"esriDUDecimalDegrees"
+                                }
+                                ]
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"linearUnit",
+                                "label":"Default Linear Unit",
+                                "tooltip":"Unit of measure for linear measurement.",
+                                "options":[
+                                {
+                                "label":"Inches",
+                                        "value":"esriInches"
+                                },
+                                {
+                                "label":"Feet",
+                                        "value":"esriFeet"
+                                },
+                                {
+                                "label":"Yards",
+                                        "value":"esriYards"
+                                },
+                                {
+                                "label":"Miles",
+                                        "value":"esriMiles"
+                                },
+                                {
+                                "label":"Nautical Miles",
+                                        "value":"esriNauticalMiles"
+                                },
+                                {
+                                "label":"Millimeters",
+                                        "value":"esriMillimeters"
+                                },
+                                {
+                                "label":"Centimeters",
+                                        "value":"esriCentimeters"
+                                },
+                                {
+                                "label":"Decimeters",
+                                        "value":"esriDecimeters"
+                                },
+                                {
+                                "label":"Meters",
+                                        "value":"esriMeters"
+                                },
+                                {
+                                "label":"Kilometers",
+                                        "value":"esriKilometers"
+                                }
+                                ]
+                        },
+                        {
+                        "type":"options",
+                                "fieldName":"areaUnit",
+                                "label":"Default Area Unit",
+                                "tooltip":"Unit of measure for area measurement.",
+                                "options":[
+                                {
+                                "label":"Sq Inches",
+                                        "value":"esriSquareInches"
+                                },
+                                {
+                                "label":"Sq Feet",
+                                        "value":"esriSquareFeet"
+                                },
+                                {
+                                "label":"Sq Yards",
+                                        "value":"esriSquareYards"
+                                },
+                                {
+                                "label":"Acres",
+                                        "value":"esriAcres"
+                                },
+                                {
+                                "label":"Sq Miles",
+                                        "value":"esriSquareMiles"
+                                },
+                                {
+                                "label":"Sq Millimeters",
+                                        "value":"esriSquareMillimeters"
+                                },
+                                {
+                                "label":"Sq Centimeters",
+                                        "value":"esriSquareCentimeters"
+                                },
+                                {
+                                "label":"Sq Decimeters",
+                                        "value":"esriSquareDecimeters"
+                                },
+                                {
+                                "label":"Sq Meters",
+                                        "value":"esriSquareMeters"
+                                },
+                                {
+                                "label":"Ares",
+                                        "value":"esriAres"
+                                },
+                                {
+                                "label":"Hectares",
+                                        "value":"esriHectares"
+                                },
+                                {
+                                "label":"Sq Kilometers",
+                                        "value":"esriSquareKilometers"
+                                }
+                                ]
+                        },
+                        {
+                        "type":"boolean",
+                                "fieldName":"popupMeasurementFlag",
+                                "label":"Display Measure Results in a Pop-up."
+                        },
+                        {
+                        "type":"paragraph",
+                                "value":"<p style='text-align:justify;font-family: verdana;'>If you check Display Measure Results in a Pop-up, the measurements will be displayed in a pop-up window instead of within the image measurement tool.</p>"
+                        }
+                        ]
+                }
+                ]
+                },
+        {
+        "category":"Editor",
+                "fields":[
+                {
+                "type":"paragraph",
+                        "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Editor tool allows users to edit feature layers (to pinpoint locations, delineate boundaries, or add additional notes, among other uses).<br><br><br>Enable the Editor tool and select the feature layers that users will be able to edit in-app. This tool requires editable feature layers in the appÂ’s web map.</p>"
+                },
+                {
+                "type":"conditional",
+                        "condition":false,
+                        "fieldName":"editFlag",
+                        "label":"Enable Edit Tool",
+                        "items":[
+                        {
+                        "label":"Turn on the layers to allow editing.",
+                                "fieldName":"featureLayers",
+                                "type":"multilayerandfieldselector",
+                                "tooltip":"Select the editable layers from the list.",
+                                "layerOptions":{
+                                "supportedTypes":[
+                                        "FeatureLayer"
+                                ]
+                                }
+                        }
+                        ]
+                }
                 ]
                 }
-
-                }]
-        }
-        
-
-
-
-        ]
-        }
-
 ],
         "values":{
         "background":"#000",
                 "backgroundOpacity":"0.9",
                 "color":"#fff",
                 "includelayeropacity":false,
-                "basemapFlag": false,
-                "scalebarFlag": false,
-                "scalebarUnit": "metric",
-                "scalebarStyle": "ruler",
-                "scalebarPosition": "bottom-left",
+                "basemapFlag":false,
+                "scalebarFlag":false,
+                "scalebarUnit":"metric",
+                "scalebarStyle":"ruler",
+                "scalebarPosition":"bottom-left",
                 "operationalLayersFlag":false,
-                "layersFlag" : false,
-                "primaryLayer": {"id":null},
-                "secondaryLayer": {"id":null},
+                "layersFlag":false,
+                "primaryLayer":{
+                "id":null
+                },
+                "secondaryLayer":{
+                "id":null
+                },
                 "imageSelectorFlag":false,
                 "displayOptions":"slider",
-                "zoomLevel" : 8,
-                "searchScreenExtent": 75,
-                "enableAutoRefresh": false,
-                "imageSelectorLayer": "",
-                "imageDateFlag": false,
+                "zoomLevel":8,
+                "searchScreenExtent":75,
+                "enableAutoRefresh":false,
+                "imageSelectorLayer":"",
+                "imageDateFlag":false,
+                "imageDateLabel":"",
                 "imageDateLayer":"",
                 "compareFlag":false,
-                "compareMode": "slider",
-                "changeDetectionFlag": false,
-                "difference": false,
-                "veg": false,
-                "savi": false,
-                "water": false,
-                "burn": false,
+                "compareMode":"slider",
+                "changeDetectionFlag":false,
+                "difference":false,
+                "veg":false,
+                "savi":false,
+                "water":false,
+                "burn":false,
                 "rendererFlag":false,
-                "exportFlag": false,
-                "exportType": "agol",
-                "measurementFlag": false,
-                "angularUnit": "esriDUDecimalDegrees",
-                "linearUnit": "esriMeters",
-                "areaUnit": "esriSquareMeters",
-                "popupMeasurementFlag": false,
-                "editFlag": false,
-                "featureLayers" : "",
+                "exportFlag":false,
+                "exportType":"agol",
+                "measurementFlag":false,
+                "angularUnit":"esriDUDecimalDegrees",
+                "linearUnit":"esriMeters",
+                "areaUnit":"esriSquareMeters",
+                "popupMeasurementFlag":false,
+                "editFlag":false,
+                "featureLayers":"",
                 "search":false,
                 "units":"english"
-                
         }
 }

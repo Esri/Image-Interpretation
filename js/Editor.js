@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright (c) 2017 Esri. All Rights Reserved.
+// Copyright (c) 2013 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,25 +15,25 @@
 ///////////////////////////////////////////////////////////////////////////
 define([
     'dojo/_base/declare', "dojo/Evented", "dojo/_base/array",
-    "dojo/on",
+    "dojo/on", "dojo/query",
     "esri/dijit/editing/Editor",
     "esri/dijit/editing/TemplatePicker",
     "dojo/_base/lang",
     'dojo/dom-class',
     "dojo/dom-construct",
     "dojo/dom",
-    "dojo/html",
+    "dojo/html", "dijit/focus",
     "dojo/dom-style",
 ],
         function (
                 declare, Evented, array,
-                on,
+                on, query,
                 Editor,
                 TemplatePicker,
                 lang,
                 domClass,
                 domConstruct,
-                dom, html, domStyle) {
+                dom, html, focus, domStyle) {
             return declare("application.Editor", [Evented], {
                 constructor: function (parameters) {
                     var defaults = {
@@ -126,9 +126,20 @@ define([
                             settings: settings
                         }, domConstruct.create("div"));
                         domConstruct.place(this.editor.domNode, dom.byId("editorDiv"));
+                        this.editor.on("load", lang.hitch(this, function () {
+
+                            query(".templatePicker .dojoxGrid")[0].tabIndex = -1;
+                            query(".templatePicker .dojoxGrid")[0].children[3].tabIndex = -1;
+                            var nodes = query(".dojoxGridHiddenFocus");
+                            for (var a = 0; a < nodes.length; a++) {
+                                nodes[a].tabIndex = -1;
+                            }
+                        }));
+
                         this.editor.startup();
 
                         this.editor.templatePicker.on("selection-change", lang.hitch(this, this.fillDefaultValues));
+
 
                     }
                 },

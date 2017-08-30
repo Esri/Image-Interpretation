@@ -16,31 +16,104 @@
  */
 define({
   "map": {
-    "error": "Det går inte att skapa kartan"
+    "error": "Å_Unable to create map_______ö"
   },
   "nav": {
-    "close": "Stäng"
-  },
-  "elevation": {
-    "toggle": "Slå på/av diagrammet Profil för höjdkurva.",
-    "drawTool": "Rita en linje på kartan för att generera en profil för höjdkurva.",
-    "selectMessage": "Klicka på ett linjegeoobjekt eller använd ritverktyget för att rita en linje som visar höjdprofilen",
-    "gainLossTemplate": "Min: ${min}   Max: ${max}   Start: ${start}   Slut: ${end}   Ändring: ${gainLoss}"
-  },
-  "splash": {
-    "title": "Titel",
-    "content": "Konfigurera för att skapa anpassat innehåll på välkomstskärmen"
-  },
-  "legend": {
-    "title": "Teckenförklaring",
-    "tip": "Visa teckenförklaring"
+    "close": "Å_Close___ö"
   },
   "basemap": {
-    "title": "Baskarta",
-    "tip": "Ändra baskarta"
+    "title": "Å_Basemap Gallery______ö"
   },
-  "share": {
-    "title": "Dela",
-    "tip": "Dela karta"
+  "operationalLayers": {
+    "title": "Å_Operational Layers______ö",
+    "error": "Å_No operational layers in the map___________ö."
+  },
+  "layerSelector": {
+    "active": "Å_Active Layer_____ö",
+    "comparison": "Å_Comparison Layer______ö",
+    "other": "Å_Other___ö",
+    "result": "Å_Result___ö",
+    "title": "Å_Layer Selector_____ö",
+    "resultSave": "Å_Add the Result layer in the comparison layer list________________ö",
+    "copy": "Å_Copy active layer to comparison layer____________ö.",
+    "swap": "Å_Swap active and comparison layer___________ö."
+  },
+  "renderer": {
+    "title": "Å_Renderer___ö",
+    "stretch": "Å_Stretch Parameters______ö",
+    "stretchType": "Å_Stretch Type_____ö",
+    "dra": "Å_DRA__ö",
+    "draText": "Å_Dynamic Range Adjustment updates enhancement based on current view_____________________ö",
+    "gamma": "Å_Gamma___ö",
+    "apply": "Å_Apply___ö",
+    "top": "Å_Exclude top____ö",
+    "bottom": "Å_Exclude bottom_____ö",
+    "topText": " Å_Exclude top x percentage of histogram____________ö",
+    "bottomText": " Å_Exclude bottom x percentage of histogram_____________ö",
+    "stdDev": "Å_# of Std. Dev_____ö",
+    "layer": "Å_Current Layer_____ö",
+    "error": "Å_No visible Imagery Layers in the map____________ö."
+  },
+  "imageSelector": {
+    "title": "Å_Image Selector_____ö",
+    "enable": "Å_Enable Image Selector_______ö",
+    "secondary": "Å_Set Active as Comparison Layer__________ö.",
+    "dropDown": "Å_Show images in drop down list__________ö.",
+    "refresh": "Å_Refresh query based on current extent____________ö.",
+    "show": "Å_Show__ö",
+    "age": "Å_Age__ö",
+    "zoom": "Å_Zoom in to select images_________ö.",
+    "error": "Å_No visible Imagery Layers in the map____________ö.",
+    "error1": "Å_Field is not specified________ö.",
+    "error2": "Å_No OBJECTID field______ö.",
+    "error3": "Å_No Category field______ö.",
+    "error4": "Å_Cannot perform action for layer___________ö.",
+    "error5": "Å_Services pre 10.2.1 not supported___________ö.",
+    "error6": "Å_No scenes in current extent_________ö.",
+    "error7": "Å_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ö.",
+    "slider": "Å_Show images on slider________ö."
+  },
+  "changeDetection": {
+    "title": "Å_Change Detection______ö",
+    "mode": "Å_Mode__ö",
+    "method": "Å_Method___ö",
+    "positive": "Å_Positive Difference_______ö",
+    "negative": "Å_Negative Difference_______ö",
+    "threshold": "Å_Threshold____ö",
+    "difference": "Å_Difference____ö",
+    "apply": "Å_Apply___ö",
+    "error": "Å_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ö."
+  },
+  "editor": {
+    "title": "Å_Editor___ö",
+    "error": "Å_No Edit Layer selected________ö.",
+    "error1": "Å_Access denied. Layers cannot be edited_____________ö."
+  },
+  "measurement": {
+    "title": "Å_Image Measurement______ö",
+    "error": "Å_Mensuration Capabilities not supported_____________ö."
+  },
+  "export": {
+    "title": "Å_Export___ö",
+    "mode": "Å_Mode__ö",
+    "titleText": "Å_Title___ö",
+    "description": "Å_Description____ö",
+    "tags": "Å_Tags__ö",
+    "submit": "Å_Submit___ö",
+    "pixel": "Å_Pixel Size____ö",
+    "outsr": "Å_Output Spatial Reference________ö",
+    "renderer": "Å_Current Renderer______ö",
+    "extent": "Å_Define Extent_____ö",
+    "text": "Å_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ö.",
+    "error": "Å_No visible imagery layers on the map____________ö.",
+    "error1": "Å_Title is required______ö.",
+    "error2": "Å_Tag(s) is required_______ö."
+  },
+  "compare": {
+    "title": "Å_Compare___ö",
+    "slider": "Å_Transparency Slider_______ö",
+    "hSwipe": "Å_Horizontal Swipe______ö",
+    "vSwipe": "Å_Vertical Swipe_____ö",
+    "error": "Å_No visible Imagery Layers available for comparison________________ö."
   }
 });

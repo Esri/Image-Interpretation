@@ -52,6 +52,7 @@ define({
     "enableAutoRefresh": false,
     "imageSelectorLayer": "",
     "imageDateFlag": false,
+    "imageDateLabel": "Image Date",
     "imageDateLayer": "",
     "compareFlag": false,
     "compareMode": "slider",

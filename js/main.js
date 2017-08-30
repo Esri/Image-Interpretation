@@ -597,7 +597,7 @@ define([
                     }
                 }
             }
-            this.imageDate = new ImageDate({map: this.map, layers: layer});
+            this.imageDate = new ImageDate({map: this.map, layers: layer, prefix: this.config.imageDateLabel});
             this.imageDate.postCreate();
             this.imageDate.onOpen();
 
@@ -780,13 +780,14 @@ define([
                         }
                         domStyle.set("editorNode", "display", "block");
                         this.editorFunction.onOpen();
+                        
                     }
                 }
             }));
         },
         setupImageMeasurement: function () {
 
-            var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.measurement.title + "</span></div><br/><div id='measurementDivContainer' style='margin:5px;overflow: auto;'><div tabindex=8 id='measureWidgetDiv'></div><div id='errorMeasurementDiv' style='color: red;'>" + this.config.i18n.measurement.error + "</div></div><br/>", id: "measurementNode", style: "display:none;"});
+            var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.measurement.title + "</span></div><br/><div id='measurementDivContainer' style='margin:5px;overflow: auto;'><div id='measureWidgetDiv'></div><div id='errorMeasurementDiv' style='color: red;'>" + this.config.i18n.measurement.error + "</div></div><br/>", id: "measurementNode", style: "display:none;"});
             parser.parse(node);
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             new Tooltip({

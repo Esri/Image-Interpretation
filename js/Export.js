@@ -218,7 +218,7 @@ define([
                             "format": format,
                             "compressionQuality": compressionQuality
                         };
-                        var portalUrl = this.portalUrl.includes("arcgis.com") ? "http://www.arcgis.com" : this.appConfig.portalUrl;
+                        var portalUrl = this.portalUrl.includes("arcgis.com") ? "http://www.arcgis.com" : this.portalUrl;
                         var portal = new arcgisPortal.Portal(portalUrl);
                         bundle.identity.lblItem = "Account";
                         var tempText = (bundle.identity.info).split("access the item on");

@@ -31,7 +31,8 @@ define([
                 constructor: function (parameters) {
                     var defaults = {
                         map: null,
-                        layers: null
+                        layers: null,
+                        prefix: "Image Date"
                     };
                     lang.mixin(this, defaults, parameters);
                 },
@@ -116,7 +117,7 @@ define([
                             callbackParamName: "callback"
                         });
                         request.then(lang.hitch(this, function (result) {
-                            if (result.samples.length > 0) {
+                            if (result.samples && result.samples.length > 0) {
                                 var primaryDate = result.samples[0].attributes[this.dateField];
                                 this.map.primaryDate = result.samples[0].attributes[this.dateField];
                                 if (this.secondaryLayer) {
@@ -138,16 +139,16 @@ define([
                                     requestSecondary.then(lang.hitch(this, function (data) {
                                         if (data.samples && data.samples.length > 0) {
                                             var secondaryDate = data.samples[0].attributes[this.secondaryDateField];
-                                            html.set("primaryDate", locale.format(new Date(secondaryDate), {selector: "date", formatLength: "long"}) + " vs " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                            html.set("primaryDate", this.prefix+": "+locale.format(new Date(secondaryDate), {selector: "date", formatLength: "long"}) + " vs " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                         } else {
                                             var secondaryDate = null;
-                                            html.set("primaryDate", locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                            html.set("primaryDate", this.prefix+": "+locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                         }
                                     }), lang.hitch(this, function () {
-                                        html.set("primaryDate", locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                        html.set("primaryDate", this.prefix+": "+locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                     }));
                                 } else {
-                                    html.set("primaryDate", locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                    html.set("primaryDate", this.prefix+": "+locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                 }
                             } else {
                                 html.set("primaryDate", "");
