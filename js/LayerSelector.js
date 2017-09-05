@@ -80,8 +80,9 @@ define([
                         registry.byId("secondaryShow").set("checked", this.secondaryLayer.visible);
                     }
                     registry.byId("imageView").on("change", lang.hitch(this, function (value) {
-                        if (this.primaryLayer && ((this.secondaryLayer && this.secondaryLayer.id !== this.primaryLayer.id) || !this.secondaryLayer))
+                        if (this.primaryLayer && ((this.secondaryLayer && this.secondaryLayer.id !== this.primaryLayer.id) || !this.secondaryLayer)) {
                             this.primaryLayer.hide();
+                        }
                         if (value.includes("extraLayers")) {
                             var temp = parseInt(value.split("extraLayers_")[1]);
 
@@ -102,10 +103,12 @@ define([
                             }
                         }
                         this.map.onUpdateEnd();
+
                     }));
                     registry.byId("secondary").on("change", lang.hitch(this, function (value) {
-                        if (this.secondaryLayer && ((this.primaryLayer && this.secondaryLayer.id !== this.primaryLayer.id) || !this.primaryLayer))
+                        if (this.secondaryLayer && ((this.primaryLayer && this.secondaryLayer.id !== this.primaryLayer.id) || !this.primaryLayer)) {
                             this.secondaryLayer.hide();
+                        }
                         if (value.includes("extraLayers")) {
                             var temp = parseInt(value.split("extraLayers_")[1]);
 
@@ -178,8 +181,8 @@ define([
                         var layer = this.map.getLayer(this.map.layerIds[a]);
                         if (layer && ((layer.serviceDataType && layer.serviceDataType.substr(0, 16) === "esriImageService" && layer.id !== "resultLayer" && layer.id !== this.map.resultLayer && (!layer.arcgisProps || ((layer.arcgisProps.title).substr(layer.arcgisProps.title.length - 2)) !== "__") && (!layer.title || ((layer.title).substr(layer.title.length - 2)) !== "__")) || (layer.arcgisProps && ((layer.arcgisProps.title).charAt(layer.arcgisProps.title.length - 1)) === "_") || (layer.title && ((layer.title).charAt(layer.title.length - 1)) === "_"))) {
                             this.primaryIndex = (a === 0 ? 1 : a);
-                            this.secondaryIndex = this.primaryIndex - 1;
-                            this.resultIndex = this.primaryIndex + 1;
+                            this.secondaryIndex = (this.primaryIndex === 1) ? 1 : (this.primaryIndex - 1);
+                            this.resultIndex = (this.primaryIndex === 1) ? 3 : this.primaryIndex + 1;
                             break;
                         }
                     }

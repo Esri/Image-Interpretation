@@ -72,6 +72,7 @@ define({
     "popupMeasurementFlag": false,
     "editFlag": false,
     "featureLayers": "",
+    "featureLayersHeightField": "",
     "editable": true,
     "disableGeometryUpdate": false,
     // Define background and text colors for the app.

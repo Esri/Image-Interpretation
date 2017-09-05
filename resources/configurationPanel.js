@@ -270,7 +270,7 @@
                 },
                 {
                 "type":"paragraph",
-                        "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Export tool saves the topmost visible imagery layer, either to the users ArcGIS Online account as an imagery layer item or to the users computer as a TIFF file of the current area of interest.</p>"
+                        "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Export tool saves the topmost visible imagery layer, either to the user's ArcGIS Online account as an imagery layer item or to the user's computer as a TIFF file of the current area of interest.</p>"
                 },
                 {
                 "type":"conditional",
@@ -426,7 +426,7 @@
                         },
                         {
                         "type":"paragraph",
-                                "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Check the box next to all the imagery layers that will display a date when selected as the apps active layer, then select one date field for each layer.</p>"
+                                "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Check the box next to all the imagery layers that will display a date when selected as the app's active layer, then select one date field for each layer.</p>"
                         },
                         {
                         "type":"multilayerandfieldselector",
@@ -654,7 +654,7 @@
                 "fields":[
                 {
                 "type":"paragraph",
-                        "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Editor tool allows users to edit feature layers (to pinpoint locations, delineate boundaries, or add additional notes, among other uses).<br><br><br>Enable the Editor tool and select the feature layers that users will be able to edit in-app. This tool requires editable feature layers in the apps web map.</p>"
+                        "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Editor tool allows users to edit feature layers (to pinpoint locations, delineate boundaries, or add additional notes, among other uses).<br><br><br>Enable the Editor tool and select the feature layers that users will be able to edit in-app. This tool requires editable feature layers in the app's web map.</p>"
                 },
                 {
                 "type":"conditional",
@@ -663,13 +663,38 @@
                         "label":"Enable Edit Tool",
                         "items":[
                         {
-                        "label":"Turn on the layers to allow editing.",
+                        "label":"Turn on the layers to allow editing.<br />Select the date field for the selected editable layers.(optional)",
                                 "fieldName":"featureLayers",
                                 "type":"multilayerandfieldselector",
                                 "tooltip":"Select the editable layers from the list.",
                                 "layerOptions":{
                                 "supportedTypes":[
                                         "FeatureLayer"
+                                ]
+                                },
+                                "fieldOptions":{
+                                "supportedTypes":[
+                                        "esriFieldTypeDate"
+                                ]
+                                }
+                        },
+                        {
+                        "label":"Select the height field for above selected editable layers. (optional)",
+                                "fieldName":"featureLayersHeightField",
+                                "type":"multilayerandfieldselector",
+                                "tooltip":"Select the height field for above selected editable layers.",
+                                "layerOptions":{
+                                "supportedTypes":[
+                                        "FeatureLayer"
+                                ]
+                                },
+                                "fieldOptions":{
+                                "supportedTypes":[
+                                        "esriFieldTypeSmallInteger",
+                                        "esriFieldTypeInteger",
+                                        "esriFieldTypeSingle",
+                                        "esriFieldTypeDouble",
+                                        "esriFieldTypeString"
                                 ]
                                 }
                         }
@@ -723,6 +748,7 @@
                 "popupMeasurementFlag":false,
                 "editFlag":false,
                 "featureLayers":"",
+                "featureLayersHeightField":"",
                 "search":false,
                 "units":"english"
         }

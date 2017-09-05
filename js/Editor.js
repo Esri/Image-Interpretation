@@ -43,18 +43,22 @@ define([
                     };
                     lang.mixin(this, defaults, parameters);
                 },
+                layerFields: {},
                 timeFormats: ["shortDateShortTime", "shortDateLEShortTime", "shortDateShortTime24", "shortDateLEShortTime24", "shortDateLongTime", "shortDateLELongTime", "shortDateLongTime24", "shortDateLELongTime24"],
                 postCreate: function () {
                     domConstruct.place('<img id="loadingEditor" style="position: absolute;top:0;bottom: 0;left: 0;right: 0;margin:auto;z-index:100;" src="images/loading.gif">', "editorContainer");
                     this.hideLoading();
                     this.editableLayers = [], this.templateLayers = [];
+
                     if (this.itemInfo) {
                         array.forEach(this.itemInfo, lang.hitch(this, function (layer) {
-                            if (layer && layer.isEditable()) {
+
+                            if (layer.layerObject && layer.layerObject.isEditable()) {
                                 this.editableLayers.push({
-                                    "featureLayer": layer
+                                    "featureLayer": layer.layerObject
                                 });
-                                this.templateLayers.push(layer);
+                                this.templateLayers.push(layer.layerObject);
+                                this.layerFields[layer.layerObject.id] = {date: layer.dateField, height: layer.heightField};
                             }
                         }));
 
@@ -149,17 +153,23 @@ define([
                         var featureLayer = selected.featureLayer;
                         on.once(featureLayer, "before-apply-edits", lang.hitch(this, function (evt) {
                             if (evt.adds[0] && evt.adds.length > 0) {
-
-                                var regex = new RegExp(/[A-Za-z0-9_]*date[A-Za-z0-9_]*/i);
-                                var heightRegex = new RegExp(/[A-Za-z0-9_]*height[A-Za-z0-9_]*/i);
-                                for (var a in evt.adds[0].attributes) {
-                                    if (regex.test(a) && !evt.adds[0].attributes[a]) {
-                                        evt.adds[0].attributes[a] = (this.map.primaryDate ? this.map.primaryDate : this.map.activeDate ? this.map.activeDate : null);
-                                    }
-                                    if (heightRegex.test(a) && !evt.adds[0].attributes[a]) {
-                                        evt.adds[0].attributes[a] = this.map.measuredHeight ? this.map.measuredHeight : null;
-                                    }
+                                if (this.layerFields[featureLayer.id]) {
+                                    if (this.layerFields[featureLayer.id].date)
+                                        evt.adds[0].attributes[this.layerFields[featureLayer.id].date] = (this.map.primaryDate ? this.map.primaryDate : this.map.activeDate ? this.map.activeDate : null);
+                                    if (this.layerFields[featureLayer.id].height)
+                                        evt.adds[0].attributes[this.layerFields[featureLayer.id].height] = this.map.measuredHeight ? this.map.measuredHeight : null;
                                 }
+
+                                //  var regex = new RegExp(/[A-Za-z0-9_]*date[A-Za-z0-9_]*/i);
+                                //   var heightRegex = new RegExp(/[A-Za-z0-9_]*height[A-Za-z0-9_]*/i);
+                                /*   for (var a in evt.adds[0].attributes) {
+                                 if (regex.test(a) && !evt.adds[0].attributes[a]) {
+                                 evt.adds[0].attributes[a] = (this.map.primaryDate ? this.map.primaryDate : this.map.activeDate ? this.map.activeDate : null);
+                                 }
+                                 if (heightRegex.test(a) && !evt.adds[0].attributes[a]) {
+                                 evt.adds[0].attributes[a] = this.map.measuredHeight ? this.map.measuredHeight : null;
+                                 }
+                                 }*/
                                 this.editor.attributeInspector.refresh();
                             }
                         }));

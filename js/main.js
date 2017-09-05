@@ -264,6 +264,7 @@ define([
                         }, 1500);
                     }
                 }));
+               
                 return response;
             }), this.reportError);
         },
@@ -550,6 +551,7 @@ define([
                 id: "basemapDialog",
                 draggable: false
             });
+            basemapDialog.closeButtonNode.tabIndex = 0;
             new Tooltip({
                 connectId: ["basemapContainer"],
                 label: this.config.i18n.basemap.title,
@@ -561,7 +563,7 @@ define([
             }));
             this.basemapFunction = new Basemap({map: this.map});
             this.basemapFunction.initBasemaps();
-            on(dom.byId("basemapContainer"), "click", lang.hitch(this, function (event) {
+            on(dom.byId("basemapContainer"), "click, keyup", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("basemapIconNode", "basemapSelected")) {
                         domClass.remove("basemapIconNode", "basemapSelected");
@@ -663,7 +665,7 @@ define([
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             this.layerSelectorFunction = new LayerSelector({map: this.map, itemInfo: this.config.itemInfo, primaryLayerID: this.config.primaryLayer.id, secondaryLayerID: this.config.secondaryLayer.id, i18n: this.config.i18n.layerSelector});
-
+             this.layerSelectorFunction.postCreate();
             on(dom.byId("layerSelectorContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("layerSelectorContainer", "selected-widget")) {
@@ -678,7 +680,7 @@ define([
                         domClass.add("layerSelectorContainer", "selected-widget");
                         if (openForFirstTime) {
                             openForFirstTime = false;
-                            this.layerSelectorFunction.postCreate();
+                          //  this.layerSelectorFunction.postCreate();
                         }
                         this.layerSelectorFunction.onOpen();
                         domStyle.set("layerSelectorNode", "display", "block");
@@ -751,15 +753,29 @@ define([
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
 
             var openForFirstTime = true;
-            var layer = [];
+            var layer = [],heightField;
 
             if (this.config.featureLayers) {
                 var featureLayers = JSON.parse(this.config.featureLayers);
-
+                if(this.config.featureLayersHeightField)
+                var featureLayersHeightField = JSON.parse(this.config.featureLayersHeightField);
                 for (var a in featureLayers) {
-                    layer.push(this.map.getLayer(featureLayers[a].id));
+                    for(var b in featureLayersHeightField){
+                        if(featureLayersHeightField[b].id === featureLayers[a].id && featureLayersHeightField[b].fields.length > 0){
+                            heightField = featureLayersHeightField[b].fields[0];
+                           break;
+                        }else
+                            heightField = null;
+                    }        
+                    layer.push({
+                       layerObject:this.map.getLayer(featureLayers[a].id),
+                       heightField: heightField,
+                       dateField: featureLayers[a].fields.length > 0 ? featureLayers[a].fields[0]: null
+                   });
+            
                 }
             }
+            
 
             this.editorFunction = new Editor({map: this.map, itemInfo: (layer.length > 0 ? layer : null), i18n: this.config.i18n.editor});
             on(dom.byId("editorContainer"), "click", lang.hitch(this, function (event) {
