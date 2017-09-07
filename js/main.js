@@ -264,7 +264,7 @@ define([
                         }, 1500);
                     }
                 }));
-               
+
                 return response;
             }), this.reportError);
         },
@@ -593,7 +593,7 @@ define([
                                 dateField: this.config.imageDateLayer[b].fields[0],
                                 title: layers[a].title || layers[a].layerObject.name || layers[a].id
                             };
-                            layer[layers[a].url.split("//")[1]] = tempLayer;
+                            layer[layers[a].id] = tempLayer;
                             break;
                         }
                     }
@@ -665,7 +665,7 @@ define([
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
             this.layerSelectorFunction = new LayerSelector({map: this.map, itemInfo: this.config.itemInfo, primaryLayerID: this.config.primaryLayer.id, secondaryLayerID: this.config.secondaryLayer.id, i18n: this.config.i18n.layerSelector});
-             this.layerSelectorFunction.postCreate();
+            this.layerSelectorFunction.postCreate();
             on(dom.byId("layerSelectorContainer"), "click", lang.hitch(this, function (event) {
                 if (event.type === "click" || event.which === 13 || event.which === 32) {
                     if (domClass.contains("layerSelectorContainer", "selected-widget")) {
@@ -680,7 +680,7 @@ define([
                         domClass.add("layerSelectorContainer", "selected-widget");
                         if (openForFirstTime) {
                             openForFirstTime = false;
-                          //  this.layerSelectorFunction.postCreate();
+                            //  this.layerSelectorFunction.postCreate();
                         }
                         this.layerSelectorFunction.onOpen();
                         domStyle.set("layerSelectorNode", "display", "block");
@@ -753,29 +753,29 @@ define([
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
 
             var openForFirstTime = true;
-            var layer = [],heightField;
+            var layer = [], heightField;
 
             if (this.config.featureLayers) {
                 var featureLayers = JSON.parse(this.config.featureLayers);
-                if(this.config.featureLayersHeightField)
-                var featureLayersHeightField = JSON.parse(this.config.featureLayersHeightField);
+                if (this.config.featureLayersHeightField)
+                    var featureLayersHeightField = JSON.parse(this.config.featureLayersHeightField);
                 for (var a in featureLayers) {
-                    for(var b in featureLayersHeightField){
-                        if(featureLayersHeightField[b].id === featureLayers[a].id && featureLayersHeightField[b].fields.length > 0){
+                    for (var b in featureLayersHeightField) {
+                        if (featureLayersHeightField[b].id === featureLayers[a].id && featureLayersHeightField[b].fields.length > 0) {
                             heightField = featureLayersHeightField[b].fields[0];
-                           break;
-                        }else
+                            break;
+                        } else
                             heightField = null;
-                    }        
+                    }
                     layer.push({
-                       layerObject:this.map.getLayer(featureLayers[a].id),
-                       heightField: heightField,
-                       dateField: featureLayers[a].fields.length > 0 ? featureLayers[a].fields[0]: null
-                   });
-            
+                        layerObject: this.map.getLayer(featureLayers[a].id),
+                        heightField: heightField,
+                        dateField: featureLayers[a].fields.length > 0 ? featureLayers[a].fields[0] : null
+                    });
+
                 }
             }
-            
+
 
             this.editorFunction = new Editor({map: this.map, itemInfo: (layer.length > 0 ? layer : null), i18n: this.config.i18n.editor});
             on(dom.byId("editorContainer"), "click", lang.hitch(this, function (event) {
@@ -796,7 +796,7 @@ define([
                         }
                         domStyle.set("editorNode", "display", "block");
                         this.editorFunction.onOpen();
-                        
+
                     }
                 }
             }));
@@ -911,6 +911,7 @@ define([
                 for (var a = 0; a < layers.length; a++) {
                     for (var b = 0; b < this.config.imageSelectorLayer.length; b++) {
                         if (this.config.imageSelectorLayer[b].id === layers[a].id && this.config.imageSelectorLayer[b].fields.length > 0) {
+
                             var tempLayer = {
                                 imageField: this.config.imageSelectorLayer[b].fields[0],
                                 objectID: this.findField(layers[a].layerObject.fields, "esriFieldTypeOID", new RegExp(/O[a-z]*[_]?ID/i)),
@@ -918,7 +919,7 @@ define([
                                 name: this.findField(layers[a].layerObject.fields, "esriFieldTypeString", new RegExp(/name/i)),
                                 title: layers[a].title || layers[a].layerObject.name || layers[a].id
                             };
-                            layer[layers[a].url.split("//")[1]] = tempLayer;
+                            layer[layers[a].id] = tempLayer;
                             break;
                         }
                     }

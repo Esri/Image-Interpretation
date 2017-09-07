@@ -180,9 +180,9 @@ define([
                     for (var a = this.map.layerIds.length - 1; a >= 0; a--) {
                         var layer = this.map.getLayer(this.map.layerIds[a]);
                         if (layer && ((layer.serviceDataType && layer.serviceDataType.substr(0, 16) === "esriImageService" && layer.id !== "resultLayer" && layer.id !== this.map.resultLayer && (!layer.arcgisProps || ((layer.arcgisProps.title).substr(layer.arcgisProps.title.length - 2)) !== "__") && (!layer.title || ((layer.title).substr(layer.title.length - 2)) !== "__")) || (layer.arcgisProps && ((layer.arcgisProps.title).charAt(layer.arcgisProps.title.length - 1)) === "_") || (layer.title && ((layer.title).charAt(layer.title.length - 1)) === "_"))) {
-                            this.primaryIndex = (a === 0 ? 1 : a);
-                            this.secondaryIndex = (this.primaryIndex === 1) ? 1 : (this.primaryIndex - 1);
-                            this.resultIndex = (this.primaryIndex === 1) ? 3 : this.primaryIndex + 1;
+                            this.primaryIndex = (a === 0 ? 1 : a === 1 ? 2 : a);
+                            this.secondaryIndex = this.primaryIndex - 1;
+                            this.resultIndex = this.primaryIndex + 1;
                             break;
                         }
                     }
@@ -195,7 +195,6 @@ define([
                     domStyle.set("loadingIsLayers", "display", "none");
                 },
                 refreshData: function () {
-
                     if (this.map.layerIds) {
                         if (this.map.getLayer("resultLayer")) {
                             this.resultLayer = this.map.getLayer("resultLayer");
@@ -258,12 +257,12 @@ define([
                             registry.byId("secondary").addOption({label: "No Imagery layer", value: "select"});
                         }
                         for (var b in this.layerList1) {
+                            if (this.secondaryLayerID && this.secondaryLayerID === this.layerList1[b].id)
+                                registry.byId("secondary").set("value", this.secondaryLayerID);
                             if (this.primaryLayerID && this.primaryLayerID === this.layerList1[b].id)
                             {
                                 registry.byId("imageView").set("value", this.primaryLayerID);
                             }
-                            if (this.secondaryLayerID && this.secondaryLayerID === this.layerList1[b].id)
-                                registry.byId("secondary").set("value", this.secondaryLayerID);
                         }
 
                     }

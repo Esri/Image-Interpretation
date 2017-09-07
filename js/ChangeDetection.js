@@ -93,7 +93,7 @@ define([
                             this.secondaryLayer = this.layersOnMap.length > 1 ? this.layersOnMap[this.layersOnMap.length - 2].layer : null;
                         }
                         if (this.secondaryLayer && this.primaryLayer && this.secondaryLayer.url === this.primaryLayer.url) {
-                            if ((this.primaryLayer.mosaicRule !== null) && (this.primaryLayer.mosaicRule.lockRasterIds !== null) && (this.secondaryLayer.mosaicRule !== null) && (this.secondaryLayer.mosaicRule.lockRasterIds !== null)) {
+                            if (this.primaryLayer.mosaicRule && this.primaryLayer.mosaicRule.lockRasterIds && this.secondaryLayer.mosaicRule && this.secondaryLayer.mosaicRule.lockRasterIds && this.primaryLayer.mosaicRule.lockRasterIds[0] !== this.secondaryLayer.mosaicRule.lockRasterIds[0]) {
                                 if (this.primaryLayer.url !== this.prevPrimaryLayer) {
                                     this.populateChangeModes();
                                     this.populateBands();
@@ -244,6 +244,8 @@ define([
                             domStyle.set("thresholdRangeSpinners", "display", "none");
                         }
                     }));
+                    registry.byId("positiveRange").set("value",[0.15,1]);
+                    registry.byId("negativeRange").set("value",[-1,-0.15]);
                 },
                 setChangeMethod: function (value) {
                     if (value === "difference") {

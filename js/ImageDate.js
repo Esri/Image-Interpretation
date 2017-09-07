@@ -169,7 +169,7 @@ define([
                     this.previousPrimary = this.primaryLayer;
                     this.setPrimaryLayer();
                     if (this.primaryLayer) {
-                        this.label = this.primaryLayer.url.split('//')[1];
+                        this.label = this.primaryLayer.id;//url.split('//')[1];
 
                         if (this.primaryLayer && this.primaryLayer.visible) {
                             if (this.layerInfos[this.label]) {

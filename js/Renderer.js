@@ -238,7 +238,7 @@ define([
 
                     if (this.imageServiceLayer.rasterFunctionInfos && this.imageServiceLayer.name)
                     {
-                        var title = this.imageServiceLayer.title || this.imageServiceLayer.name || "";
+                        var title = (this.imageServiceLayer.arcgisProps && this.imageServiceLayer.arcgisProps.title) ? this.imageServiceLayer.arcgisProps.title : (this.imageServiceLayer.title || this.imageServiceLayer.name || "");
                         html.set(document.getElementById("activeLayerName"), title);
                         var data = this.imageServiceLayer.rasterFunctionInfos;
                         this.rendererRR(data);

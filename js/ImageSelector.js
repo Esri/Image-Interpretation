@@ -229,7 +229,7 @@ define([
 
                 if (this.primaryLayer) {
                     this.prevMosaicBackup = this.mosaicBackup;
-                    this.label = this.primaryLayer.url.split('//')[1];
+                    this.label = this.primaryLayer.id;//url.split('//')[1];
                     this.defaultMosaicRule = this.primaryLayer.defaultMosaicRule;
                     if (!this.prevPrimary || this.prevPrimary.url !== this.primaryLayer.url) {
                         this.mosaicBackup = this.primaryLayer.mosaicRule;
@@ -261,7 +261,8 @@ define([
                             this.checkField(currentVersion);
                         }));
                     } else if (!this.layerInfos[this.label]) {
-                        dom.byId("imageSelectorLayerTitle").innerHTML = this.primaryLayer.visible ? ("Layer: <b>" + this.primaryLayer.name || this.primaryLayer.id + "</b>") : ("Layer: <b>" + this.primaryLayer.name || this.primaryLayer.id + " (Visibility Off)</b>");
+                        var title = (this.primaryLayer.arcgisProps && this.primaryLayer.arcgisProps.title) ? this.primaryLayer.arcgisProps.title : (this.primaryLayer.title || this.primaryLayer.name || this.primaryLayer.id);
+                        dom.byId("imageSelectorLayerTitle").innerHTML = this.primaryLayer.visible ? ("Layer: <b>" + title + "</b>") : ("Layer: <b>" + title + " (Visibility Off)</b>");
                         var layersRequest = esriRequest({
                             url: this.primaryLayer.url,
                             content: {f: "json"},
@@ -289,7 +290,7 @@ define([
                                     obj.imageField = data.fields[a].name;
                                 }
                             }
-                            obj.title = this.primaryLayer.name || this.primaryLayer.id;
+                            obj.title = (this.primaryLayer.arcgisProps && this.primaryLayer.arcgisProps.title) ? this.primaryLayer.arcgisProps.title : (this.primaryLayer.title || this.primaryLayer.name || this.primaryLayer.id);
                             this.layerInfos[this.label] = obj;
                             this.checkField(currentVersion);
                         }));
