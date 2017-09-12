@@ -368,6 +368,12 @@
                                 "toottip":""
                         },
                         {
+                        "type":"boolean",
+                                "fieldName":"distinctImages",
+                                "label":"Show distinct values on slider or in a dropDown",
+                                "toottip":"If turned on, slider or dropdown will merge all the images together with same attribute value."
+                        },
+                        {
                         "type":"paragraph",
                                 "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px -10px; 0px;'>Check the box by each imagery layer you wish to be searchable, then select one attribute per imagery layer by which to sort the images (for example, you might select AcquisitionDate to sort satellite imagery chronologically).</p>"
                         },
@@ -726,6 +732,7 @@
                 "zoomLevel":8,
                 "searchScreenExtent":75,
                 "enableAutoRefresh":false,
+                "distinctImages": false,
                 "imageSelectorLayer":"",
                 "imageDateFlag":false,
                 "imageDateLabel":"",

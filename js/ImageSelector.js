@@ -176,7 +176,6 @@ define([
                 if (this.layerInfos[this.label]) {
                     if (this.layerInfos[this.label].imageField && this.layerInfos[this.label].objectID && this.layerInfos[this.label].category) {
                         this.imageField = this.layerInfos[this.label].imageField;
-                        this.nameField = this.layerInfos[this.label].name;
                         for (var a in this.primaryLayer.fields) {
                             if (this.imageField === this.primaryLayer.fields[a].name) {
                                 this.imageFieldType = this.primaryLayer.fields[a].type;
@@ -408,10 +407,15 @@ define([
             if (!domClass.contains(registry.byId("dropDownImageList").domNode, "dropDownSelected")) {
                 domStyle.set(document.getElementById("imageRange"), "display", "inline-block");
                 domStyle.set("dropDownOption", "display", "none");
+                if(this.featureLength > 1) {
                 domStyle.set(this.slider.domNode, "display", "block");
                 domStyle.set(this.sliderRules.domNode, "display", "block");
                 domStyle.set(this.sliderLabels.domNode, "display", "block");
-
+            }else{
+                domStyle.set(this.slider.domNode, "display", "none");
+                domStyle.set(this.sliderRules.domNode, "display", "none");
+                domStyle.set(this.sliderLabels.domNode, "display", "none");
+            }
             } else {
                 if (this.slider) {
                     domStyle.set(this.slider.domNode, "display", "none");
@@ -456,6 +460,7 @@ define([
                     if (this.orderedFeatures.length > 0) {
                         this.orderedDates = [];
                         for (var a in this.orderedFeatures) {
+                            if(this.config.distinctImages) {
                             if (parseInt(a) < 1)
                                 this.orderedDates.push(this.orderedFeatures[a].attributes[this.imageField]);
                             else {
@@ -469,6 +474,9 @@ define([
                                         this.orderedDates.push(this.orderedFeatures[a].attributes[this.imageField]);
                                 }
                             }
+                        }else {
+                            this.orderedDates.push(this.orderedFeatures[a].attributes[this.imageField]);
+                        }
                         }
                         this.featureLength = this.orderedDates.length;
                         this.imageSliderHide();
@@ -704,39 +712,48 @@ define([
                             if ((locale.format(new Date(this.orderedFeatures[i].attributes[this.imageField]), {selector: "date", datePattern: "yyyy/MM/dd"}) <= locale.format(new Date(aqDate), {selector: "date", datePattern: "yyyy/MM/dd"})) && (locale.format(new Date(this.orderedFeatures[i].attributes[this.imageField]), {selector: "date", datePattern: "yyyy/MM/dd"}) >= locale.format(compareDate, {selector: "date", datePattern: "yyyy/MM/dd"}))) {
                                 featureSelect.push(this.orderedFeatures[i]);
                                 this.featureIds.push(this.orderedFeatures[i].attributes[this.objectID]);
-                                if (this.nameField)
-                                    this.featureNames.push(this.orderedFeatures[i].attributes[this.nameField]);
+                                
                             }
                         }
 
                         html.set(document.getElementById("imageRange"), "Date(s): <b>" + locale.format(compareDate, {selector: "date", formatLength: "long"}) + " - " + locale.format(new Date(aqDate), {selector: "date", formatLength: "long"}) + "</b>");
                     } else {
+                        if(this.config.distinctImages) {
                         for (var c in this.orderedFeatures) {
-                            var tempValue = locale.format(new Date(this.orderedDates[this.valueSelected]), {selector: "date", formatLength: "short"});
+                            
+                            var tempValue = locale.format(new Date(this.orderedDates[this.valueSelected]), {selector: "date", formatLength: "short"}); 
                             var tempCurrentValue = locale.format(new Date(this.orderedFeatures[c].attributes[this.imageField]), {selector: "date", formatLength: "short"});
-
+                        
                             if (tempValue === tempCurrentValue) {
                                 featureSelect.push(this.orderedFeatures[c]);
                                 this.featureIds.push(this.orderedFeatures[c].attributes[this.objectID]);
-                                if (this.nameField)
-                                    this.featureNames.push(this.orderedFeatures[c].attributes[this.nameField]);
+                                
                             }
+                        
                         }
-                        html.set(document.getElementById("imageRange"), "Date(s): <b>" + locale.format(new Date(aqDate), {selector: "date", formatLength: "long"}) + "</b>");
+                    }else{
+                    featureSelect.push(this.orderedFeatures[this.valueSelected]);
+                        this.featureIds.push(this.orderedFeatures[this.valueSelected].attributes[this.objectID]);
+                    }
+                    html.set(document.getElementById("imageRange"), "Date(s): <b>" + locale.format(new Date(aqDate), {selector: "date", formatLength: "long"}) + "</b>");
 
                     }
                 } else
                 {
                     this.map.activeDate = null;
                     domStyle.set("ageDiv", "display", "none");
+                    if(this.config.distinctImages) {
                     for (var c in this.orderedFeatures) {
                         if (this.orderedFeatures[c].attributes[this.imageField] === this.orderedDates[this.valueSelected]) {
                             featureSelect.push(this.orderedFeatures[c]);
                             this.featureIds.push(this.orderedFeatures[c].attributes[this.objectID]);
-                            if (this.nameField)
-                                this.featureNames.push(this.orderedFeatures[c].attributes[this.nameField]);
+                            
                         }
                     }
+                }else{
+                     featureSelect.push(this.orderedFeatures[this.valueSelected]);
+                    this.featureIds.push(this.orderedFeatures[this.valueSelected].attributes[this.objectID]);
+                }
                     html.set(document.getElementById("imageRange"), this.imageField + ": <b>" + aqDate + "</b>");
                 }
                 this.map.graphics.clear();

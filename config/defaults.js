@@ -50,6 +50,7 @@ define({
     "zoomLevel": 8,
     "searchScreenExtent": 75,
     "enableAutoRefresh": false,
+    "distinctImages": false,
     "imageSelectorLayer": "",
     "imageDateFlag": false,
     "imageDateLabel": "Image Date",

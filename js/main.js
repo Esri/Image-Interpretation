@@ -904,7 +904,8 @@ define([
                 display: this.config.displayOptions,
                 zoomLevel: this.config.zoomLevel,
                 searchExtent: this.config.searchScreenExtent,
-                autoRefresh: this.config.enableAutoRefresh
+                autoRefresh: this.config.enableAutoRefresh,
+                distinctImages: this.config.distinctImages
             };
             if (this.config.imageSelectorLayer) {
                 this.config.imageSelectorLayer = JSON.parse(this.config.imageSelectorLayer);
@@ -916,7 +917,6 @@ define([
                                 imageField: this.config.imageSelectorLayer[b].fields[0],
                                 objectID: this.findField(layers[a].layerObject.fields, "esriFieldTypeOID", new RegExp(/O[a-z]*[_]?ID/i)),
                                 category: this.findField(layers[a].layerObject.fields, "esriFieldTypeInteger", new RegExp(/Cate[a-z]*/i)),
-                                name: this.findField(layers[a].layerObject.fields, "esriFieldTypeString", new RegExp(/name/i)),
                                 title: layers[a].title || layers[a].layerObject.name || layers[a].id
                             };
                             layer[layers[a].id] = tempLayer;
