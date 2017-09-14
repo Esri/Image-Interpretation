@@ -240,13 +240,14 @@ define([
                 this._setupAppTools();
                 this._updateTheme();
                 registry.byId("toolsContentContainer").show();
+                domConstruct.destroy("toolsContentContainer_underlay");
                 this.resizeTemplate();
 
                 dojo.connect(registry.byId("toolsContentContainer"), "hide", lang.hitch(this, function (event) {
                     var left = document.getElementById("toolsContentContainer").style.left;
                     var top = document.getElementById("toolsContentContainer").style.top;
                     registry.byId("toolsContentContainer").show();
-
+                    domConstruct.destroy("toolsContentContainer_underlay");
                     domStyle.set("toolsContentContainer", "top", top);
                     domStyle.set("toolsContentContainer", "left", left);
                     var toolNodesActive = document.getElementsByClassName("selected-widget");
