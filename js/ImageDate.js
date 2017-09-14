@@ -45,7 +45,7 @@ define([
                         this.map.on("update-start", lang.hitch(this, this.clearDateRange));
                         this.map.on("update-end", lang.hitch(this, this.changeDateRange));
                     }
-
+                    this.prefix = this.prefix ? this.prefix : "Image Date";
                 },
                 setPrimaryLayer: function () {
 
@@ -139,16 +139,16 @@ define([
                                     requestSecondary.then(lang.hitch(this, function (data) {
                                         if (data.samples && data.samples.length > 0) {
                                             var secondaryDate = data.samples[0].attributes[this.secondaryDateField];
-                                            html.set("primaryDate", this.prefix+": "+locale.format(new Date(secondaryDate), {selector: "date", formatLength: "long"}) + " vs " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                            html.set("primaryDate", this.prefix + ": " + locale.format(new Date(secondaryDate), {selector: "date", formatLength: "long"}) + " vs " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                         } else {
                                             var secondaryDate = null;
-                                            html.set("primaryDate", this.prefix+": "+locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                            html.set("primaryDate", this.prefix + ": " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                         }
                                     }), lang.hitch(this, function () {
-                                        html.set("primaryDate", this.prefix+": "+locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                        html.set("primaryDate", this.prefix + ": " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                     }));
                                 } else {
-                                    html.set("primaryDate", this.prefix+": "+locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
+                                    html.set("primaryDate", this.prefix + ": " + locale.format(new Date(primaryDate), {selector: "date", formatLength: "long"}));
                                 }
                             } else {
                                 html.set("primaryDate", "");

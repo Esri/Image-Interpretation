@@ -239,7 +239,7 @@ define([
 
                         for (var i = mainLayers.length - 1; i >= 0; i--) {
                             title = mainLayers[i].title || mainLayers[i].layerObject.name || mainLayers[i].id;
-                            if ((title && title.substr(title.length - 2) === "__") || (title && (title.charAt(title.length - 1)) === "_") || (mainLayers[i].layerObject && mainLayers[i].layerObject.serviceDataType && mainLayers[i].layerObject.serviceDataType.substr(0, 16) === "esriImageService") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISImageServiceLayer")) {
+                            if ((title && title.substr(title.length - 2) === "__") || (title && (title.charAt(title.length - 1)) === "_") || (mainLayers[i].layerObject && mainLayers[i].layerObject.serviceDataType && mainLayers[i].layerObject.serviceDataType.substr(0, 16) === "esriImageService") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISImageServiceLayer") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISTiledImageServiceLayer")) {
                                 skipLayer = false;
                                 this.map.getLayer(mainLayers[i].layerObject.id).hide();
                                 this.layerList1[k] = mainLayers[i].layerObject;

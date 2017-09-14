@@ -24,7 +24,7 @@ define([
     "dojo/Deferred",
     "esri/dijit/Scalebar",
     "esri/dijit/Search", "esri/tasks/locator", "application/SearchSources",
-    "dojo/dom",
+    "dojo/dom", "esri/layers/ArcGISImageServiceLayer",
     "dojo/dom-construct",
     "dojo/dom-style", "dojo/html",
     "dojo/dom-class",
@@ -41,7 +41,7 @@ define([
         declare, lang, kernel,
         on, query, focus,
         Deferred, Scalebar, Search, Locator, SearchSources,
-        dom, domConstruct, domStyle, html, domClass, Dialog, parser,
+        dom, ArcGISImageServiceLayer, domConstruct, domStyle, html, domClass, Dialog, parser,
         registry, rendererHtml, exportHtml, compareHtml, layerSelectorHtml, imageSelectorHtml, changeDetectionHtml, Tooltip,
         arcgisUtils,
         MapUrlParams, Compare, Editor, Basemap, Renderer, OperationalLayers, Export, Measurement, LayerSelector, ImageDate, ImageSelector, ChangeDetection
@@ -179,6 +179,7 @@ define([
                 domConstruct.place('<img id="loadingMap" style="position: absolute;top:0;bottom: 0;left: 0;right: 0;margin:auto;z-index:100;display:none;" src="images/loading.gif">', this.map.container);
                 this.map.on("update-start", lang.hitch(this, this.showLoading));
                 this.map.on("update-end", lang.hitch(this, this.hideLoading));
+                this.findAndReplaceCacheImageService();
                 window.addEventListener("resize", lang.hitch(this, this.resizeTemplate));
                 if (this.config.basemapFlag) {
                     domStyle.set("basemapContainer", "display", "block");
@@ -240,10 +241,12 @@ define([
                 this._updateTheme();
                 registry.byId("toolsContentContainer").show();
                 this.resizeTemplate();
+
                 dojo.connect(registry.byId("toolsContentContainer"), "hide", lang.hitch(this, function (event) {
                     var left = document.getElementById("toolsContentContainer").style.left;
                     var top = document.getElementById("toolsContentContainer").style.top;
                     registry.byId("toolsContentContainer").show();
+
                     domStyle.set("toolsContentContainer", "top", top);
                     domStyle.set("toolsContentContainer", "left", left);
                     var toolNodesActive = document.getElementsByClassName("selected-widget");
@@ -267,6 +270,27 @@ define([
 
                 return response;
             }), this.reportError);
+        },
+        findAndReplaceCacheImageService: function () {
+            var layerIds = this.map.layerIds;
+            var layers = this.config.itemInfo.itemData.operationalLayers;
+            for (var a in layers) {
+                if (layers[a].layerType && layers[a].layerType === "ArcGISTiledImageServiceLayer") {
+                    for (var b = layerIds.length - 1; b >= 0; b--) {
+                        if (layerIds[b] === layers[a].id) {
+                            var layer = this.map.getLayer(layers[a].id);
+                            this.map.removeLayer(layer);
+                            layer = new ArcGISImageServiceLayer(layers[a].url, {
+                                id: layers[a].id,
+                                visibility: layers[a].visibility
+                            });
+                            layer.title = layers[a].title;
+                            this.map.addLayer(layer, b);
+                            break;
+                        }
+                    }
+                }
+            }
         },
         resizeTemplate: function () {
             if (window.innerWidth > 1200) {
@@ -457,7 +481,7 @@ define([
                     if (!value.visible) {
                         this.map.onUpdateEnd();
                     }
-                }))
+                }));
             }));
             var layers = this.config.itemInfo.itemData.operationalLayers, layer;
             for (var a = layers.length - 1; a >= 0; a--) {
@@ -599,6 +623,7 @@ define([
                     }
                 }
             }
+
             this.imageDate = new ImageDate({map: this.map, layers: layer, prefix: this.config.imageDateLabel});
             this.imageDate.postCreate();
             this.imageDate.onOpen();
@@ -618,7 +643,7 @@ define([
             var layersList = [];
             for (var a = layers.length - 1; a >= 0; a--) {
                 var title = layers[a].title || layers[a].layerObject.name || layers[a].id;
-                if ((title && (title.charAt(title.length - 1)) !== "_") && (title && (title.substr(title.length - 2)) !== "__") && ((layers[a].layerObject && layers[a].layerObject.serviceDataType && layers[a].layerObject.serviceDataType.substr(0, 16) !== "esriImageService") || (layers[a].layerType && layers[a].layerType !== "ArcGISImageServiceLayer"))) {
+                if ((layers[a].layerType && layers[a].layerType !== "ArcGISTiledImageServiceLayer") && (title && (title.charAt(title.length - 1)) !== "_") && (title && (title.substr(title.length - 2)) !== "__") && ((layers[a].layerObject && layers[a].layerObject.serviceDataType && layers[a].layerObject.serviceDataType.substr(0, 16) !== "esriImageService") || (layers[a].layerType && layers[a].layerType !== "ArcGISImageServiceLayer"))) {
                     layersList.push({
                         layer: layers[a].layerObject,
                         title: layers[a].title,
@@ -648,7 +673,6 @@ define([
                         }
                         this.operationalLayersFunction.onOpen();
                         domStyle.set("operationalLayersNode", "display", "block");
-
                     }
                 }
             }));
@@ -684,7 +708,6 @@ define([
                         }
                         this.layerSelectorFunction.onOpen();
                         domStyle.set("layerSelectorNode", "display", "block");
-
                     }
                 }
             }));
@@ -723,7 +746,6 @@ define([
                         }
                         this.changeDetectionFunction.onOpen();
                         domStyle.set("changeDetectionNode", "display", "block");
-
                     }
                 }
             }));
@@ -881,7 +903,6 @@ define([
                         }
                         this.exportFunction.onOpen();
                         domStyle.set("exportNode", "display", "block");
-
                     }
                 }
             }));
@@ -946,7 +967,6 @@ define([
                         }
                         this.imageSelectorFunction.onOpen();
                         domStyle.set("imageSelectorNode", "display", "block");
-
                     }
                 }
             }));
@@ -1001,7 +1021,6 @@ define([
                         }
                         this.rendererFunction.onOpen();
                         domStyle.set("rendererNode", "display", "block");
-
                     }
                 }
             }));
@@ -1052,6 +1071,7 @@ define([
                 if (this.openedWidget) {
                     domStyle.set(this.openedWidget, "display", "none");
                 }
+
             }
         },
         hideContentPanel: function () {
