@@ -38,7 +38,8 @@ define({
             title: "Layer Selector",
             resultSave: "Add the Result layer in the comparison layer list",
             copy: "Copy active layer to comparison layer.",
-            swap: "Swap active and comparison layer."
+            swap: "Swap active and comparison layer.",
+            layerError: "Layer is set as Active Layer. Please select different layer."
         },
         renderer: {
             title: "Renderer",
@@ -84,7 +85,7 @@ define({
             threshold: "Threshold",
             difference: "Difference",
             apply: "Apply",
-            error: "Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection."
+            error: "Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image, then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection."
         },
         editor: {
             title: "Editor",
@@ -117,7 +118,8 @@ define({
             slider: "Transparency Slider",
             hSwipe: "Horizontal Swipe",
             vSwipe: "Vertical Swipe",
-            error: "No visible Imagery Layers available for comparison."
+            error: "No visible Imagery Layers available for comparison.",
+            identicalLayerError: "Active and Comparison Layer are identical."
         }
     }),
     "ar": 1,

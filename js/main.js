@@ -68,11 +68,6 @@ define([
                 }
                 document.getElementById("titleContainer").style.backgroundColor = this.config.background;
                 document.getElementById("dockContainer").style.backgroundColor = this.config.background;
-
-
-                document.getElementById("titleContainer").style.opacity = this.config.backgroundOpacity;
-
-                document.getElementById("dockContainer").style.opacity = this.config.backgroundOpacity;
                 document.getElementById("titleText").style.color = this.config.color;
                 document.getElementById("primaryDate").style.color = this.config.color;
 
@@ -181,7 +176,7 @@ define([
                 this.map.on("update-end", lang.hitch(this, this.hideLoading));
                 this.findAndReplaceCacheImageService();
                 window.addEventListener("resize", lang.hitch(this, this.resizeTemplate));
-                if (this.config.basemapFlag) {
+                if (!this.config.basemapFlag) {
                     domStyle.set("basemapContainer", "display", "block");
                     this.setupBasemap();
                 } else
@@ -240,30 +235,39 @@ define([
                 this._setupAppTools();
                 this._updateTheme();
                 registry.byId("toolsContentContainer").show();
+                domConstruct.destroy("toolsContentContainer_underlay");
+                domStyle.set("toolsContentContainer", "z-index", "1");
+                domStyle.set("toolsContentContainer", "left", "");
                 this.resizeTemplate();
-
+                this.setCloseEvent();
                 dojo.connect(registry.byId("toolsContentContainer"), "hide", lang.hitch(this, function (event) {
-                    var left = document.getElementById("toolsContentContainer").style.left;
                     var top = document.getElementById("toolsContentContainer").style.top;
                     registry.byId("toolsContentContainer").show();
-
+                    domConstruct.destroy("toolsContentContainer_underlay");
                     domStyle.set("toolsContentContainer", "top", top);
-                    domStyle.set("toolsContentContainer", "left", left);
+                    domStyle.set("toolsContentContainer", "left", "");
+                    domStyle.set("toolsContentContainer", "z-index", "1");
+                    domStyle.set("toolsContentContainer", "opacity", "");
                     var toolNodesActive = document.getElementsByClassName("selected-widget");
                     if (toolNodesActive.length > 1) {
+
                         for (var a = 0; a < toolNodesActive.length; a++) {
-                            if (toolNodesActive[a].id !== "compareContainer")
+                            if (!event) {
+                                if (toolNodesActive[a].id !== "compareContainer")
+                                    toolNodesActive[a].click();
+                                setTimeout(function () {
+                                    focus.focus(dom.byId("compareContainer"));
+                                }, 100);
+                            } else if ((toolNodesActive[a].id).includes((event.split(" ")[0]).toLowerCase())) {
                                 toolNodesActive[a].click();
-                            setTimeout(function () {
-                                focus.focus(dom.byId("compareContainer"))
-                            }, 100);
+                            }
                         }
 
                     } else if (toolNodesActive.length > 0) {
                         var id = toolNodesActive[0].id;
                         toolNodesActive[0].click();
                         setTimeout(function () {
-                            focus.focus(dom.byId(id))
+                            focus.focus(dom.byId(id));
                         }, 1500);
                     }
                 }));
@@ -292,6 +296,20 @@ define([
                 }
             }
         },
+        setCloseEvent: function () {
+            var closeNodes = query(".closeContainerButton");
+
+            for (var a = 0; a < closeNodes.length; a++) {
+
+                closeNodes[a].addEventListener("click", lang.hitch(this, function (element) {
+                    if (element.target.nodeName === "BUTTON")
+                        var node = element.target.previousElementSibling.innerHTML;
+                    else
+                        var node = element.target.parentNode.previousElementSibling.innerHTML;
+                    registry.byId("toolsContentContainer").hide(node);
+                }));
+            }
+        },
         resizeTemplate: function () {
             if (window.innerWidth > 1200) {
                 document.getElementsByTagName("BODY")[0].style.fontSize = "14px";
@@ -304,10 +322,7 @@ define([
 
                 }
 
-                domConstruct.destroy("toolsContentContainer_underlay");
                 domStyle.set("toolsContentContainer", "top", "45px");
-                domStyle.set("toolsContentContainer", "left", "85px");
-
                 this.resizeDockContainer("80px", "30px", "25px", "39px", "16px", "5px 9px", "15px", "5px", "-6px", "14px", "3px 2px", "100px", "67px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -326,7 +341,6 @@ define([
 
                 }
                 domStyle.set("toolsContentContainer", "top", "40px");
-                domStyle.set("toolsContentContainer", "left", "65px");
                 this.resizeDockContainer("60px", "26px", "17px", "35px", "14px", "4px 7px", "14px", "4px", "-6px", "14px", "3px 2px", "80px", "57px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -345,7 +359,7 @@ define([
 
                 }
                 domStyle.set("toolsContentContainer", "top", "36px");
-                domStyle.set("toolsContentContainer", "left", "45px");
+
                 this.resizeDockContainer("40px", "20px", "10px", "31px", "13px", "3px 5px", "13px", "3px", "-7px", "13px", "2px 2px", "80px", "52px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -364,7 +378,7 @@ define([
 
                 }
                 domStyle.set("toolsContentContainer", "top", "32px");
-                domStyle.set("toolsContentContainer", "left", "35px");
+
                 this.resizeDockContainer("30px", "16px", "7px", "27px", "12px", "2px 4px", "11px", "2px", "-8px", "12px", "1px 2px", "70px", "52px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -383,7 +397,7 @@ define([
 
                 }
                 domStyle.set("toolsContentContainer", "top", "27px");
-                domStyle.set("toolsContentContainer", "left", "30px");
+
                 this.resizeDockContainer("25px", "13px", "6px", "22px", "11px", "1px 2px", "9px", "0px", "-8px", "11px", "0px 1px", "60px", "47px");
                 if (this.currentPanelClass) {
                     domClass.remove("toolsContentContainer", this.currentPanelClass);
@@ -397,7 +411,7 @@ define([
                 document.getElementById("mapDiv").style.marginTop = "21px";
                 document.getElementById("mapDiv").style.height = "calc(100% - 21px)";
                 domStyle.set("toolsContentContainer", "top", "26px");
-                domStyle.set("toolsContentContainer", "left", "25px");
+
                 if (domStyle.get("dockContainer", "display") === "block") {
                     document.getElementById("mapDiv").style.marginLeft = "20px";
                     document.getElementById("mapDiv").style.width = "calc(100% - 20px)";
@@ -571,7 +585,7 @@ define([
             var basemapDialog = new Dialog({
                 title: this.config.i18n.basemap.title,
                 content: "<div id='basemapGalleryDiv' style='overflow:auto;height:95%;'></div>",
-                style: "background-color:white;border-radius:5px;width:300px;height:200px;",
+                style: "background-color:white;width:300px;height:300px;",
                 id: "basemapDialog",
                 draggable: false
             });
@@ -635,7 +649,7 @@ define([
                 label: this.config.i18n.operationalLayers.title,
                 position: ['after']
             });
-            var node = domConstruct.create("div", {innerHTML: '<div class="titleBar"><span class="titleBarTextSpan">' + this.config.i18n.operationalLayers.title + '</span></div><br /><div style="margin: 5px;overflow: auto;"><div id="operationalLayerList"></div><br /></div>', id: "operationalLayersNode", style: "display:none;"});
+            var node = domConstruct.create("div", {innerHTML: '<div class="titleBar"><span class="titleBarTextSpan">' + this.config.i18n.operationalLayers.title + '</span><button class="closeContainerButton"><img src="images/cancel.png" alt="X"/></button></div><br /><div style="margin: 5px;overflow: auto;"><div id="operationalLayerList"></div><br /></div>', id: "operationalLayersNode", style: "display:none;"});
             parser.parse(node);
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             var openForFirstTime = true;
@@ -673,6 +687,9 @@ define([
                         }
                         this.operationalLayersFunction.onOpen();
                         domStyle.set("operationalLayersNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("operationalLayersNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -708,6 +725,9 @@ define([
                         }
                         this.layerSelectorFunction.onOpen();
                         domStyle.set("layerSelectorNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("layerSelectorNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -746,6 +766,9 @@ define([
                         }
                         this.changeDetectionFunction.onOpen();
                         domStyle.set("changeDetectionNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("changeDetectionNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -770,7 +793,7 @@ define([
                 label: this.config.i18n.editor.title,
                 position: ['after']
             });
-            var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.editor.title + "</span></div><br/><div style='margin:5px;overflow: auto;'><div id='templateDiv'></div><div id='editorDiv'></div><div id='errorEditor'></div><br /></div>", id: "editorNode", style: "display:none;"});
+            var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.editor.title + "</span><button class='closeContainerButton'><img src='images/cancel.png' alt='X'/></button></div><br/><div style='margin:5px;overflow: auto;'><div id='templateDiv'></div><div id='editorDiv'></div><div id='errorEditor'></div><br /></div>", id: "editorNode", style: "display:none;"});
             parser.parse(node);
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
 
@@ -817,6 +840,9 @@ define([
                             this.editorFunction.postCreate();
                         }
                         domStyle.set("editorNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("editorNode").children[0].children[1]);
+                        }, 500);
                         this.editorFunction.onOpen();
 
                     }
@@ -825,7 +851,7 @@ define([
         },
         setupImageMeasurement: function () {
 
-            var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.measurement.title + "</span></div><br/><div id='measurementDivContainer' style='margin:5px;overflow: auto;'><div id='measureWidgetDiv'></div><div id='errorMeasurementDiv' style='color: red;'>" + this.config.i18n.measurement.error + "</div></div><br/>", id: "measurementNode", style: "display:none;"});
+            var node = domConstruct.create("div", {innerHTML: "<div class='titleBar'><span class='titleBarTextSpan'>" + this.config.i18n.measurement.title + "</span><button class='closeContainerButton'><img src='images/cancel.png' alt='X'/></button></div><br/><div id='measurementDivContainer' style='margin:5px;overflow: auto;'><div id='measureWidgetDiv'></div><div id='errorMeasurementDiv' style='color: red;'>" + this.config.i18n.measurement.error + "</div></div><br/>", id: "measurementNode", style: "display:none;"});
             parser.parse(node);
             domConstruct.place(node, registry.byId("toolsContentContainer").containerNode);
             new Tooltip({
@@ -863,6 +889,9 @@ define([
                         }
                         this.measurementFunction.onOpen();
                         domStyle.set("measurementNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("measurementNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -903,6 +932,9 @@ define([
                         }
                         this.exportFunction.onOpen();
                         domStyle.set("exportNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("exportNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -932,7 +964,7 @@ define([
                 this.config.imageSelectorLayer = JSON.parse(this.config.imageSelectorLayer);
                 for (var a = 0; a < layers.length; a++) {
                     for (var b = 0; b < this.config.imageSelectorLayer.length; b++) {
-                        if (this.config.imageSelectorLayer[b].id === layers[a].id && this.config.imageSelectorLayer[b].fields.length > 0) {
+                        if (this.config.imageSelectorLayer[b].id === layers[a].id && this.config.imageSelectorLayer[b].fields.length > 0 && layers[a].layerObject) {
 
                             var tempLayer = {
                                 imageField: this.config.imageSelectorLayer[b].fields[0],
@@ -967,6 +999,9 @@ define([
                         }
                         this.imageSelectorFunction.onOpen();
                         domStyle.set("imageSelectorNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("imageSelectorNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -1021,6 +1056,9 @@ define([
                         }
                         this.rendererFunction.onOpen();
                         domStyle.set("rendererNode", "display", "block");
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("rendererNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));
@@ -1059,7 +1097,9 @@ define([
                         }
                         this.compareFunction.onOpen();
                         domStyle.set("compareNode", "display", "block");
-
+                        setTimeout(function () {
+                            focus.focus(document.getElementById("compareNode").children[0].children[1]);
+                        }, 500);
                     }
                 }
             }));

@@ -91,6 +91,8 @@ define([
                         } else {
                             if (value !== "select")
                             {
+                                if (this.secondaryLayer && this.secondaryLayer.id === value)
+                                    registry.byId("secondary").set("value", "select");
                                 this.primaryLayer = this.map.getLayer(value);
                                 this.map.primaryLayer = value;
                                 this.map.reorderLayer(this.primaryLayer, this.primaryIndex);
@@ -118,13 +120,20 @@ define([
                             if (value !== "select")
                             {
                                 this.secondaryLayer = this.map.getLayer(value);
-                                this.map.secondaryLayer = value;
-                                if ((!this.secondaryLayer.arcgisProps || ((this.secondaryLayer.arcgisProps.title).substr(this.secondaryLayer.arcgisProps.title.length - 2)) !== "__") && (!this.secondaryLayer.title || ((this.secondaryLayer.title).substr(this.secondaryLayer.title.length - 2)) !== "__"))
-                                    this.map.reorderLayer(this.secondaryLayer, this.secondaryIndex);
-                                else
-                                    this.map.reorderLayer(this.secondaryLayer, this.resultIndex);
-                                this.secondaryLayer.show();
-
+                                if (this.primaryLayer && value === this.primaryLayer.id) {
+                                    document.getElementById("layersErrorDiv").innerHTML = this.i18n.layerError;
+                                    setTimeout(function () {
+                                        document.getElementById("layersErrorDiv").innerHTML = "";
+                                    }, 5000);
+                                    registry.byId("secondary").set("value", "select");
+                                } else {
+                                    this.map.secondaryLayer = value;
+                                    if ((!this.secondaryLayer.arcgisProps || ((this.secondaryLayer.arcgisProps.title).substr(this.secondaryLayer.arcgisProps.title.length - 2)) !== "__") && (!this.secondaryLayer.title || ((this.secondaryLayer.title).substr(this.secondaryLayer.title.length - 2)) !== "__"))
+                                        this.map.reorderLayer(this.secondaryLayer, this.secondaryIndex);
+                                    else
+                                        this.map.reorderLayer(this.secondaryLayer, this.resultIndex);
+                                    this.secondaryLayer.show();
+                                }
                             } else {
                                 this.secondaryLayer = null;
                                 this.map.secondaryLayer = false;
@@ -241,13 +250,15 @@ define([
                             title = mainLayers[i].title || mainLayers[i].layerObject.name || mainLayers[i].id;
                             if ((title && title.substr(title.length - 2) === "__") || (title && (title.charAt(title.length - 1)) === "_") || (mainLayers[i].layerObject && mainLayers[i].layerObject.serviceDataType && mainLayers[i].layerObject.serviceDataType.substr(0, 16) === "esriImageService") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISImageServiceLayer") || (mainLayers[i].layerType && mainLayers[i].layerType === "ArcGISTiledImageServiceLayer")) {
                                 skipLayer = false;
-                                this.map.getLayer(mainLayers[i].layerObject.id).hide();
-                                this.layerList1[k] = mainLayers[i].layerObject;
-                                this.layerList1[k].title = title;
-                                if (((this.layerList1[k].title).substr(this.layerList1[k].title.length - 2)) !== "__")
-                                    registry.byId("imageView").addOption({label: this.layerList1[k].title, value: mainLayers[i].id});
-                                registry.byId("secondary").addOption({label: this.layerList1[k].title, value: mainLayers[i].id});
-                                k++;
+                                if (mainLayers[i].layerObject) {
+                                    this.map.getLayer(mainLayers[i].layerObject.id).hide();
+                                    this.layerList1[k] = mainLayers[i].layerObject;
+                                    this.layerList1[k].title = title;
+                                    if (((this.layerList1[k].title).substr(this.layerList1[k].title.length - 2)) !== "__")
+                                        registry.byId("imageView").addOption({label: this.layerList1[k].title, value: mainLayers[i].id});
+                                    registry.byId("secondary").addOption({label: this.layerList1[k].title, value: mainLayers[i].id});
+                                    k++;
+                                }
                             }
                         }
 
@@ -456,7 +467,8 @@ define([
                                 break;
                             }
                         }
-                        this.createSecondary(primaryLayer, primaryLayerPosition);
+                        if (this.primaryLayer.type === "ArcGISImageServiceLayer" || (this.primaryLayer.serviceDataType && this.primaryLayer.serviceDataType.substr(0, 16) === "esriImageService"))
+                            this.createSecondary(primaryLayer, primaryLayerPosition);
                     }
                 },
                 createSecondary: function (layer, previousSecondaryLayerIndex) {
@@ -509,7 +521,9 @@ define([
                             layerExists = false;
                     }
                     registry.byId("imageView").set("value", (layerExists ? secondaryValue : "select"));
-                    registry.byId("secondary").set("value", primaryValue);
+                    setTimeout(function () {
+                        registry.byId("secondary").set("value", primaryValue);
+                    }, 500);
 
                 },
                 primaryVisibility: function () {

@@ -106,7 +106,6 @@ define([
                         document.getElementById("itemTags").style.width = "200px";
                         document.getElementById("itemDescription").style.width = "200px";
                         document.getElementById("itemDescription").style.height = "80px";
-                        document.getElementById("toolsContentContainer").style.left = "85px";
                         document.getElementById("itemTitle").style.height = "40px";
                         document.getElementById("itemTags").style.height = "40px";
                         document.getElementById("pixelSize").style.width = "100px";

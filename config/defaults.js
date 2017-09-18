@@ -33,7 +33,6 @@ define({
     "title": "Image Interpretation",
     "description": "Configurable App containing imagery tools.",
     "background": "#000",
-    "backgroundOpacity": "0.9",
     "color": "#fff",
     "basemapFlag": false,
     "includelayeropacity": false,

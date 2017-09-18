@@ -400,7 +400,7 @@ g#mapDiv_graphics_layer path {
 .claro .dijitDialog {
     background: #fff;
     border: 0 none;
-    border-radius: 10px;
+    border-radius: 0px;
     -webkit-box-shadow: 0 -1px 1px rgba(0,0,0,0.15),0 3px 5px rgba(0,0,0,0.25);
     box-shadow: 0 -1px 1px rgba(0,0,0,0.15),0 3px 5px rgba(0,0,0,0.25);
 
@@ -728,28 +728,29 @@ g#mapDiv_graphics_layer path {
     background-color: transparent;
     border-bottom: 1px solid;
 }
-.toolContainers:focus{
+/*.toolContainers:focus{
     background-color:#008299;
-}
+}*/
 .toolContainers:hover{
     background-color:#008299;
 }
 .toolsContentContainer {
     top: 45px;
-    left:85px;
+    left:-384px;
     position: absolute;
-    width:0%;
+    width:400px;//0%;
     display: block;
     background-color: white;
 
-    z-index: 31;
-    border-radius: 5px;
-    opacity: 1;
+    z-index: 1;
+    //border-radius: 5px;
+    opacity: 0;
     visibility: hidden;
-    overflow:hidden;
-    white-space:nowrap;
+    overflow:auto;
+    // white-space:nowrap;
     max-height: 85%;
     overflow-y: auto;
+    transition:0.5s;
 }
 #toolsContentContainer .dijitDialogTitleBar {
     display:none;
@@ -763,60 +764,66 @@ g#mapDiv_graphics_layer path {
     line-height: 40px;
 }
 .toolsContentContainerClicked {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    width: 384px;
+    //  -webkit-transition: left 0.5s ease-in-out,visibility 0s 0.1s ease-in-out;
+    //   -moz-transition: left 0.5s ease-in-out,visibility 0s 0.1s ease-in-out;
+    //  -o-transition: left 0.5s ease-in-out,visibility 0s 0.1s ease-in-out;
+    //   transition: left 0.5s ease-in-out,visibility 0s 0.1s ease-in-out;
+    left: 85px;
+    width: 400px;
     visibility: visible;
     opacity: 1;
 
 }
 .toolsContentContainerClicked2 {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    left: 65px;
     width: 334px;
     visibility: visible;
     opacity: 1;
 
 }
 .toolsContentContainerClicked3 {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    left: 45px;  
     width: 31%;
     visibility: visible;
     opacity: 1;
 
 }
 .toolsContentContainerClicked4 {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //   transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    left: 35px; 
     width: 33%;
     visibility: visible;
     opacity: 1;
 
 }
 .toolsContentContainerClicked5 {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    left: 30px;  
     width: 34%;
     visibility: visible;
     opacity: 1;
 
 }
 .toolsContentContainerClicked6 {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -webkit-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    // -moz-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //  -o-transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    //   transition: width 1s ease-in-out,visibility 0s 0.1s ease-in-out,opacity 1s linear;
+    left: 25px;   
     width: 40%;
     visibility: visible;
     opacity: 1;
@@ -824,12 +831,12 @@ g#mapDiv_graphics_layer path {
 }
 
 .toolsContentContainerClosed {
-    -webkit-transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
-    -moz-transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
-    -o-transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
-    transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
-
-    width: 0%;
+    // -webkit-transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
+    // -moz-transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
+    // -o-transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
+    //  transition: width 1s ease-in-out,visibility 0s 1s, opacity 1s linear;
+    left:-400px;
+    // width: 0%;
     visibility: hidden;
     opacity: 0;
 
@@ -902,7 +909,19 @@ g#mapDiv_graphics_layer path {
     background-color:#008299;
 }
 #basemapDialog .dijitDialogPaneContent {
-    height: 90%;
+    height: calc(100% - 50px);
+}
+.closeContainerButton {
+    float: right;
+    display: inline;
+    background: transparent;
+    border: 0px solid transparent;
+    cursor:pointer;
+    height: 100%;
+    opacity: 0.8;
+}
+.closeContainerButton:hover {
+    opacity: 1;
 }
 .claro .dijitSelectHover {
     background-color: white;

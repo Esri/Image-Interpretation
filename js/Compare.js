@@ -50,7 +50,8 @@ define([
                 secondaryLayer: null,
                 layerSwipe: null,
                 layerList: null,
-                previousPrimary: null,
+                previousPrimary: {id: null, renderingRule: null, mosaicRule: null},
+                previousSecondary: {id: null, renderingRule: null, mosaicRule: null},
                 onOpen: function () {
                     this.refreshData();
                     if (this.map)
@@ -70,7 +71,8 @@ define([
                         this.layerSwipeHorizontal.destroy();
                         this.layerSwipeHorizontal = null;
                     }
-                    this.previousPrimary = null;
+                    this.previousPrimary = {id: null, renderingRule: null, mosaicRule: null};
+                    this.previousSecondary = {id: null, renderingRule: null, mosaicRule: null};
                     this.map.onUpdateEnd();
                 },
                 refreshData: function () {
@@ -134,7 +136,7 @@ define([
 
                         }
                         if (this.secondaryLayer)
-                            var secTitle = (this.secondaryLayer.arcgisProps && this.secondaryLayer.arcgisProps.title) ? this.secondaryLayer.arcgisProps.title : (this.secondaryLayer.title || this.secondaryLayer.name || this.secondaryLayer.id);
+                            var secTitle = this.secondaryLayer.title ? this.secondaryLayer.title : (this.secondaryLayer.arcgisProps && this.secondaryLayer.arcgisProps.title) ? this.secondaryLayer.arcgisProps.title : (this.secondaryLayer.name || this.secondaryLayer.id);
                         else
                             var secTitle = "Basemap";
 
@@ -153,38 +155,35 @@ define([
                         } else
                             html.set(document.getElementById("resultLayerDescription"), "");
 
-                        if (priTitle === secTitle && priTitle === "Basemap") {
-                            html.set(document.getElementById("compareLayerDescription"), "");
-                        } else if (priTitle === secTitle && this.primaryLayer.id === this.secondaryLayer.id) {
-                            html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + priTitle + "</b><br/>  VS     <b>Basemap</b><br>");
-                        } else {
-                            if (priTitle !== "Basemap")
-                                html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + priTitle + "</b><br/>  VS     <b>" + secTitle + "</b><br>");
-                            else
-                                html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + secTitle + "</b><br/>  VS     <b>" + priTitle + "</b><br>");
-                        }
+
 
                         if (!this.primaryLayer && !this.secondaryLayer && !this.resultLayer)
                             html.set(document.getElementById("noLayerNotification"), this.i18n.error);
-                        else
-                            html.set(document.getElementById("noLayerNotification"), "");
-                        if (this.primaryLayer) {
 
-                            if (this.previousPrimary !== this.primaryLayer || !this.layerSwipe) {
+                        if (this.primaryLayer) {
+                            if (this.previousPrimary.id !== this.primaryLayer.id || (this.primaryLayer.serviceDataType && this.primaryLayer.serviceDataType.substr(0, 16) === "esriImageService" && (this.previousPrimary.renderingRule !== this.primaryLayer.renderingRule || this.previousPrimary.mosaicRule !== this.primaryLayer.mosaicRule)) || !this.layerSwipe) {
+
                                 this.invert = true;
-                                this.setSwipe();
+                                this.setSwipe(priTitle, secTitle);
+                            } else if (this.secondaryLayer && (this.previousSecondary.id !== this.secondaryLayer.id || (this.secondaryLayer.serviceDataType && this.secondaryLayer.serviceDataType.substr(0, 16) === "esriImageService" && (this.previousSecondary.renderingRule !== this.secondaryLayer.renderingRule || this.previousSecondary.mosaicRule !== this.secondaryLayer.mosaicRule)))) {
+
+                                this.invert = true;
+                                this.setSwipe(priTitle, secTitle);
                             }
                         } else if (this.secondaryLayer) {
-                            if (this.previousPrimary !== this.primaryLayer || !this.layerSwipe) {
+                            if (this.previousPrimary.id !== this.primaryLayer || (this.previousSecondary.id !== this.secondaryLayer.id || (this.secondaryLayer.serviceDataType && this.secondaryLayer.serviceDataType.substr(0, 16) === "esriImageService" && (this.previousSecondary.renderingRule !== this.secondaryLayer.renderingRule || this.previousSecondary.mosaicRule !== this.secondaryLayer.mosaicRule))) || !this.layerSwipe) {
+
                                 this.invert = false;
-                                this.setSwipe();
+                                this.setSwipe(priTitle, secTitle);
                             }
                         } else if (this.layerSwipe) {
+                            html.set(document.getElementById("compareLayerDescription"), "");
                             this.layerSwipe.destroy();
                             this.layerSwipe = null;
                             this.map.onUpdateEnd();
                         }
                     }
+
                 },
                 postCreate: function () {
                     registry.byId("resultOpacity").on("change", lang.hitch(this, this.changePrimaryOpacity));
@@ -193,14 +192,26 @@ define([
                     if (this.resultLayer)
                         this.resultLayer.setOpacity(1 - value);
                 },
-                setSwipe: function () {
+                setSwipe: function (priTitle, secTitle) {
                     if (document.getElementById("swipewidget") && this.layerSwipe)
                         this.layerSwipe.destroy();
-
+                    html.set(document.getElementById("noLayerNotification"), "");
                     domConstruct.place("<div id='swipewidget'></div>", "mapDiv_root", "first");
                     var layers = [];
+                    if (priTitle === secTitle && priTitle === "Basemap") {
+                        html.set(document.getElementById("compareLayerDescription"), "");
+                    } else if (priTitle === secTitle && this.primaryLayer.id === this.secondaryLayer.id) {
+                        html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + priTitle + "</b><br/>  VS     <b>Basemap</b><br>");
+                    } else if (priTitle === secTitle) {
+                        html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + priTitle + "</b><br/>  VS     <b>Basemap</b><br>");
+                    } else {
+                        if (priTitle !== "Basemap")
+                            html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + priTitle + "</b><br/>  VS     <b>" + secTitle + "</b><br>");
+                        else
+                            html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + secTitle + "</b><br/>  VS     <b>" + priTitle + "</b><br>");
+                    }
+                    if (this.secondaryLayer && this.primaryLayer && (!this.primaryLayer.serviceDataType || !this.secondaryLayer.serviceDataType || this.primaryLayer.serviceDataType.substr(0, 16) !== "esriImageService" || this.secondaryLayer.serviceDataType.substr(0, 16) !== "esriImageService" || ((this.secondaryLayer.renderingRule !== this.primaryLayer.renderingRule) || this.secondaryLayer.mosaicRule !== this.primaryLayer.mosaicRule))) {
 
-                    if (this.secondaryLayer && this.primaryLayer && (JSON.stringify(this.secondaryLayer.renderingRule) !== JSON.stringify(this.primaryLayer.renderingRule) || JSON.stringify(this.secondaryLayer.mosaicRule) !== JSON.stringify(this.primaryLayer.mosaicRule))) {
                         for (var a in this.map.layerIds) {
                             if (this.map.layerIds[a] === this.primaryLayer.id)
                             {
@@ -227,9 +238,10 @@ define([
                     } else
                     {
                         if (this.primaryLayer && this.secondaryLayer && this.secondaryLayer.id !== this.primaryLayer.id) {
+                            document.getElementById("noLayerNotification").innerHTML = "<br />" + this.i18n.identicalLayerError;
                             layers.push(this.primaryLayer);
                             layers.push(this.secondaryLayer);
-                            var priTitle = (this.primaryLayer.arcgisProps && this.primaryLayer.arcgisProps.title) ? this.primaryLayer.arcgisProps.title : (this.primaryLayer.title || this.primaryLayer.name || this.primaryLayer.id);
+                            var priTitle = this.primaryLayer.title ? this.primaryLayer.title : (this.primaryLayer.arcgisProps && this.primaryLayer.arcgisProps.title) ? this.primaryLayer.arcgisProps.title : (this.primaryLayer.name || this.primaryLayer.id);
                             html.set(document.getElementById("compareLayerDescription"), this.i18n.vSwipe + ":<br/><b>" + priTitle + "</b><br/>  VS     <b>Basemap</b><br>");
                         } else if (this.primaryLayer)
                             layers.push(this.primaryLayer);
@@ -249,7 +261,8 @@ define([
                         this.layerSwipe.startup();
                     }
 
-                    this.previousPrimary = this.primaryLayer;
+                    this.previousPrimary = this.primaryLayer ? {id: (this.primaryLayer.id || null), renderingRule: (this.primaryLayer.renderingRule || null), mosaicRule: (this.primaryLayer.mosaicRule || null)} : {id: null, renderingRule: null, mosaicRule: null};
+                    this.previousSecondary = this.secondaryLayer ? {id: (this.secondaryLayer.id || null), renderingRule: (this.secondaryLayer.renderingRule || null), mosaicRule: (this.secondaryLayer.mosaicRule || null)} : {id: null, renderingRule: null, mosaicRule: null};
                     this.map.onUpdateEnd();
 
                 },
