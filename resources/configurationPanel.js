@@ -177,7 +177,7 @@
         "fields":[
         {
         "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Select and configure the tools users will be able to access to visualize imagery layers in the app.<br/><br>If the Layer Selector tool is enabled, users will be able to change the active and comparison layers in the app using two dropdown menus that list all the imagery layers from the associated web map.</p>"
+                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Select and configure the tools users will be able to access to visualize imagery layers in the app. All imagery tools interact with the active imagery layer. Additionally, the Compare and Change Detection tools require that two layers be set, an active layer and a comparison layer. This is accomplished using the Image Selector tool. <br/><br>If the Layer Selector tool is enabled, users will be able to change the active and comparison layers in the app using two dropdown menus that list all the imagery layers from the associated web map.</p>"
         },
         {
         "type":"conditional",
@@ -216,7 +216,7 @@
         },
         {
         "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Renderer tool allows the user to set service functions and stretch on the active layer in the app. In the app, a dropdown menu will be automatically populated with any service functions associated with the active layer.</p>"
+                "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Renderer tool allows the user to set service functions and stretch on the active layer in the app. In the app, a dropdown menu will be automatically populated with any service functions associated with the active layer in the associated web map.</p>"
         },
         {
         "type":"boolean",
@@ -226,7 +226,7 @@
         },
         {
         "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Compare tool enables a vertical swipe to compare the active layer with the comparison layer. If a Results layer is present (after performing change detection in the app, for example), you can choose whether a transparency slider or a horizontal swipe will be available to compare the results with those layers, as well.</p>"
+                "value":"<p style='text-align:justify;font-family: verdana;margin:20px 0px 0px 0px;'>The Compare tool enables a vertical swipe to compare the active layer with the comparison layer. (Note: If no comparison layer is selected, or the comparison image is the same as the active image, the vertical swipe will compare the active layer with the basemap.) If a Results layer is present (after performing change detection in the app, for example), you can also compare the active and comparison layers with the Results layer using either transparency or a horizontal swipe. </p>"
         },
         {
         "type":"conditional",
@@ -237,7 +237,7 @@
                 "items":[
                 {
                 "type":"paragraph",
-                        "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>Choose the tools you wish to use to compare the active layer with results and comparison layers, respectively</p>"
+                        "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Compare tool will always use a vertical swipe to compare the active layer with the comparison layer. Use the dropdown menu below to choose whether a horizontal swipe or a transparency slider will be used to compare a Results layer (if present) with the imagery layers.</p>"
                 },
                 {
                 "type":"options",
@@ -299,7 +299,7 @@
         "fields":[
         {
         "type":"paragraph",
-                "value":"<p style='text-align: justify;font-family: verdana;'>The Image Selector Tool allows users to filter and set specific images as the active and comparison layers. In the app, the tool will display all the rasters from the active imagery layer that intersect with the current area of interest (AOI) on a slider, as a dropdown list, or both.<br><br><br/>When configuring the tool, choose the following:<br><br>(1) A display option,<br>(2) The minimum zoom level at which the tool will be available. At low zoom levels, no filtering is applied.<br>(3) The Search Screen Extent (%). If a small value is chosen, searches will return imagery only from the central part of the screen.<br>(4) Whether to activate Enable AutoRefresh. If the viewing extent changes, Enable AutoRefresh will update the display list and find similar images for the new extent.</p>"
+                "value":"<p style='text-align: justify;font-family: verdana;'>The Image Selector Tool allows users to filter and set specific images as the active and comparison layers. In the app, the tool will display all the rasters from the active imagery layer that intersect with the current screen extent on a slider, as a dropdown list, or both.<br><br><br/>When configuring the tool, choose the following:<br><br>(1) A display option. Use a slider, a dropdown list, or both to choose specific images.<br>(2) The minimum zoom level at which the tool will be available. At low zoom levels, no filtering is applied.<br>(3) The Search Screen Extent (%). If a small value is chosen, searches will return imagery only from the central part of the screen.<br>(4) Whether to activate Enable AutoRefresh. If the viewing extent changes, Enable AutoRefresh will update the display list and find similar images for the new extent.<br>(5) Whether or not to show distinct values on the slider or dropdown menu. If this is checked on, unique values will appear only once, and all images matching that value will be displayed when selected (for example, all images with the same acquisition date). If checked off, a distinct entry for each image in the extent will appear. </p>"
         },
         {
         "type":"conditional",
@@ -359,12 +359,12 @@
                 {
                 "type":"boolean",
                         "fieldName":"distinctImages",
-                        "label":"Show distinct values on slider or in a dropDown",
-                        "toottip":"If turned on, slider or dropdown will merge all the images together with same attribute value."
+                        "label":"Show distinct values on slider or in a dropdown",
+                        "tooltip":"If turned on, slider or dropdown will merge all the images together with same attribute value."
                 },
                 {
                 "type":"paragraph",
-                        "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px -10px; 0px;'>Check the box by each imagery layer you wish to be searchable, then select one attribute per imagery layer by which to sort the images (for example, you might select AcquisitionDate to sort satellite imagery chronologically).</p>"
+                        "value":"<p style='text-align: justify;font-family: verdana;margin:20px 0px -10px; 0px;'>Below, check the box next to each imagery layer you wish to be searchable, then select one attribute per imagery layer by which to sort the images (for example, you might select AcquisitionDate to sort satellite imagery chronologically).</p>"
                 },
                 {
                 "type":"multilayerandfieldselector",
@@ -459,7 +459,7 @@
                 "items":[
                 {
                 "type":"paragraph",
-                        "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Select which change detection options you wish to be available to app users.</p>"
+                        "value":"<p style='text-align: justify;font-family: verdana;margin-bottom:0px;'>Select which change detection options you wish to be available to app users. Before performing the change detection, the Difference option converts both imagery layers into grayscale, while the rest of the options calculate indexes for both imagery layers. Index options include Vegetation Index (Normalized Difference Vegetation Index), Soil Adjusted Vegetation Index, Water Index (Normalized Difference Water Index), and Burn Index (Normalized Burn Ratio). </p>"
                 },
                 {
                 "type":"boolean",
@@ -649,7 +649,7 @@
         "fields":[
         {
         "type":"paragraph",
-                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Editor tool allows users to edit feature layers (to pinpoint locations, delineate boundaries, or add additional notes, among other uses).<br><br><br>Enable the Editor tool and select the feature layers that users will be able to edit in-app. This tool requires editable feature layers in the app's web map.</p>"
+                "value":"<p style='text-align:justify;font-family: verdana;margin-bottom:0px;'>The Editor tool allows users to edit feature layers (to pinpoint locations, delineate boundaries, or add additional notes, among other uses).<br><br><br>Enable the Editor tool and select the feature layers that users will be able to edit in-app. This tool requires editable hosted feature layers in the app's web map.</p>"
         },
         {
         "type":"conditional",
@@ -658,10 +658,10 @@
                 "label":"Enable Edit Tool",
                 "items":[
                 {
-                "label":"Turn on the layers to allow editing.<br />Select the date field for the selected editable layers.(optional)",
+                "label":"Turn on the layers to allow editing.<br />For each editable feature layer, select the feature layer field in which to record the date from the active image. (optional)",
                         "fieldName":"featureLayers",
                         "type":"multilayerandfieldselector",
-                        "tooltip":"Select the editable layers from the list.",
+                        "tooltip":"Select the feature layer field in which to record the date from the active image.",
                         "layerOptions":{
                         "supportedTypes":[
                                 "FeatureLayer"
@@ -674,10 +674,10 @@
                         }
                 },
                 {
-                "label":"Select the height field for above selected editable layers. (optional)",
+                "label":"For each editable feature layer, select the feature layer field in which to record the height from the active image. (optional)",
                         "fieldName":"featureLayersHeightField",
                         "type":"multilayerandfieldselector",
-                        "tooltip":"Select the height field for above selected editable layers.",
+                        "tooltip":"Select the feature layer field in which to record the height from the active image.",
                         "layerOptions":{
                         "supportedTypes":[
                                 "FeatureLayer"
