@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ก้_Unable to create map_______ษฺ"
+    "error": "ไม่สามารถสร้างแผนที่ได้"
   },
   "nav": {
-    "close": "ก้_Close___ษฺ"
+    "close": "ปิด"
   },
   "basemap": {
-    "title": "ก้_Basemap Gallery______ษฺ"
+    "title": "แกลเลอรี่แผนที่ฐาน"
   },
   "operationalLayers": {
-    "title": "ก้_Operational Layers______ษฺ",
-    "error": "ก้_No operational layers in the map___________ษฺ."
+    "title": "ชั้นข้อมูลกระบวนการทำงาน",
+    "error": "ไม่มีเลเยอร์การดำเนินงานในแผนที่"
   },
   "layerSelector": {
-    "active": "ก้_Active Layer_____ษฺ",
-    "comparison": "ก้_Comparison Layer______ษฺ",
-    "other": "ก้_Other___ษฺ",
-    "result": "ก้_Result___ษฺ",
-    "title": "ก้_Layer Selector_____ษฺ",
-    "resultSave": "ก้_Add the Result layer in the comparison layer list________________ษฺ",
-    "copy": "ก้_Copy active layer to comparison layer____________ษฺ.",
-    "swap": "ก้_Swap active and comparison layer___________ษฺ."
+    "active": "เลเยอร์ที่ทำงานอยู่",
+    "comparison": "เลเยอร์เปรียบเทียบ",
+    "other": "อื่นๆ",
+    "result": "ผลลัพธ์",
+    "title": "ตัวเลือกเลเยอร์",
+    "resultSave": "เพิ่มเลเยอร์ผลลัพธ์ในรายการเลเยอร์เปรียบเทียบ",
+    "copy": "คัดลอกเลเยอร์ที่ใช้งานเป็นเลเยอร์เปรียบเทียบ",
+    "swap": "สลับเลเยอร์ที่ใช้งาน และเลเยอร์เปรียบเทียบ"
   },
   "renderer": {
-    "title": "ก้_Renderer___ษฺ",
-    "stretch": "ก้_Stretch Parameters______ษฺ",
-    "stretchType": "ก้_Stretch Type_____ษฺ",
-    "dra": "ก้_DRA__ษฺ",
-    "draText": "ก้_Dynamic Range Adjustment updates enhancement based on current view_____________________ษฺ",
-    "gamma": "ก้_Gamma___ษฺ",
-    "apply": "ก้_Apply___ษฺ",
-    "top": "ก้_Exclude top____ษฺ",
-    "bottom": "ก้_Exclude bottom_____ษฺ",
-    "topText": " ก้_Exclude top x percentage of histogram____________ษฺ",
-    "bottomText": " ก้_Exclude bottom x percentage of histogram_____________ษฺ",
-    "stdDev": "ก้_# of Std. Dev_____ษฺ",
-    "layer": "ก้_Current Layer_____ษฺ",
-    "error": "ก้_No visible Imagery Layers in the map____________ษฺ."
+    "title": "แสดง",
+    "stretch": "Stretch พารามิเตอร์",
+    "stretchType": "ประเภท Stretch",
+    "dra": "ดีอาร์เอ",
+    "draText": "การปรับช่วงไดนามิก อัปเดตตามมุมมองปัจจุบัน",
+    "gamma": "แกรมม่า",
+    "apply": "ใช้",
+    "top": "ยกเว้นด้านบน",
+    "bottom": "ยกเว้นด้านล่าง",
+    "topText": " ยกเว้นด้านบน x เปอร์เซ็นต์ของฮิสโทแกรม",
+    "bottomText": " ยกเว้นด้านล่าง x เปอร์เซ็นต์ของฮิสโทแกรม",
+    "stdDev": "# of Std. Dev",
+    "layer": "เลเยอร์ปัจจุบัน",
+    "error": "ไม่มีเลเยอร์ภาพที่มองเห็นได้ในแผนที่"
   },
   "imageSelector": {
-    "title": "ก้_Image Selector_____ษฺ",
-    "enable": "ก้_Enable Image Selector_______ษฺ",
-    "secondary": "ก้_Set Active as Comparison Layer__________ษฺ.",
-    "dropDown": "ก้_Show images in drop down list__________ษฺ.",
-    "refresh": "ก้_Refresh query based on current extent____________ษฺ.",
-    "show": "ก้_Show__ษฺ",
-    "age": "ก้_Age__ษฺ",
-    "zoom": "ก้_Zoom in to select images_________ษฺ.",
-    "error": "ก้_No visible Imagery Layers in the map____________ษฺ.",
-    "error1": "ก้_Field is not specified________ษฺ.",
-    "error2": "ก้_No OBJECTID field______ษฺ.",
-    "error3": "ก้_No Category field______ษฺ.",
-    "error4": "ก้_Cannot perform action for layer___________ษฺ.",
-    "error5": "ก้_Services pre 10.2.1 not supported___________ษฺ.",
-    "error6": "ก้_No scenes in current extent_________ษฺ.",
-    "error7": "ก้_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ษฺ.",
-    "slider": "ก้_Show images on slider________ษฺ."
+    "title": "ตัวเลือกรูปภาพ",
+    "enable": "เปิดใช้งานตัวเลือกรูปภาพ",
+    "secondary": "ตั้งค่าใช้งานเป็นเลเยอร์เปรียบเทียบ",
+    "dropDown": "แสดงรูปภาพในรายการตัวเลือก",
+    "refresh": "รีเฟรชข้อความค้นหาตามขอบเขตปัจจุบัน",
+    "show": "แสดง",
+    "age": "อายุ",
+    "zoom": "ขยายไปยังภาพที่เลือก",
+    "error": "ไม่มีเลเยอร์ภาพที่มองเห็นได้ในแผนที่",
+    "error1": "ฟิลด์ไม่ได้ถูกระบุ",
+    "error2": "ไม่มีฟิลด์ OBJECTID",
+    "error3": "ไม่มีฟิลด์ Category",
+    "error4": "ไม่สามารถดำเนินการกับเลเยอร์ได้",
+    "error5": "พรีเซอร์วิส 10.2.1 ไม่สนับสนุน",
+    "error6": "ไม่มีซีนในขอบเขตปัจจุบัน",
+    "error7": "จำนวนทางเดินเท้าที่เลือกเกินกว่า 20 ตัว จะแสดงเฉพาะ 20 ตัวแรกเท่านั้น กดตกลงเพื่อไม่ให้เตือนอีกครั้ง",
+    "slider": "แสดงภาพบนแถบเลื่อน"
   },
   "changeDetection": {
-    "title": "ก้_Change Detection______ษฺ",
-    "mode": "ก้_Mode__ษฺ",
-    "method": "ก้_Method___ษฺ",
-    "positive": "ก้_Positive Difference_______ษฺ",
-    "negative": "ก้_Negative Difference_______ษฺ",
-    "threshold": "ก้_Threshold____ษฺ",
-    "difference": "ก้_Difference____ษฺ",
-    "apply": "ก้_Apply___ษฺ",
-    "error": "ก้_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ษฺ."
+    "title": "เปลี่ยนการตรวจจับ",
+    "mode": "โหมด",
+    "method": "วิธีการ",
+    "positive": "ความแตกต่างในเชิงบวก",
+    "negative": "ความแตกต่างในเชิงลบ",
+    "threshold": "การเริ่มต้น",
+    "difference": "แตกต่าง",
+    "apply": "ใช้",
+    "error": "การตรวจจับการเปลี่ยนแปลงการทำงานร่วมกับภาพสองภาพ จากวันที่ต่างกันด้วยเซอร์วิสเดียวกัน.<br />ขั้นตอนแรกใช้ Image Selector เพื่อระบุภาพแรก,<br />จากนั้นคลิกบน <img src='images/down.png' height='14'/> ปุ่ม และเลือกภาพที่สอง.<br />กลับไปที่ตัวควบคุมนี้เพื่อดำเนินการตรวจหาการเปลี่ยนแปลง"
   },
   "editor": {
-    "title": "ก้_Editor___ษฺ",
-    "error": "ก้_No Edit Layer selected________ษฺ.",
-    "error1": "ก้_Access denied. Layers cannot be edited_____________ษฺ."
+    "title": "เครื่องมือแก้ไข",
+    "error": "ไม่ได้เลือกเลเยอร์การแก้ไข",
+    "error1": "ปฏิเสธการเข้าใช้. ไม่สามารถแก้ไขเลเยอร์ได้"
   },
   "measurement": {
-    "title": "ก้_Image Measurement______ษฺ",
-    "error": "ก้_Mensuration Capabilities not supported_____________ษฺ."
+    "title": "การวัดภาพ",
+    "error": "ไม่รองรับความสามารถในการดูแลรักษา"
   },
   "export": {
-    "title": "ก้_Export___ษฺ",
-    "mode": "ก้_Mode__ษฺ",
-    "titleText": "ก้_Title___ษฺ",
-    "description": "ก้_Description____ษฺ",
-    "tags": "ก้_Tags__ษฺ",
-    "submit": "ก้_Submit___ษฺ",
-    "pixel": "ก้_Pixel Size____ษฺ",
-    "outsr": "ก้_Output Spatial Reference________ษฺ",
-    "renderer": "ก้_Current Renderer______ษฺ",
-    "extent": "ก้_Define Extent_____ษฺ",
-    "text": "ก้_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ษฺ.",
-    "error": "ก้_No visible imagery layers on the map____________ษฺ.",
-    "error1": "ก้_Title is required______ษฺ.",
-    "error2": "ก้_Tag(s) is required_______ษฺ."
+    "title": "ส่งออก",
+    "mode": "โหมด",
+    "titleText": "ชื่อ",
+    "description": "คำอธิบาย",
+    "tags": "แท็ก",
+    "submit": "ส่ง",
+    "pixel": "ขนาดพิกเซล",
+    "outsr": "ผลลัพธ์การอ้างอิงเชิงพื้นที่",
+    "renderer": "เครื่องแสดงผลปัจจุบัน",
+    "extent": "กำหนดขอบเขต",
+    "text": "หากเครื่องแสดงผลปัจจุบันมีการตรวจสอบ การแสดงผล<br /> ถูกส่องออก , ค่าข้อมูลเดิม<br/>จะถูกส่งออก",
+    "error": "ไม่มีเลเยอร์ภาพที่มองเห็นได้ในแผนที่",
+    "error1": "ต้องระบุชื่อ",
+    "error2": "ต้องระบุแท็ก"
   },
   "compare": {
-    "title": "ก้_Compare___ษฺ",
-    "slider": "ก้_Transparency Slider_______ษฺ",
-    "hSwipe": "ก้_Horizontal Swipe______ษฺ",
-    "vSwipe": "ก้_Vertical Swipe_____ษฺ",
-    "error": "ก้_No visible Imagery Layers available for comparison________________ษฺ."
+    "title": "เปรียบเทียบ",
+    "slider": "ตัวเลื่อนโปร่งแสง",
+    "hSwipe": "การเลื่อนกวาดในแนวนอน",
+    "vSwipe": "การเลื่อนกวาดในแนวตั้ง",
+    "error": "ไม่มีเลเยอร์ภาพที่สามารถมองเห็นได้สำหรับการเปรียบเทียบ"
   }
 });

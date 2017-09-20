@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "å_Unable to create map_______ø"
+    "error": "Kan ikke opprette kart"
   },
   "nav": {
-    "close": "å_Close___ø"
+    "close": "Ja"
   },
   "basemap": {
-    "title": "å_Basemap Gallery______ø"
+    "title": "Bakgrunnskartgalleri"
   },
   "operationalLayers": {
-    "title": "å_Operational Layers______ø",
-    "error": "å_No operational layers in the map___________ø."
+    "title": "Operative kartlag",
+    "error": "Ingen operative lag i kartet."
   },
   "layerSelector": {
-    "active": "å_Active Layer_____ø",
-    "comparison": "å_Comparison Layer______ø",
-    "other": "å_Other___ø",
-    "result": "å_Result___ø",
-    "title": "å_Layer Selector_____ø",
-    "resultSave": "å_Add the Result layer in the comparison layer list________________ø",
-    "copy": "å_Copy active layer to comparison layer____________ø.",
-    "swap": "å_Swap active and comparison layer___________ø."
+    "active": "Aktivt lag",
+    "comparison": "Sammenligningslag",
+    "other": "Annet",
+    "result": "Resultat",
+    "title": "Lagvelger",
+    "resultSave": "Legg til resultatlaget i sammenligningslagslisten",
+    "copy": "Kopier aktivt lag til sammenligningslaget.",
+    "swap": "Bytt aktivt lag og sammenligningslag."
   },
   "renderer": {
-    "title": "å_Renderer___ø",
-    "stretch": "å_Stretch Parameters______ø",
-    "stretchType": "å_Stretch Type_____ø",
-    "dra": "å_DRA__ø",
-    "draText": "å_Dynamic Range Adjustment updates enhancement based on current view_____________________ø",
-    "gamma": "å_Gamma___ø",
-    "apply": "å_Apply___ø",
-    "top": "å_Exclude top____ø",
-    "bottom": "å_Exclude bottom_____ø",
-    "topText": " å_Exclude top x percentage of histogram____________ø",
-    "bottomText": " å_Exclude bottom x percentage of histogram_____________ø",
-    "stdDev": "å_# of Std. Dev_____ø",
-    "layer": "å_Current Layer_____ø",
-    "error": "å_No visible Imagery Layers in the map____________ø."
+    "title": "Opptegning",
+    "stretch": "Strekkparametere:",
+    "stretchType": "Strekktype",
+    "dra": "DRA",
+    "draText": "Dynamic Range Adjustment oppdateres på bakgrunn av nåværende visning",
+    "gamma": "Gamma",
+    "apply": "Bruk",
+    "top": "Utelat topp",
+    "bottom": "Utelat bunn",
+    "topText": " Utelat topp x prosentandel av histogram",
+    "bottomText": " Utelat bunn x prosentandel av histogram",
+    "stdDev": "# av standardavvik",
+    "layer": "Gjeldende lag",
+    "error": "Ingen synlige bildelag i kartet."
   },
   "imageSelector": {
-    "title": "å_Image Selector_____ø",
-    "enable": "å_Enable Image Selector_______ø",
-    "secondary": "å_Set Active as Comparison Layer__________ø.",
-    "dropDown": "å_Show images in drop down list__________ø.",
-    "refresh": "å_Refresh query based on current extent____________ø.",
-    "show": "å_Show__ø",
-    "age": "å_Age__ø",
-    "zoom": "å_Zoom in to select images_________ø.",
-    "error": "å_No visible Imagery Layers in the map____________ø.",
-    "error1": "å_Field is not specified________ø.",
-    "error2": "å_No OBJECTID field______ø.",
-    "error3": "å_No Category field______ø.",
-    "error4": "å_Cannot perform action for layer___________ø.",
-    "error5": "å_Services pre 10.2.1 not supported___________ø.",
-    "error6": "å_No scenes in current extent_________ø.",
-    "error7": "å_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ø.",
-    "slider": "å_Show images on slider________ø."
+    "title": "Bildevelger",
+    "enable": "Aktiver bildevelger",
+    "secondary": "Sett aktivt lag som sammenligningslag.",
+    "dropDown": "Vis bilder i nedtrekksmenyen.",
+    "refresh": "Oppdater spørring på bakgrunn av nåværende utstrekning.",
+    "show": "Vis",
+    "age": "Alder",
+    "zoom": "Zoom inn for å velge bilder.",
+    "error": "Ingen synlige bildelag i kartet.",
+    "error1": "Feltet er ikke spesifisert.",
+    "error2": "Ingen OBJECTID-felt.",
+    "error3": "Ingen kategorifelt.",
+    "error4": "Kan ikke utføre handling for lag.",
+    "error5": "Tjenester før 10.2.1 støttes ikke.",
+    "error6": "Ingen scener i gjeldende utstrekning.",
+    "error7": "Antall valgte fotavtrykk overstiger 20. Bare de første 20 vises. Trykk på OK for ikke å advare igjen.",
+    "slider": "Vis bilder på skyveknappen."
   },
   "changeDetection": {
-    "title": "å_Change Detection______ø",
-    "mode": "å_Mode__ø",
-    "method": "å_Method___ø",
-    "positive": "å_Positive Difference_______ø",
-    "negative": "å_Negative Difference_______ø",
-    "threshold": "å_Threshold____ø",
-    "difference": "å_Difference____ø",
-    "apply": "å_Apply___ø",
-    "error": "å_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ø."
+    "title": "Endringdeteksjon",
+    "mode": "Modus",
+    "method": "Metode",
+    "positive": "Positiv differanse",
+    "negative": "Negativ differanse",
+    "threshold": "Terskel",
+    "difference": "Differanse",
+    "apply": "Bruk",
+    "error": "Endringsdeteksjon bruker to bilder fra forskjellige datoer fra samme tjeneste.<br />Først bruker du Bildevelger til å definere ett bilde,<br />deretter klikker du på knappen <img src='images/down.png' height='14'/> og velger det andre bildet.<br />Gå tilbake til denne kontrollen for å fortsette med endringdeteksjon."
   },
   "editor": {
-    "title": "å_Editor___ø",
-    "error": "å_No Edit Layer selected________ø.",
-    "error1": "å_Access denied. Layers cannot be edited_____________ø."
+    "title": "Redaktør",
+    "error": "Ingen redigeringslag valgt.",
+    "error1": "Tilgang avslått. Lagene kan ikke redigeres."
   },
   "measurement": {
-    "title": "å_Image Measurement______ø",
-    "error": "å_Mensuration Capabilities not supported_____________ø."
+    "title": "Bildemål",
+    "error": "Oppmålingsegenskaper støttes ikke."
   },
   "export": {
-    "title": "å_Export___ø",
-    "mode": "å_Mode__ø",
-    "titleText": "å_Title___ø",
-    "description": "å_Description____ø",
-    "tags": "å_Tags__ø",
-    "submit": "å_Submit___ø",
-    "pixel": "å_Pixel Size____ø",
-    "outsr": "å_Output Spatial Reference________ø",
-    "renderer": "å_Current Renderer______ø",
-    "extent": "å_Define Extent_____ø",
-    "text": "å_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ø.",
-    "error": "å_No visible imagery layers on the map____________ø.",
-    "error1": "å_Title is required______ø.",
-    "error2": "å_Tag(s) is required_______ø."
+    "title": "Eksporter",
+    "mode": "Modus",
+    "titleText": "Tittel",
+    "description": "Beskrivelse",
+    "tags": "Knagger",
+    "submit": "Send inn",
+    "pixel": "Pikselstørrelse",
+    "outsr": "Romlig referanse for utdata",
+    "renderer": "Gjeldende opptegning",
+    "extent": "Definere utstrekning",
+    "text": "Hvis Gjeldende opptegning er krysset av, blir opptegningen<br /> eksportert, ellers blir de originale dataverdiene<br/> eksportert.",
+    "error": "Ingen synlige bildelag på kartet.",
+    "error1": "Du må fylle ut tittel.",
+    "error2": "Merke(r) er påkrevd."
   },
   "compare": {
-    "title": "å_Compare___ø",
-    "slider": "å_Transparency Slider_______ø",
-    "hSwipe": "å_Horizontal Swipe______ø",
-    "vSwipe": "å_Vertical Swipe_____ø",
-    "error": "å_No visible Imagery Layers available for comparison________________ø."
+    "title": "Sammenligning",
+    "slider": "Glidebryter for gjennomsiktighet",
+    "hSwipe": "Horisontal sveiping",
+    "vSwipe": "Vertikal sveiping",
+    "error": "Ingen synlige bildelag tilgjengelige for sammenligning."
   }
 });

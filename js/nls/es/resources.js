@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "á_Unable to create map_______Ó"
+    "error": "No se puede crear el mapa"
   },
   "nav": {
-    "close": "á_Close___Ó"
+    "close": "Cerrar"
   },
   "basemap": {
-    "title": "á_Basemap Gallery______Ó"
+    "title": "Galería de mapas base"
   },
   "operationalLayers": {
-    "title": "á_Operational Layers______Ó",
-    "error": "á_No operational layers in the map___________Ó."
+    "title": "Capas operativas",
+    "error": "No hay capas operativas en el mapa."
   },
   "layerSelector": {
-    "active": "á_Active Layer_____Ó",
-    "comparison": "á_Comparison Layer______Ó",
-    "other": "á_Other___Ó",
-    "result": "á_Result___Ó",
-    "title": "á_Layer Selector_____Ó",
-    "resultSave": "á_Add the Result layer in the comparison layer list________________Ó",
-    "copy": "á_Copy active layer to comparison layer____________Ó.",
-    "swap": "á_Swap active and comparison layer___________Ó."
+    "active": "Capa activa",
+    "comparison": "Capa de comparación",
+    "other": "Otro",
+    "result": "Resultado",
+    "title": "Selector de capas",
+    "resultSave": "Agregar la capa Resultado a la lista de capas de comparación",
+    "copy": "Copiar la capa activa a la capa de comparación.",
+    "swap": "Intercambiar la capa activa y la capa de comparación."
   },
   "renderer": {
-    "title": "á_Renderer___Ó",
-    "stretch": "á_Stretch Parameters______Ó",
-    "stretchType": "á_Stretch Type_____Ó",
-    "dra": "á_DRA__Ó",
-    "draText": "á_Dynamic Range Adjustment updates enhancement based on current view_____________________Ó",
-    "gamma": "á_Gamma___Ó",
-    "apply": "á_Apply___Ó",
-    "top": "á_Exclude top____Ó",
-    "bottom": "á_Exclude bottom_____Ó",
-    "topText": " á_Exclude top x percentage of histogram____________Ó",
-    "bottomText": " á_Exclude bottom x percentage of histogram_____________Ó",
-    "stdDev": "á_# of Std. Dev_____Ó",
-    "layer": "á_Current Layer_____Ó",
-    "error": "á_No visible Imagery Layers in the map____________Ó."
+    "title": "Renderizador",
+    "stretch": "Parámetros de extensión",
+    "stretchType": "Tipo de extensión",
+    "dra": "DRA",
+    "draText": "Realce de las actualizaciones de Ajuste de rango dinámico en la vista actual",
+    "gamma": "Gamma",
+    "apply": "Aplicar",
+    "top": "Excluir superior",
+    "bottom": "Excluir inferior",
+    "topText": " Excluir el x por ciento superior del histograma",
+    "bottomText": " Excluir el x por ciento inferior del histograma",
+    "stdDev": "N.º de desv. est.",
+    "layer": "Capa actual",
+    "error": "Capas de imágenes no visibles en el mapa."
   },
   "imageSelector": {
-    "title": "á_Image Selector_____Ó",
-    "enable": "á_Enable Image Selector_______Ó",
-    "secondary": "á_Set Active as Comparison Layer__________Ó.",
-    "dropDown": "á_Show images in drop down list__________Ó.",
-    "refresh": "á_Refresh query based on current extent____________Ó.",
-    "show": "á_Show__Ó",
-    "age": "á_Age__Ó",
-    "zoom": "á_Zoom in to select images_________Ó.",
-    "error": "á_No visible Imagery Layers in the map____________Ó.",
-    "error1": "á_Field is not specified________Ó.",
-    "error2": "á_No OBJECTID field______Ó.",
-    "error3": "á_No Category field______Ó.",
-    "error4": "á_Cannot perform action for layer___________Ó.",
-    "error5": "á_Services pre 10.2.1 not supported___________Ó.",
-    "error6": "á_No scenes in current extent_________Ó.",
-    "error7": "á_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________Ó.",
-    "slider": "á_Show images on slider________Ó."
+    "title": "Selector de imágenes",
+    "enable": "Activar selector de imágenes",
+    "secondary": "Usar la activa como Capa de comparación.",
+    "dropDown": "Mostrar imágenes en la lista desplegable.",
+    "refresh": "Actualizar la consulta basándose en la extensión actual.",
+    "show": "Mostrar",
+    "age": "Edad",
+    "zoom": "Acercar para seleccionar imágenes.",
+    "error": "Capas de imágenes no visibles en el mapa.",
+    "error1": "Campo no especificado.",
+    "error2": "Sin campo OBJECTID.",
+    "error3": "Sin campo Categoría.",
+    "error4": "Imposible realizar una acción para la capa.",
+    "error5": "Servicios anteriores a 10.2.1 no compatibles.",
+    "error6": "Sin escenas en la extensión actual.",
+    "error7": "El número de huellas seleccionadas rebasa las 20. Solo se visualizarán las primeras 20. Pulse Aceptar para no volver a ver esta advertencia.",
+    "slider": "Mostrar imágenes en un control deslizante."
   },
   "changeDetection": {
-    "title": "á_Change Detection______Ó",
-    "mode": "á_Mode__Ó",
-    "method": "á_Method___Ó",
-    "positive": "á_Positive Difference_______Ó",
-    "negative": "á_Negative Difference_______Ó",
-    "threshold": "á_Threshold____Ó",
-    "difference": "á_Difference____Ó",
-    "apply": "á_Apply___Ó",
-    "error": "á_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________Ó."
+    "title": "Detección de cambio",
+    "mode": "Modo",
+    "method": "Método",
+    "positive": "Diferencia positiva",
+    "negative": "Diferencia negativa",
+    "threshold": "Umbral",
+    "difference": "Diferencia",
+    "apply": "Aplicar",
+    "error": "La Detección de cambios funciona con dos imágenes de distintas fechas y del mismo servicio.<br />Primero use el Selector de imágenes para definir una imagen,<br />luego haga clic en el botón <img src='images/down.png' height='14'/>y seleccione la segunda imagen.<br />Vuelva a este control para ejecutar la detección de cambio."
   },
   "editor": {
-    "title": "á_Editor___Ó",
-    "error": "á_No Edit Layer selected________Ó.",
-    "error1": "á_Access denied. Layers cannot be edited_____________Ó."
+    "title": "Editor",
+    "error": "No seleccionó ninguna capa de edición.",
+    "error1": "Acceso denegado. No es posible editar las capas."
   },
   "measurement": {
-    "title": "á_Image Measurement______Ó",
-    "error": "á_Mensuration Capabilities not supported_____________Ó."
+    "title": "Medición de imagen",
+    "error": "Funciones de medición no compatibles."
   },
   "export": {
-    "title": "á_Export___Ó",
-    "mode": "á_Mode__Ó",
-    "titleText": "á_Title___Ó",
-    "description": "á_Description____Ó",
-    "tags": "á_Tags__Ó",
-    "submit": "á_Submit___Ó",
-    "pixel": "á_Pixel Size____Ó",
-    "outsr": "á_Output Spatial Reference________Ó",
-    "renderer": "á_Current Renderer______Ó",
-    "extent": "á_Define Extent_____Ó",
-    "text": "á_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________Ó.",
-    "error": "á_No visible imagery layers on the map____________Ó.",
-    "error1": "á_Title is required______Ó.",
-    "error2": "á_Tag(s) is required_______Ó."
+    "title": "Exportar",
+    "mode": "Modo",
+    "titleText": "Título",
+    "description": "Descripción",
+    "tags": "Etiquetas",
+    "submit": "Enviar",
+    "pixel": "Tamaño de píxel",
+    "outsr": "Referencia espacial de salida",
+    "renderer": "Renderizador actual",
+    "extent": "Definir extensión",
+    "text": "Si Renderizador actual está activado, se exporta la representación en pantalla<br />; de lo contrario, se exportan los valores originales de los datos<br/>.",
+    "error": "No hay capas de imágenes visibles en el mapa.",
+    "error1": "Se requiere un título.",
+    "error2": "Se requieren una o varias etiquetas."
   },
   "compare": {
-    "title": "á_Compare___Ó",
-    "slider": "á_Transparency Slider_______Ó",
-    "hSwipe": "á_Horizontal Swipe______Ó",
-    "vSwipe": "á_Vertical Swipe_____Ó",
-    "error": "á_No visible Imagery Layers available for comparison________________Ó."
+    "title": "Comparar",
+    "slider": "Control deslizante de transparencia",
+    "hSwipe": "Barrido horizontal",
+    "vSwipe": "Barrido vertical",
+    "error": "No hay capas de imágenes visibles disponibles para su comparación."
   }
 });

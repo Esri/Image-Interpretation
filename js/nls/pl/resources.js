@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ł_Unable to create map_______ą"
+    "error": "Nie można utworzyć mapy"
   },
   "nav": {
-    "close": "ł_Close___ą"
+    "close": "Zamknij"
   },
   "basemap": {
-    "title": "ł_Basemap Gallery______ą"
+    "title": "Galeria map bazowych"
   },
   "operationalLayers": {
-    "title": "ł_Operational Layers______ą",
-    "error": "ł_No operational layers in the map___________ą."
+    "title": "Warstwy operacyjne",
+    "error": "Brak warstw operacyjnych na mapie."
   },
   "layerSelector": {
-    "active": "ł_Active Layer_____ą",
-    "comparison": "ł_Comparison Layer______ą",
-    "other": "ł_Other___ą",
-    "result": "ł_Result___ą",
-    "title": "ł_Layer Selector_____ą",
-    "resultSave": "ł_Add the Result layer in the comparison layer list________________ą",
-    "copy": "ł_Copy active layer to comparison layer____________ą.",
-    "swap": "ł_Swap active and comparison layer___________ą."
+    "active": "Aktywna warstwa",
+    "comparison": "Warstwa porównania",
+    "other": "Inne",
+    "result": "Wynik",
+    "title": "Selektor warstwy",
+    "resultSave": "Dodaj warstwę wynikową do listy warstw porównania",
+    "copy": "Skopiuj aktywną warstwę na warstwę porównania.",
+    "swap": "Zamień warstwy aktywną i porównania."
   },
   "renderer": {
-    "title": "ł_Renderer___ą",
-    "stretch": "ł_Stretch Parameters______ą",
-    "stretchType": "ł_Stretch Type_____ą",
-    "dra": "ł_DRA__ą",
-    "draText": "ł_Dynamic Range Adjustment updates enhancement based on current view_____________________ą",
-    "gamma": "ł_Gamma___ą",
-    "apply": "ł_Apply___ą",
-    "top": "ł_Exclude top____ą",
-    "bottom": "ł_Exclude bottom_____ą",
-    "topText": " ł_Exclude top x percentage of histogram____________ą",
-    "bottomText": " ł_Exclude bottom x percentage of histogram_____________ą",
-    "stdDev": "ł_# of Std. Dev_____ą",
-    "layer": "ł_Current Layer_____ą",
-    "error": "ł_No visible Imagery Layers in the map____________ą."
+    "title": "Moduł renderowania",
+    "stretch": "Parametry rozciągnięcia",
+    "stretchType": "Typ rozciągnięcia",
+    "dra": "DRA",
+    "draText": "Dynamiczna regulacja zakresu aktualizuje usprawnienia w oparciu o bieżący widok",
+    "gamma": "Gamma",
+    "apply": "Zastosuj",
+    "top": "Wyklucz górne",
+    "bottom": "Wyklucz dolne",
+    "topText": " Wyklucz górną wartość procentową x histogramu",
+    "bottomText": " Wyklucz dolną wartość procentową x histogramu",
+    "stdDev": "# odchylenia standardowego",
+    "layer": "Bieżąca warstwa",
+    "error": "Brak widocznych warstw zobrazowań na mapie."
   },
   "imageSelector": {
-    "title": "ł_Image Selector_____ą",
-    "enable": "ł_Enable Image Selector_______ą",
-    "secondary": "ł_Set Active as Comparison Layer__________ą.",
-    "dropDown": "ł_Show images in drop down list__________ą.",
-    "refresh": "ł_Refresh query based on current extent____________ą.",
-    "show": "ł_Show__ą",
-    "age": "ł_Age__ą",
-    "zoom": "ł_Zoom in to select images_________ą.",
-    "error": "ł_No visible Imagery Layers in the map____________ą.",
-    "error1": "ł_Field is not specified________ą.",
-    "error2": "ł_No OBJECTID field______ą.",
-    "error3": "ł_No Category field______ą.",
-    "error4": "ł_Cannot perform action for layer___________ą.",
-    "error5": "ł_Services pre 10.2.1 not supported___________ą.",
-    "error6": "ł_No scenes in current extent_________ą.",
-    "error7": "ł_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ą.",
-    "slider": "ł_Show images on slider________ą."
+    "title": "Selektor obrazów",
+    "enable": "Włącz selektor obrazów",
+    "secondary": "Ustaw warstwę aktywną jako warstwę porównania.",
+    "dropDown": "Pokaż obrazy na liście rozwijanej.",
+    "refresh": "Odśwież zapytanie w oparciu o bieżący zasięg.",
+    "show": "Pokaż",
+    "age": "Wiek",
+    "zoom": "Powiększ, aby wybrać obrazy.",
+    "error": "Brak widocznych warstw zobrazowań na mapie.",
+    "error1": "Nie określono pola.",
+    "error2": "Brak pola OBJECTID.",
+    "error3": "Brak pola Kategoria.",
+    "error4": "Nie można wykonać działania dla warstwy.",
+    "error5": "Usługi w wersjach starszych niż 10.2.1 nie są obsługiwane.",
+    "error6": "Brak scen w bieżącym zasięgu.",
+    "error7": "Liczba wybranych atrybutów przekroczyła 20. Zostanie wyświetlonych tylko pierwszych 20 atrybutów. Naciśnij przycisk OK, aby to ostrzeżenie nie było ponownie wyświetlane.",
+    "slider": "Pokaż obrazy na suwaku."
   },
   "changeDetection": {
-    "title": "ł_Change Detection______ą",
-    "mode": "ł_Mode__ą",
-    "method": "ł_Method___ą",
-    "positive": "ł_Positive Difference_______ą",
-    "negative": "ł_Negative Difference_______ą",
-    "threshold": "ł_Threshold____ą",
-    "difference": "ł_Difference____ą",
-    "apply": "ł_Apply___ą",
-    "error": "ł_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ą."
+    "title": "Wykrywanie zmian",
+    "mode": "Tryb",
+    "method": "Metoda",
+    "positive": "Różnica dodatnia",
+    "negative": "Różnica ujemna",
+    "threshold": "Próg",
+    "difference": "Różnica",
+    "apply": "Zastosuj",
+    "error": "Wykrywanie zmian działa w odniesieniu do obrazów wykonanych w różnym czasie przy użyciu tej samej usługi.<br />Najpierw za pomocą selektora obrazów wybierz jeden obraz,<br />następnie kliknij przycisk <img src='images/down.png' height='14'/> i wybierz drugi obraz.<br />Wróć do tego elementu sterującego, aby kontynuować wykrywanie zmian."
   },
   "editor": {
-    "title": "ł_Editor___ą",
-    "error": "ł_No Edit Layer selected________ą.",
-    "error1": "ł_Access denied. Layers cannot be edited_____________ą."
+    "title": "Edytor",
+    "error": "Nie wybrano warstwy do edycji.",
+    "error1": "Odmowa dostępu. Nie można edytować warstw."
   },
   "measurement": {
-    "title": "ł_Image Measurement______ą",
-    "error": "ł_Mensuration Capabilities not supported_____________ą."
+    "title": "Pomiar obrazu",
+    "error": "Funkcja pomiarów geodezyjnych nie jest obsługiwana."
   },
   "export": {
-    "title": "ł_Export___ą",
-    "mode": "ł_Mode__ą",
-    "titleText": "ł_Title___ą",
-    "description": "ł_Description____ą",
-    "tags": "ł_Tags__ą",
-    "submit": "ł_Submit___ą",
-    "pixel": "ł_Pixel Size____ą",
-    "outsr": "ł_Output Spatial Reference________ą",
-    "renderer": "ł_Current Renderer______ą",
-    "extent": "ł_Define Extent_____ą",
-    "text": "ł_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ą.",
-    "error": "ł_No visible imagery layers on the map____________ą.",
-    "error1": "ł_Title is required______ą.",
-    "error2": "ł_Tag(s) is required_______ą."
+    "title": "Eksportuj",
+    "mode": "Tryb",
+    "titleText": "Tytuł",
+    "description": "Opis",
+    "tags": "Znaczniki",
+    "submit": "Zapisz",
+    "pixel": "Rozmiar pikseli",
+    "outsr": "Wynikowe odniesienie przestrzenne",
+    "renderer": "Bieżący moduł renderowania",
+    "extent": "Definiuj zasięg",
+    "text": "Jeśli zaznaczono opcję Bieżący moduł renderowania, eksportowane będą wartości renderowane<br />; w przeciwnym razie wyeksportowane zostaną <br/>oryginalne wartości danych.",
+    "error": "Brak widocznych warstw zobrazowań na mapie.",
+    "error1": "Tytuł jest wymagany.",
+    "error2": "Znacznik/znaczniki są wymagane."
   },
   "compare": {
-    "title": "ł_Compare___ą",
-    "slider": "ł_Transparency Slider_______ą",
-    "hSwipe": "ł_Horizontal Swipe______ą",
-    "vSwipe": "ł_Vertical Swipe_____ą",
-    "error": "ł_No visible Imagery Layers available for comparison________________ą."
+    "title": "Porównanie",
+    "slider": "Suwak przezroczystości",
+    "hSwipe": "Zwijanie w poziomie",
+    "vSwipe": "Zwijanie w pionie",
+    "error": "Brak widocznych warstw zobrazowań dostępnych do porównania."
   }
 });

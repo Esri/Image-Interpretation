@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ä_Unable to create map_______Ü"
+    "error": "Karte kann nicht erstellt werden"
   },
   "nav": {
-    "close": "ä_Close___Ü"
+    "close": "Schließen"
   },
   "basemap": {
-    "title": "ä_Basemap Gallery______Ü"
+    "title": "Grundkartengalerie"
   },
   "operationalLayers": {
-    "title": "ä_Operational Layers______Ü",
-    "error": "ä_No operational layers in the map___________Ü."
+    "title": "Operationale Layer",
+    "error": "Keine funktionsfähigen Layer in der Karte."
   },
   "layerSelector": {
-    "active": "ä_Active Layer_____Ü",
-    "comparison": "ä_Comparison Layer______Ü",
-    "other": "ä_Other___Ü",
-    "result": "ä_Result___Ü",
-    "title": "ä_Layer Selector_____Ü",
-    "resultSave": "ä_Add the Result layer in the comparison layer list________________Ü",
-    "copy": "ä_Copy active layer to comparison layer____________Ü.",
-    "swap": "ä_Swap active and comparison layer___________Ü."
+    "active": "Aktiver Layer",
+    "comparison": "Vergleichs-Layer",
+    "other": "Andere",
+    "result": "Ergebnis",
+    "title": "Layer-Auswahl",
+    "resultSave": "Den Ergebnis-Layer der Liste von Vergleichs-Layern hinzufügen",
+    "copy": "Kopieren Sie den aktiven Layer in den Vergleichs-Layer.",
+    "swap": "Tauschen Sie den aktiven Layer und den Vergleichs-Layer aus."
   },
   "renderer": {
-    "title": "ä_Renderer___Ü",
-    "stretch": "ä_Stretch Parameters______Ü",
-    "stretchType": "ä_Stretch Type_____Ü",
-    "dra": "ä_DRA__Ü",
-    "draText": "ä_Dynamic Range Adjustment updates enhancement based on current view_____________________Ü",
-    "gamma": "ä_Gamma___Ü",
-    "apply": "ä_Apply___Ü",
-    "top": "ä_Exclude top____Ü",
-    "bottom": "ä_Exclude bottom_____Ü",
-    "topText": " ä_Exclude top x percentage of histogram____________Ü",
-    "bottomText": " ä_Exclude bottom x percentage of histogram_____________Ü",
-    "stdDev": "ä_# of Std. Dev_____Ü",
-    "layer": "ä_Current Layer_____Ü",
-    "error": "ä_No visible Imagery Layers in the map____________Ü."
+    "title": "Renderer",
+    "stretch": "Streckungsparameter",
+    "stretchType": "Streckungstyp",
+    "dra": "DRA",
+    "draText": "Die dynamische Bereichsanpassung aktualisiert Verbesserungen basierend auf der aktuellen Ansicht",
+    "gamma": "Gamma",
+    "apply": "Anwenden",
+    "top": "Obere ausschließen",
+    "bottom": "Untere ausschließen",
+    "topText": " Obere x Prozent des Histogramms ausschließen",
+    "bottomText": " Untere x Prozent des Histogramms ausschließen",
+    "stdDev": "# der Std.-Abw.",
+    "layer": "Aktueller Layer",
+    "error": "Keine sichtbaren Bilddaten-Layer auf der Karte."
   },
   "imageSelector": {
-    "title": "ä_Image Selector_____Ü",
-    "enable": "ä_Enable Image Selector_______Ü",
-    "secondary": "ä_Set Active as Comparison Layer__________Ü.",
-    "dropDown": "ä_Show images in drop down list__________Ü.",
-    "refresh": "ä_Refresh query based on current extent____________Ü.",
-    "show": "ä_Show__Ü",
-    "age": "ä_Age__Ü",
-    "zoom": "ä_Zoom in to select images_________Ü.",
-    "error": "ä_No visible Imagery Layers in the map____________Ü.",
-    "error1": "ä_Field is not specified________Ü.",
-    "error2": "ä_No OBJECTID field______Ü.",
-    "error3": "ä_No Category field______Ü.",
-    "error4": "ä_Cannot perform action for layer___________Ü.",
-    "error5": "ä_Services pre 10.2.1 not supported___________Ü.",
-    "error6": "ä_No scenes in current extent_________Ü.",
-    "error7": "ä_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________Ü.",
-    "slider": "ä_Show images on slider________Ü."
+    "title": "Bildauswahl",
+    "enable": "Bildauswahl aktivieren",
+    "secondary": "Legen Sie den aktiven Layer als Vergleichs-Layer fest.",
+    "dropDown": "Zeigen Sie Bilder in der Dropdown-Liste an.",
+    "refresh": "Aktualisieren Sie die Abfrage basierend auf der aktuellen Ausdehnung.",
+    "show": "Anzeigen",
+    "age": "Alter",
+    "zoom": "Vergrößern Sie die Ansicht, um Bilder auszuwählen.",
+    "error": "Keine sichtbaren Bilddaten-Layer auf der Karte.",
+    "error1": "Das Feld wurde nicht angegeben.",
+    "error2": "Kein ObjectID-Feld.",
+    "error3": "Kein Kategoriefeld.",
+    "error4": "Die Aktion kann für den Layer nicht ausgeführt werden.",
+    "error5": "Services vor 10.2.1 werden nicht unterstützt.",
+    "error6": "Keine Szenen in der aktuellen Ausdehnung.",
+    "error7": "Es wurden mehr als 20 Footprints ausgewählt. Nur die ersten 20 werden angezeigt. Drücken Sie auf 'OK', damit die Warnung nicht wieder angezeigt wird.",
+    "slider": "Zeigen Sie Bilder auf dem Schieberegler an."
   },
   "changeDetection": {
-    "title": "ä_Change Detection______Ü",
-    "mode": "ä_Mode__Ü",
-    "method": "ä_Method___Ü",
-    "positive": "ä_Positive Difference_______Ü",
-    "negative": "ä_Negative Difference_______Ü",
-    "threshold": "ä_Threshold____Ü",
-    "difference": "ä_Difference____Ü",
-    "apply": "ä_Apply___Ü",
-    "error": "ä_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________Ü."
+    "title": "Änderungserkennung",
+    "mode": "Modus",
+    "method": "Methode",
+    "positive": "Positiver Unterschied",
+    "negative": "Negativer Unterschied",
+    "threshold": "Schwellenwert",
+    "difference": "Differenz",
+    "apply": "Anwenden",
+    "error": "Die Änderungserkennung verwendet zwei Bilder mit unterschiedlichen Datumswerten aus einem Service.<br />Definieren Sie zuerst in der Bildauswahl ein Bild,<br />klicken Sie dann auf die Schaltfläche <img src='images/down.png' height='14'/>, und wählen Sie das zweite Bild aus.<br />Kehren Sie zu diesem Steuerelement zurück, um mit der Änderungserkennung fortzufahren."
   },
   "editor": {
-    "title": "ä_Editor___Ü",
-    "error": "ä_No Edit Layer selected________Ü.",
-    "error1": "ä_Access denied. Layers cannot be edited_____________Ü."
+    "title": "Editor",
+    "error": "Kein Bearbeitungs-Layer ausgewählt.",
+    "error1": "Zugriff verweigert. Layer können nicht bearbeitet werden."
   },
   "measurement": {
-    "title": "ä_Image Measurement______Ü",
-    "error": "ä_Mensuration Capabilities not supported_____________Ü."
+    "title": "Bildmessung",
+    "error": "Messfunktionen werden nicht unterstützt."
   },
   "export": {
-    "title": "ä_Export___Ü",
-    "mode": "ä_Mode__Ü",
-    "titleText": "ä_Title___Ü",
-    "description": "ä_Description____Ü",
-    "tags": "ä_Tags__Ü",
-    "submit": "ä_Submit___Ü",
-    "pixel": "ä_Pixel Size____Ü",
-    "outsr": "ä_Output Spatial Reference________Ü",
-    "renderer": "ä_Current Renderer______Ü",
-    "extent": "ä_Define Extent_____Ü",
-    "text": "ä_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________Ü.",
-    "error": "ä_No visible imagery layers on the map____________Ü.",
-    "error1": "ä_Title is required______Ü.",
-    "error2": "ä_Tag(s) is required_______Ü."
+    "title": "Exportieren",
+    "mode": "Modus",
+    "titleText": "Titel",
+    "description": "Beschreibung",
+    "tags": "Tags",
+    "submit": "Senden",
+    "pixel": "Pixelgröße",
+    "outsr": "Ausgabe-Raumbezug",
+    "renderer": "Aktueller Renderer",
+    "extent": "Ausdehnung definieren",
+    "text": "Wenn \"Aktueller Renderer\" aktiviert ist, werden die gerenderten Daten<br /> exportiert, andernfalls werden die Originaldatenwerte <br/>exportiert.",
+    "error": "Keine sichtbaren Bilddaten-Layer auf der Karte.",
+    "error1": "Titel ist erforderlich.",
+    "error2": "Tags sind erforderlich."
   },
   "compare": {
-    "title": "ä_Compare___Ü",
-    "slider": "ä_Transparency Slider_______Ü",
-    "hSwipe": "ä_Horizontal Swipe______Ü",
-    "vSwipe": "ä_Vertical Swipe_____Ü",
-    "error": "ä_No visible Imagery Layers available for comparison________________Ü."
+    "title": "Vergleich",
+    "slider": "Transparenz-Schieberegler",
+    "hSwipe": "Horizontaler Vergleich",
+    "vSwipe": "Vertikaler Vergleich",
+    "error": "Keine sichtbaren Bilddaten-Layer für den Vergleich verfügbar."
   }
 });

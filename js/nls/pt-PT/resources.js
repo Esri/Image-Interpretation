@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ã_Unable to create map_______Ç"
+    "error": "Não foi possível criar mapa"
   },
   "nav": {
-    "close": "ã_Close___Ç"
+    "close": "Fechar"
   },
   "basemap": {
-    "title": "ã_Basemap Gallery______Ç"
+    "title": "Galeria de Mapas Base"
   },
   "operationalLayers": {
-    "title": "ã_Operational Layers______Ç",
-    "error": "ã_No operational layers in the map___________Ç."
+    "title": "Camadas Operacionais",
+    "error": "Não existem camadas operacionais no mapa."
   },
   "layerSelector": {
-    "active": "ã_Active Layer_____Ç",
-    "comparison": "ã_Comparison Layer______Ç",
-    "other": "ã_Other___Ç",
-    "result": "ã_Result___Ç",
-    "title": "ã_Layer Selector_____Ç",
-    "resultSave": "ã_Add the Result layer in the comparison layer list________________Ç",
-    "copy": "ã_Copy active layer to comparison layer____________Ç.",
-    "swap": "ã_Swap active and comparison layer___________Ç."
+    "active": "Camada Ativa",
+    "comparison": "Camada de Comparação",
+    "other": "Outro",
+    "result": "Resultado",
+    "title": "Seletor de Camadas",
+    "resultSave": "Adicionar a camada Resultado à lista de camadas de comparação",
+    "copy": "Copiar camada ativa para camada de comparação.",
+    "swap": "Alternar entre camada ativa e de comparação."
   },
   "renderer": {
-    "title": "ã_Renderer___Ç",
-    "stretch": "ã_Stretch Parameters______Ç",
-    "stretchType": "ã_Stretch Type_____Ç",
-    "dra": "ã_DRA__Ç",
-    "draText": "ã_Dynamic Range Adjustment updates enhancement based on current view_____________________Ç",
-    "gamma": "ã_Gamma___Ç",
-    "apply": "ã_Apply___Ç",
-    "top": "ã_Exclude top____Ç",
-    "bottom": "ã_Exclude bottom_____Ç",
-    "topText": " ã_Exclude top x percentage of histogram____________Ç",
-    "bottomText": " ã_Exclude bottom x percentage of histogram_____________Ç",
-    "stdDev": "ã_# of Std. Dev_____Ç",
-    "layer": "ã_Current Layer_____Ç",
-    "error": "ã_No visible Imagery Layers in the map____________Ç."
+    "title": "Renderizador",
+    "stretch": "Parâmetros de Esticamento",
+    "stretchType": "Tipo de Esticamento",
+    "dra": "DRA",
+    "draText": "Melhoria das atualizações de Dynamic Range Adjustment com base na visualização atual",
+    "gamma": "Gama",
+    "apply": "Aplicar",
+    "top": "Excluir superior",
+    "bottom": "Excluir inferior",
+    "topText": " Excluir a percentagem x superior do histograma",
+    "bottomText": " Excluir a percentagem x inferior do histograma",
+    "stdDev": "# de Desvio Padrão",
+    "layer": "Camada Atual",
+    "error": "Não existem Camadas de Imagens visíveis no mapa."
   },
   "imageSelector": {
-    "title": "ã_Image Selector_____Ç",
-    "enable": "ã_Enable Image Selector_______Ç",
-    "secondary": "ã_Set Active as Comparison Layer__________Ç.",
-    "dropDown": "ã_Show images in drop down list__________Ç.",
-    "refresh": "ã_Refresh query based on current extent____________Ç.",
-    "show": "ã_Show__Ç",
-    "age": "ã_Age__Ç",
-    "zoom": "ã_Zoom in to select images_________Ç.",
-    "error": "ã_No visible Imagery Layers in the map____________Ç.",
-    "error1": "ã_Field is not specified________Ç.",
-    "error2": "ã_No OBJECTID field______Ç.",
-    "error3": "ã_No Category field______Ç.",
-    "error4": "ã_Cannot perform action for layer___________Ç.",
-    "error5": "ã_Services pre 10.2.1 not supported___________Ç.",
-    "error6": "ã_No scenes in current extent_________Ç.",
-    "error7": "ã_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________Ç.",
-    "slider": "ã_Show images on slider________Ç."
+    "title": "Seletor de Imagens",
+    "enable": "Ativar Seletor de Imagens",
+    "secondary": "Definir Ativo como Camada de Comparação.",
+    "dropDown": "Exibir imagens em lista pendente.",
+    "refresh": "Atualizar consulta com base na extensão atual.",
+    "show": "Mostrar",
+    "age": "Idade",
+    "zoom": "Ampliar para selecionar imagens.",
+    "error": "Não existem Camadas de Imagens visíveis no mapa.",
+    "error1": "O campo não se encontra especificado.",
+    "error2": "Não existe campo OBJECTID.",
+    "error3": "Não existe campo de Categoria",
+    "error4": "Não é possível aplicar ação para a camada.",
+    "error5": "Serviços anteriores à versão 10.2.1 não-suportados.",
+    "error6": "Não existem cenas na extensão atual.",
+    "error7": "Número de pegadas selecionadas excede as 20. Apenas serão exibidas as primeiras 20. Pressione OK para não voltar a avisar.",
+    "slider": "Exibir imagens em slider."
   },
   "changeDetection": {
-    "title": "ã_Change Detection______Ç",
-    "mode": "ã_Mode__Ç",
-    "method": "ã_Method___Ç",
-    "positive": "ã_Positive Difference_______Ç",
-    "negative": "ã_Negative Difference_______Ç",
-    "threshold": "ã_Threshold____Ç",
-    "difference": "ã_Difference____Ç",
-    "apply": "ã_Apply___Ç",
-    "error": "ã_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________Ç."
+    "title": "Alterar Deteção",
+    "mode": "Modo",
+    "method": "Método",
+    "positive": "Diferença Positiva",
+    "negative": "Diferença Negativa",
+    "threshold": "Limiar",
+    "difference": "Diferença",
+    "apply": "Aplicar",
+    "error": "Alterar Deteção funciona com duas imagens com datas diferentes do mesmo serviço.<br />Primeiro, utilize o Seletor de Imagens para definir uma imagem,<br />depois clique no botão <img src='images/down.png' height='14'/> e selecione a segunda imagem.<br />Regresse a este controlo para prosseguir com a alteração de deteção."
   },
   "editor": {
-    "title": "ã_Editor___Ç",
-    "error": "ã_No Edit Layer selected________Ç.",
-    "error1": "ã_Access denied. Layers cannot be edited_____________Ç."
+    "title": "Editor",
+    "error": "Não se encontra selecionada qualquer Camada de Edição.",
+    "error1": "Acesso negado. Não é possível editar as camadas."
   },
   "measurement": {
-    "title": "ã_Image Measurement______Ç",
-    "error": "ã_Mensuration Capabilities not supported_____________Ç."
+    "title": "Medição de Imagens",
+    "error": "Funcionalidades de Mensuração não suportadas."
   },
   "export": {
-    "title": "ã_Export___Ç",
-    "mode": "ã_Mode__Ç",
-    "titleText": "ã_Title___Ç",
-    "description": "ã_Description____Ç",
-    "tags": "ã_Tags__Ç",
-    "submit": "ã_Submit___Ç",
-    "pixel": "ã_Pixel Size____Ç",
-    "outsr": "ã_Output Spatial Reference________Ç",
-    "renderer": "ã_Current Renderer______Ç",
-    "extent": "ã_Define Extent_____Ç",
-    "text": "ã_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________Ç.",
-    "error": "ã_No visible imagery layers on the map____________Ç.",
-    "error1": "ã_Title is required______Ç.",
-    "error2": "ã_Tag(s) is required_______Ç."
+    "title": "Exportar",
+    "mode": "Modo",
+    "titleText": "Título",
+    "description": "Descrição",
+    "tags": "Palavras-chave",
+    "submit": "Enviar",
+    "pixel": "Tamanho de Pixeis",
+    "outsr": "Referência Espacial de Saída",
+    "renderer": "Renderizador Atual",
+    "extent": "Definir Extensão",
+    "text": "Caso Renderizador Atual se encontre selecionado, a renderização<br /> é exportada, de outro modo, os valores de dados originais<br/>serão exportados.",
+    "error": "Não existem camadas de imagens visíveis no mapa.",
+    "error1": "O Título é obrigatório.",
+    "error2": "Palavra(s) Chave são obrigatórias."
   },
   "compare": {
-    "title": "ã_Compare___Ç",
-    "slider": "ã_Transparency Slider_______Ç",
-    "hSwipe": "ã_Horizontal Swipe______Ç",
-    "vSwipe": "ã_Vertical Swipe_____Ç",
-    "error": "ã_No visible Imagery Layers available for comparison________________Ç."
+    "title": "Comparar Narrativa",
+    "slider": "Controlo Deslizante de Transparência",
+    "hSwipe": "Varrimento Horizontal",
+    "vSwipe": "Varrimento Vertical",
+    "error": "Não existem Camadas de Imagens disponíveis para comparação."
   }
 });

@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ı_Unable to create map_______İ"
+    "error": "Harita oluşturulamıyor"
   },
   "nav": {
-    "close": "ı_Close___İ"
+    "close": "Kapat"
   },
   "basemap": {
-    "title": "ı_Basemap Gallery______İ"
+    "title": "Altlık Harita Galerisi"
   },
   "operationalLayers": {
-    "title": "ı_Operational Layers______İ",
-    "error": "ı_No operational layers in the map___________İ."
+    "title": "Operasyonel Katmanlar",
+    "error": "Haritada işlem katmanı yok."
   },
   "layerSelector": {
-    "active": "ı_Active Layer_____İ",
-    "comparison": "ı_Comparison Layer______İ",
-    "other": "ı_Other___İ",
-    "result": "ı_Result___İ",
-    "title": "ı_Layer Selector_____İ",
-    "resultSave": "ı_Add the Result layer in the comparison layer list________________İ",
-    "copy": "ı_Copy active layer to comparison layer____________İ.",
-    "swap": "ı_Swap active and comparison layer___________İ."
+    "active": "Aktif Katman",
+    "comparison": "Karşılaştırma Katmanı",
+    "other": "Diğer",
+    "result": "Sonuç",
+    "title": "Katman Seçici",
+    "resultSave": "Sonuç katmanını karşılaştırma katmanı listesine ekleyin",
+    "copy": "Aktif katmanı karşılaştırma katmanına kopyalayın.",
+    "swap": "Aktif katman ve karşılaştırma katmanını değiştirin."
   },
   "renderer": {
-    "title": "ı_Renderer___İ",
-    "stretch": "ı_Stretch Parameters______İ",
-    "stretchType": "ı_Stretch Type_____İ",
-    "dra": "ı_DRA__İ",
-    "draText": "ı_Dynamic Range Adjustment updates enhancement based on current view_____________________İ",
-    "gamma": "ı_Gamma___İ",
-    "apply": "ı_Apply___İ",
-    "top": "ı_Exclude top____İ",
-    "bottom": "ı_Exclude bottom_____İ",
-    "topText": " ı_Exclude top x percentage of histogram____________İ",
-    "bottomText": " ı_Exclude bottom x percentage of histogram_____________İ",
-    "stdDev": "ı_# of Std. Dev_____İ",
-    "layer": "ı_Current Layer_____İ",
-    "error": "ı_No visible Imagery Layers in the map____________İ."
+    "title": "Canlandırıcı",
+    "stretch": "Esneme Parametleri",
+    "stretchType": "Esneme Türü",
+    "dra": "DRA",
+    "draText": "Dinamik Aralık Ayarı geliştirmeleri mevcut görünüme dayanarak günceller",
+    "gamma": "Gama",
+    "apply": "Uygula",
+    "top": "Üstü dışarıda bırak",
+    "bottom": "Altı dışarıda bırak",
+    "topText": " Histogramın üst x yüzdesini dışarıda bırak",
+    "bottomText": " Histogramın alt x yüzdesini dışarıda bırak",
+    "stdDev": "Std. Sap. #",
+    "layer": "Geçerli Katman",
+    "error": "Haritada görünür Görüntü Katmanı yok."
   },
   "imageSelector": {
-    "title": "ı_Image Selector_____İ",
-    "enable": "ı_Enable Image Selector_______İ",
-    "secondary": "ı_Set Active as Comparison Layer__________İ.",
-    "dropDown": "ı_Show images in drop down list__________İ.",
-    "refresh": "ı_Refresh query based on current extent____________İ.",
-    "show": "ı_Show__İ",
-    "age": "ı_Age__İ",
-    "zoom": "ı_Zoom in to select images_________İ.",
-    "error": "ı_No visible Imagery Layers in the map____________İ.",
-    "error1": "ı_Field is not specified________İ.",
-    "error2": "ı_No OBJECTID field______İ.",
-    "error3": "ı_No Category field______İ.",
-    "error4": "ı_Cannot perform action for layer___________İ.",
-    "error5": "ı_Services pre 10.2.1 not supported___________İ.",
-    "error6": "ı_No scenes in current extent_________İ.",
-    "error7": "ı_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________İ.",
-    "slider": "ı_Show images on slider________İ."
+    "title": "Görüntü Seçici",
+    "enable": "Görüntü Seçiciyi Etkinleştir",
+    "secondary": "Aktif Katmanı Karşılaştırma Katmanı olarak ayarla.",
+    "dropDown": "Görüntüleri açılır listede göster.",
+    "refresh": "Sorguyu geçerli yayılıma dayanarak yenile.",
+    "show": "Göster",
+    "age": "Yaş",
+    "zoom": "Görüntü seçmek için yakınlaştır.",
+    "error": "Haritada görünür Görüntü Katmanı yok.",
+    "error1": "Alan belirtilmedi.",
+    "error2": "OBJECTID alanı yok.",
+    "error3": "Kategori alanı yok.",
+    "error4": "Katman için işlem yapılamıyor.",
+    "error5": "10.2.1 öncesi servisler desteklenmiyor.",
+    "error6": "Geçerli yayılımda sahne yok.",
+    "error7": "Seçilen ayak izi 20'yi geçti. Sadece ilk 20 gösterilecek. Tekrar uyarmak için Tamam öğesine basın.",
+    "slider": "Görüntüleri kaydırıcıda göster."
   },
   "changeDetection": {
-    "title": "ı_Change Detection______İ",
-    "mode": "ı_Mode__İ",
-    "method": "ı_Method___İ",
-    "positive": "ı_Positive Difference_______İ",
-    "negative": "ı_Negative Difference_______İ",
-    "threshold": "ı_Threshold____İ",
-    "difference": "ı_Difference____İ",
-    "apply": "ı_Apply___İ",
-    "error": "ı_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________İ."
+    "title": "Değişiklik Algılama",
+    "mode": "Mod",
+    "method": "Yöntem",
+    "positive": "Olumlu Fark",
+    "negative": "Olumsuz Fark",
+    "threshold": "Eşik",
+    "difference": "Fark",
+    "apply": "Uygula",
+    "error": "Değişiklik Algılama, aynı servisten farklı tarihlerdeki iki görüntüyle birlikte çalışır.<br />Önce bir görüntüyü tanımlamak için Görüntü Seçiciyi kullanın,<br />ardından <img src='images/down.png' height='14'/> düğmesine basın ve ikinci görüntüyü seçin.<br />Değişiklik algılamayla devam etmek için bu kontrole dönün."
   },
   "editor": {
-    "title": "ı_Editor___İ",
-    "error": "ı_No Edit Layer selected________İ.",
-    "error1": "ı_Access denied. Layers cannot be edited_____________İ."
+    "title": "Düzenleyici",
+    "error": "Seçili Düzenleme Katman yok.",
+    "error1": "Erişim reddedildi. Katmanlar düzenlenemez."
   },
   "measurement": {
-    "title": "ı_Image Measurement______İ",
-    "error": "ı_Mensuration Capabilities not supported_____________İ."
+    "title": "Görüntü Ölçümü",
+    "error": "Ölçme Becerileri desteklenmiyor."
   },
   "export": {
-    "title": "ı_Export___İ",
-    "mode": "ı_Mode__İ",
-    "titleText": "ı_Title___İ",
-    "description": "ı_Description____İ",
-    "tags": "ı_Tags__İ",
-    "submit": "ı_Submit___İ",
-    "pixel": "ı_Pixel Size____İ",
-    "outsr": "ı_Output Spatial Reference________İ",
-    "renderer": "ı_Current Renderer______İ",
-    "extent": "ı_Define Extent_____İ",
-    "text": "ı_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________İ.",
-    "error": "ı_No visible imagery layers on the map____________İ.",
-    "error1": "ı_Title is required______İ.",
-    "error2": "ı_Tag(s) is required_______İ."
+    "title": "Dışa Aktar",
+    "mode": "Mod",
+    "titleText": "Başlık",
+    "description": "Açıklama",
+    "tags": "Etiketler",
+    "submit": "Gönder",
+    "pixel": "Piksel Boyutu",
+    "outsr": "Çıktı Mekansal Referansı",
+    "renderer": "Geçerli İşleyici",
+    "extent": "Yayılımı Tanımla",
+    "text": "Geçerli İşleyici işaretlenirse, <br /> işleme dışarı aktarılır; aksi takdirde orijinal veri değerleri <br/> dışa aktarılır.",
+    "error": "Haritada görünür görüntü katmanı yok.",
+    "error1": "Başlık gerekli.",
+    "error2": "Etiket gerekli."
   },
   "compare": {
-    "title": "ı_Compare___İ",
-    "slider": "ı_Transparency Slider_______İ",
-    "hSwipe": "ı_Horizontal Swipe______İ",
-    "vSwipe": "ı_Vertical Swipe_____İ",
-    "error": "ı_No visible Imagery Layers available for comparison________________İ."
+    "title": "Karşılaştır",
+    "slider": "Şeffaflık Kaydırıcı",
+    "hSwipe": "Yatay Kaydırma",
+    "vSwipe": "Dikey Kaydırma",
+    "error": "Karşılaştırılacak görünür Görüntü Katmanı yok."
   }
 });

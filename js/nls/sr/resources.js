@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "Č_Unable to create map_______ž"
+    "error": "Kreiranje mape nije moguće"
   },
   "nav": {
-    "close": "Č_Close___ž"
+    "close": "Zatvori"
   },
   "basemap": {
-    "title": "Č_Basemap Gallery______ž"
+    "title": "Galerija pozadinskih mapa"
   },
   "operationalLayers": {
-    "title": "Č_Operational Layers______ž",
-    "error": "Č_No operational layers in the map___________ž."
+    "title": "Operativni slojevi",
+    "error": "Nema operativnih slojeva u mapi."
   },
   "layerSelector": {
-    "active": "Č_Active Layer_____ž",
-    "comparison": "Č_Comparison Layer______ž",
-    "other": "Č_Other___ž",
-    "result": "Č_Result___ž",
-    "title": "Č_Layer Selector_____ž",
-    "resultSave": "Č_Add the Result layer in the comparison layer list________________ž",
-    "copy": "Č_Copy active layer to comparison layer____________ž.",
-    "swap": "Č_Swap active and comparison layer___________ž."
+    "active": "Aktivni sloj",
+    "comparison": "Sloj poređenja",
+    "other": "Ostalo",
+    "result": "Rezultat",
+    "title": "Izbornik sloja",
+    "resultSave": "Dodaj sloj sa rezultatima u listu slojeva poređenja",
+    "copy": "Kopiraj aktivni sloj u sloj poređenja",
+    "swap": "Zamenite aktivni i sloj poređenja."
   },
   "renderer": {
-    "title": "Č_Renderer___ž",
-    "stretch": "Č_Stretch Parameters______ž",
-    "stretchType": "Č_Stretch Type_____ž",
-    "dra": "Č_DRA__ž",
-    "draText": "Č_Dynamic Range Adjustment updates enhancement based on current view_____________________ž",
-    "gamma": "Č_Gamma___ž",
-    "apply": "Č_Apply___ž",
-    "top": "Č_Exclude top____ž",
-    "bottom": "Č_Exclude bottom_____ž",
-    "topText": " Č_Exclude top x percentage of histogram____________ž",
-    "bottomText": " Č_Exclude bottom x percentage of histogram_____________ž",
-    "stdDev": "Č_# of Std. Dev_____ž",
-    "layer": "Č_Current Layer_____ž",
-    "error": "Č_No visible Imagery Layers in the map____________ž."
+    "title": "Prikazivač",
+    "stretch": "Parametri razvlačenja",
+    "stretchType": "Tip razvlačenja",
+    "dra": "DRA",
+    "draText": "Prilagođavanje dinamičkog opsega ažurira poboljšanje na osnovu trenutnog prikaza",
+    "gamma": "Gama",
+    "apply": "Primeni",
+    "top": "Izostavi vrh",
+    "bottom": "Izostavi dno",
+    "topText": " Izostavi gornjih x procenata histograma",
+    "bottomText": " Izostavi donjih x procenata histograma",
+    "stdDev": "Br. standardne devijacije",
+    "layer": "Trenutni sloj",
+    "error": "Na mapi nema vidljivih slojeva snimka."
   },
   "imageSelector": {
-    "title": "Č_Image Selector_____ž",
-    "enable": "Č_Enable Image Selector_______ž",
-    "secondary": "Č_Set Active as Comparison Layer__________ž.",
-    "dropDown": "Č_Show images in drop down list__________ž.",
-    "refresh": "Č_Refresh query based on current extent____________ž.",
-    "show": "Č_Show__ž",
-    "age": "Č_Age__ž",
-    "zoom": "Č_Zoom in to select images_________ž.",
-    "error": "Č_No visible Imagery Layers in the map____________ž.",
-    "error1": "Č_Field is not specified________ž.",
-    "error2": "Č_No OBJECTID field______ž.",
-    "error3": "Č_No Category field______ž.",
-    "error4": "Č_Cannot perform action for layer___________ž.",
-    "error5": "Č_Services pre 10.2.1 not supported___________ž.",
-    "error6": "Č_No scenes in current extent_________ž.",
-    "error7": "Č_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ž.",
-    "slider": "Č_Show images on slider________ž."
+    "title": "Izbornik snimaka",
+    "enable": "Omogući izbornik snimaka",
+    "secondary": "Postavite da aktivan sloj bude sloj poređenja.",
+    "dropDown": "Prikaži snimke u padajućoj listi.",
+    "refresh": "Osvežite upit na osnovu trenutnog obuhvata.",
+    "show": "Prikaži",
+    "age": "Starost",
+    "zoom": "Uvećajte za izbor snimaka.",
+    "error": "Na mapi nema vidljivih slojeva snimka.",
+    "error1": "Polje nije navedeno.",
+    "error2": "Nema OBJECTID polja.",
+    "error3": "Nema polja kategorije.",
+    "error4": "Nije moguće izvršiti radnju za sloj.",
+    "error5": "Servisi pre 10.2.1 nisu podržani.",
+    "error6": "Nema scena u trenutnom obuhvatu.",
+    "error7": "Broj izabranih otisaka premašuje 20. Biće prikazano samo prvih 20. Pritisnite „U redu“ da ne dobijete ponovo upozorenje.",
+    "slider": "Prikažite snimke na klizaču."
   },
   "changeDetection": {
-    "title": "Č_Change Detection______ž",
-    "mode": "Č_Mode__ž",
-    "method": "Č_Method___ž",
-    "positive": "Č_Positive Difference_______ž",
-    "negative": "Č_Negative Difference_______ž",
-    "threshold": "Č_Threshold____ž",
-    "difference": "Č_Difference____ž",
-    "apply": "Č_Apply___ž",
-    "error": "Č_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ž."
+    "title": "Promeni otkrivanje",
+    "mode": "Režim",
+    "method": "Metod",
+    "positive": "Pozitivna razlika",
+    "negative": "Negativna razlika",
+    "threshold": "Granica",
+    "difference": "Razlika",
+    "apply": "Primeni",
+    "error": "Otkrivanje promene funkcioniše sa dva snimka od različitih datuma iz istog servisa.<br />Prvo upotrebite Izbornik snimaka za definisanje jednog snimka,<br />zatim kliknite na <img src='images/down.png' height='14'/> dugme i izaberite drugi snimak.<br />Vratite se na ovu kontrolu da biste nastavili sa otkrivanjem promene."
   },
   "editor": {
-    "title": "Č_Editor___ž",
-    "error": "Č_No Edit Layer selected________ž.",
-    "error1": "Č_Access denied. Layers cannot be edited_____________ž."
+    "title": "Uređivač",
+    "error": "Nije izabran sloj za uređivanje.",
+    "error1": "Pristup je odbijen. Nije moguće urediti slojeve."
   },
   "measurement": {
-    "title": "Č_Image Measurement______ž",
-    "error": "Č_Mensuration Capabilities not supported_____________ž."
+    "title": "Mere snimka",
+    "error": "Mogućnosti merenja nisu podržane."
   },
   "export": {
-    "title": "Č_Export___ž",
-    "mode": "Č_Mode__ž",
-    "titleText": "Č_Title___ž",
-    "description": "Č_Description____ž",
-    "tags": "Č_Tags__ž",
-    "submit": "Č_Submit___ž",
-    "pixel": "Č_Pixel Size____ž",
-    "outsr": "Č_Output Spatial Reference________ž",
-    "renderer": "Č_Current Renderer______ž",
-    "extent": "Č_Define Extent_____ž",
-    "text": "Č_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ž.",
-    "error": "Č_No visible imagery layers on the map____________ž.",
-    "error1": "Č_Title is required______ž.",
-    "error2": "Č_Tag(s) is required_______ž."
+    "title": "Izvezi",
+    "mode": "Režim",
+    "titleText": "Naslov",
+    "description": "Opis",
+    "tags": "Oznake",
+    "submit": "Prosledi",
+    "pixel": "Veličina piksela",
+    "outsr": "Izlazna prostorna referenca",
+    "renderer": "Trenutni prikazivač",
+    "extent": "Definiši obuhvat",
+    "text": "Ako je potvrđena opcija trenutnog prikazivača, prikazivanje<br /> se izvozi, u suprotnom će biti izvezene<br/>vrednosti originalnih podataka.",
+    "error": "Na mapi nema vidljivih slojeva snimka.",
+    "error1": "Naslov je obavezan.",
+    "error2": "Oznaka/oznake je/su obavezni."
   },
   "compare": {
-    "title": "Č_Compare___ž",
-    "slider": "Č_Transparency Slider_______ž",
-    "hSwipe": "Č_Horizontal Swipe______ž",
-    "vSwipe": "Č_Vertical Swipe_____ž",
-    "error": "Č_No visible Imagery Layers available for comparison________________ž."
+    "title": "Uporedi",
+    "slider": "Klizač za prozirnost",
+    "hSwipe": "Horizontalno prevlačenje",
+    "vSwipe": "Vertikalno prevlačenje",
+    "error": "Nema vidljivih slojeva snimka koji su dostupni za poređenje."
   }
 });

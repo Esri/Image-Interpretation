@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "π_Unable to create map_______Ω"
+    "error": "Δεν είναι δυνατή η δημιουργία χάρτη"
   },
   "nav": {
-    "close": "π_Close___Ω"
+    "close": "Κλείσιμο"
   },
   "basemap": {
-    "title": "π_Basemap Gallery______Ω"
+    "title": "Συλλογή υποβάθρων"
   },
   "operationalLayers": {
-    "title": "π_Operational Layers______Ω",
-    "error": "π_No operational layers in the map___________Ω."
+    "title": "Επιχειρησιακά θεματικά επίπεδα",
+    "error": "Δεν υπάρχουν λειτουργικά επίπεδα στον χάρτη."
   },
   "layerSelector": {
-    "active": "π_Active Layer_____Ω",
-    "comparison": "π_Comparison Layer______Ω",
-    "other": "π_Other___Ω",
-    "result": "π_Result___Ω",
-    "title": "π_Layer Selector_____Ω",
-    "resultSave": "π_Add the Result layer in the comparison layer list________________Ω",
-    "copy": "π_Copy active layer to comparison layer____________Ω.",
-    "swap": "π_Swap active and comparison layer___________Ω."
+    "active": "Ενεργό θεματικό επίπεδο",
+    "comparison": "Θεματικό επίπεδο σύγκρισης",
+    "other": "Άλλο",
+    "result": "Αποτέλεσμα",
+    "title": "Επιλογέας θεματικού επιπέδου",
+    "resultSave": "Προσθήκη του Εξαγόμενου θεματικού επιπέδου αποτελεσμάτων στη λίστα σύγκρισης θεματικών επιπέδων",
+    "copy": "Αντιγράψτε το ενεργό θεματικό επίπεδο στο θεματικό επίπεδο σύγκρισης.",
+    "swap": "Εναλλάξτε το ενεργό θεματικό επίπεδο με το θεματικό επίπεδο σύγκρισης."
   },
   "renderer": {
-    "title": "π_Renderer___Ω",
-    "stretch": "π_Stretch Parameters______Ω",
-    "stretchType": "π_Stretch Type_____Ω",
-    "dra": "π_DRA__Ω",
-    "draText": "π_Dynamic Range Adjustment updates enhancement based on current view_____________________Ω",
-    "gamma": "π_Gamma___Ω",
-    "apply": "π_Apply___Ω",
-    "top": "π_Exclude top____Ω",
-    "bottom": "π_Exclude bottom_____Ω",
-    "topText": " π_Exclude top x percentage of histogram____________Ω",
-    "bottomText": " π_Exclude bottom x percentage of histogram_____________Ω",
-    "stdDev": "π_# of Std. Dev_____Ω",
-    "layer": "π_Current Layer_____Ω",
-    "error": "π_No visible Imagery Layers in the map____________Ω."
+    "title": "Απεικόνιση",
+    "stretch": "Παράμετροι παραμόρφωσης",
+    "stretchType": "Τύπος παραμόρφωσης",
+    "dra": "DRA",
+    "draText": "Βελτίωση ενημερώσεων ρύθμισης δυναμικής περιοχής με βάση την τρέχουσα προβολή",
+    "gamma": "Γάμμα",
+    "apply": "Εφαρμογή",
+    "top": "Εξαίρεση επάνω πλευράς",
+    "bottom": "Εξαίρεση κάτω πλευράς",
+    "topText": " Εξαίρεση επάνω πλευράς x ποσοστό ιστογράμματος",
+    "bottomText": " Εξαίρεση κάτω πλευράς x ποσοστό ιστογράμματος",
+    "stdDev": "# τυπ. απόκλ.",
+    "layer": "Τρέχον θεματικό επίπεδο",
+    "error": "Δεν υπάρχουν ορατά Imagery Layer στον χάρτη."
   },
   "imageSelector": {
-    "title": "π_Image Selector_____Ω",
-    "enable": "π_Enable Image Selector_______Ω",
-    "secondary": "π_Set Active as Comparison Layer__________Ω.",
-    "dropDown": "π_Show images in drop down list__________Ω.",
-    "refresh": "π_Refresh query based on current extent____________Ω.",
-    "show": "π_Show__Ω",
-    "age": "π_Age__Ω",
-    "zoom": "π_Zoom in to select images_________Ω.",
-    "error": "π_No visible Imagery Layers in the map____________Ω.",
-    "error1": "π_Field is not specified________Ω.",
-    "error2": "π_No OBJECTID field______Ω.",
-    "error3": "π_No Category field______Ω.",
-    "error4": "π_Cannot perform action for layer___________Ω.",
-    "error5": "π_Services pre 10.2.1 not supported___________Ω.",
-    "error6": "π_No scenes in current extent_________Ω.",
-    "error7": "π_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________Ω.",
-    "slider": "π_Show images on slider________Ω."
+    "title": "Εργαλείο επιλογής εικόνων",
+    "enable": "Ενεργοποίηση Eργαλείου επιλογής εικόνων",
+    "secondary": "Ενεργοποίηση Εργαλείου επιλογής εικόνων",
+    "dropDown": "Εμφάνιση εικόνων σε πτυσσόμενη λίστα.",
+    "refresh": "Ανανέωση ερωτήματος με βάση την τρέχουσα έκταση.",
+    "show": "Εμφάνιση",
+    "age": "Ηλικία",
+    "zoom": "Μεγέθυνση σε επιλεγμένες εικόνες.",
+    "error": "Δεν υπάρχουν ορατά Imagery Layer στον χάρτη.",
+    "error1": "Το πεδίο δεν έχει καθοριστεί.",
+    "error2": "Δεν υπάρχει πεδίο «OBJECTID».",
+    "error3": "Δεν υπάρχει πεδίο «Κατηγορία».",
+    "error4": "Δεν είναι δυνατή η εκτέλεση της ενέργειας για το θεματικό επίπεδο αυτό.",
+    "error5": "Δεν υποστηρίζονται υπηρεσίες για εκδόσεις προγενέστερες της 10.2.1.",
+    "error6": "Δεν υπάρχουν Προβολές 3D στην τρέχουσα έκταση.",
+    "error7": "Έχετε επιλέξει περισσότερα από 20 αποτυπώματα. Θα παρουσιαστούν μόνο τα πρώτα 20. Πιέστε την επιλογή «OK» για να μην εμφανιστεί ξανά η προειδοποίηση.",
+    "slider": "Εμφάνιση εικόνων στην μπάρα κύλισης."
   },
   "changeDetection": {
-    "title": "π_Change Detection______Ω",
-    "mode": "π_Mode__Ω",
-    "method": "π_Method___Ω",
-    "positive": "π_Positive Difference_______Ω",
-    "negative": "π_Negative Difference_______Ω",
-    "threshold": "π_Threshold____Ω",
-    "difference": "π_Difference____Ω",
-    "apply": "π_Apply___Ω",
-    "error": "π_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________Ω."
+    "title": "Ανίχνευση αλλαγών",
+    "mode": "Λειτουργία",
+    "method": "Μέθοδος",
+    "positive": "Θετική διαφορά",
+    "negative": "Αρνητική διαφορά",
+    "threshold": "Κατώφλιο",
+    "difference": "Διαφορά",
+    "apply": "Εφαρμογή",
+    "error": "Η επιλογή «Ανίχνευση αλλαγών» χρησιμεύει για δύο εικόνες διαφορετικών ημερομηνιών από την ίδια υπηρεσία.<br />Χρησιμοποιήστε πρώτα τον Επιλογέα εικόνων για να καθορίσετε τη μία εικόνα<br />και ύστερα κάντε κλικ στο κουμπί <img src='images/down.png' height='14'/> και επιλέξτε τη δεύτερη εικόνα.<br />Επιστρέψτε στο ίδιο κουμπί ρύθμισης για να προχωρήσετε στην ανίχνευση αλλαγών."
   },
   "editor": {
-    "title": "π_Editor___Ω",
-    "error": "π_No Edit Layer selected________Ω.",
-    "error1": "π_Access denied. Layers cannot be edited_____________Ω."
+    "title": "Εργαλείο επεξεργασίας",
+    "error": "Δεν έχει επιλεχθεί Θεματικό επίπεδο επεξεργασίας.",
+    "error1": "Η πρόσβαση δεν έγινε δεκτή. Δεν είναι δυνατή η επεξεργασία θεματικών επιπέδων."
   },
   "measurement": {
-    "title": "π_Image Measurement______Ω",
-    "error": "π_Mensuration Capabilities not supported_____________Ω."
+    "title": "Μέτρηση εικόνας",
+    "error": "Δεν υποστηρίζονται Δυνατότητες μέτρησης."
   },
   "export": {
-    "title": "π_Export___Ω",
-    "mode": "π_Mode__Ω",
-    "titleText": "π_Title___Ω",
-    "description": "π_Description____Ω",
-    "tags": "π_Tags__Ω",
-    "submit": "π_Submit___Ω",
-    "pixel": "π_Pixel Size____Ω",
-    "outsr": "π_Output Spatial Reference________Ω",
-    "renderer": "π_Current Renderer______Ω",
-    "extent": "π_Define Extent_____Ω",
-    "text": "π_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________Ω.",
-    "error": "π_No visible imagery layers on the map____________Ω.",
-    "error1": "π_Title is required______Ω.",
-    "error2": "π_Tag(s) is required_______Ω."
+    "title": "Εξαγωγή",
+    "mode": "Λειτουργία",
+    "titleText": "Τίτλος",
+    "description": "Περιγραφή",
+    "tags": "Ετικέτες",
+    "submit": "Υποβολή",
+    "pixel": "Μέγεθος εικονοψηφίδων",
+    "outsr": "Χωρική αναφορά εξόδου",
+    "renderer": "Τρέχουσα απόδοση",
+    "extent": "Ορισμός έκτασης",
+    "text": "Αν επιλεχθεί η δυνατότητα «Τρέχουσα απόδοση», <br />εξάγεται η απόδοση ενώ αλλιώς<br/>θα εξαχθούν οι αρχικές τιμές των δεδομένων.",
+    "error": "Δεν υπάρχουν ορατά Imagery Layer στον χάρτη.",
+    "error1": "Απαιτείται τίτλος.",
+    "error2": "Απαιτούνται ετικέτες."
   },
   "compare": {
-    "title": "π_Compare___Ω",
-    "slider": "π_Transparency Slider_______Ω",
-    "hSwipe": "π_Horizontal Swipe______Ω",
-    "vSwipe": "π_Vertical Swipe_____Ω",
-    "error": "π_No visible Imagery Layers available for comparison________________Ω."
+    "title": "Σύγκριση",
+    "slider": "Μπάρα κύλισης διαφάνειας",
+    "hSwipe": "Σάρωση οριζόντια",
+    "vSwipe": "Σάρωση κατακόρυφα",
+    "error": "Δεν υπάρχουν ορατά Imagery Layer διαθέσιμα για σύγκριση."
   }
 });

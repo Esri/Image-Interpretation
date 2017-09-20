@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "Ř_Unable to create map_______ů"
+    "error": "Nelze vytvořit mapu"
   },
   "nav": {
-    "close": "Ř_Close___ů"
+    "close": "Zavřít"
   },
   "basemap": {
-    "title": "Ř_Basemap Gallery______ů"
+    "title": "Galerie podkladových map"
   },
   "operationalLayers": {
-    "title": "Ř_Operational Layers______ů",
-    "error": "Ř_No operational layers in the map___________ů."
+    "title": "Operační vrstvy",
+    "error": "V mapě nejsou k dispozici žádné operační vrstvy."
   },
   "layerSelector": {
-    "active": "Ř_Active Layer_____ů",
-    "comparison": "Ř_Comparison Layer______ů",
-    "other": "Ř_Other___ů",
-    "result": "Ř_Result___ů",
-    "title": "Ř_Layer Selector_____ů",
-    "resultSave": "Ř_Add the Result layer in the comparison layer list________________ů",
-    "copy": "Ř_Copy active layer to comparison layer____________ů.",
-    "swap": "Ř_Swap active and comparison layer___________ů."
+    "active": "Aktivní vrstva",
+    "comparison": "Srovnávací vrstva",
+    "other": "Ostatní",
+    "result": "Výsledek",
+    "title": "Nástroj pro výběr vrstev",
+    "resultSave": "Přidat výslednou vrstvu do seznamu srovnávacích vrstev",
+    "copy": "Kopírovat aktivní vrstvu do srovnávací vrstvy.",
+    "swap": "Přehodit aktivní vrstvu a srovnávací vrstvu"
   },
   "renderer": {
-    "title": "Ř_Renderer___ů",
-    "stretch": "Ř_Stretch Parameters______ů",
-    "stretchType": "Ř_Stretch Type_____ů",
-    "dra": "Ř_DRA__ů",
-    "draText": "Ř_Dynamic Range Adjustment updates enhancement based on current view_____________________ů",
-    "gamma": "Ř_Gamma___ů",
-    "apply": "Ř_Apply___ů",
-    "top": "Ř_Exclude top____ů",
-    "bottom": "Ř_Exclude bottom_____ů",
-    "topText": " Ř_Exclude top x percentage of histogram____________ů",
-    "bottomText": " Ř_Exclude bottom x percentage of histogram_____________ů",
-    "stdDev": "Ř_# of Std. Dev_____ů",
-    "layer": "Ř_Current Layer_____ů",
-    "error": "Ř_No visible Imagery Layers in the map____________ů."
+    "title": "Vykreslovač",
+    "stretch": "Parametry roztažení",
+    "stretchType": "Typ roztažení hodnot pro použití barevné škály",
+    "dra": "Dynamické roztažení",
+    "draText": "Vylepšení aktualizace dynamického roztažení na základě aktuálního zobrazení",
+    "gamma": "Gama",
+    "apply": "Použít",
+    "top": "Vyloučit horní část",
+    "bottom": "Vyloučit spodní část",
+    "topText": " Vyloučit horní část x procenta z histogramu",
+    "bottomText": " Vyloučit spodní část x procenta z histogramu",
+    "stdDev": "Č. směr. odch.",
+    "layer": "Aktuální vrstva",
+    "error": "V mapě nejsou viditelné žádné vrstvy imagery."
   },
   "imageSelector": {
-    "title": "Ř_Image Selector_____ů",
-    "enable": "Ř_Enable Image Selector_______ů",
-    "secondary": "Ř_Set Active as Comparison Layer__________ů.",
-    "dropDown": "Ř_Show images in drop down list__________ů.",
-    "refresh": "Ř_Refresh query based on current extent____________ů.",
-    "show": "Ř_Show__ů",
-    "age": "Ř_Age__ů",
-    "zoom": "Ř_Zoom in to select images_________ů.",
-    "error": "Ř_No visible Imagery Layers in the map____________ů.",
-    "error1": "Ř_Field is not specified________ů.",
-    "error2": "Ř_No OBJECTID field______ů.",
-    "error3": "Ř_No Category field______ů.",
-    "error4": "Ř_Cannot perform action for layer___________ů.",
-    "error5": "Ř_Services pre 10.2.1 not supported___________ů.",
-    "error6": "Ř_No scenes in current extent_________ů.",
-    "error7": "Ř_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ů.",
-    "slider": "Ř_Show images on slider________ů."
+    "title": "Nástroj pro volbu snímků",
+    "enable": "Povolit nástroj pro volbu snímků",
+    "secondary": "Nastavit aktivní vrstvu jako srovnávací vrstvu.",
+    "dropDown": "Zobrazit snímky v rozbalovacím seznamu.",
+    "refresh": "Obnovit dotaz podle aktuálního rozsahu.",
+    "show": "Zobrazit",
+    "age": "Věk",
+    "zoom": "Přiblížit pro volbu snímků.",
+    "error": "V mapě nejsou viditelné žádné vrstvy imagery.",
+    "error1": "Pole není specifikováno.",
+    "error2": "Chybí pole OBJECTID.",
+    "error3": "Chybí pole kategorie.",
+    "error4": "Činnost pro vrstvu nelze provést.",
+    "error5": "Služby ve verzi nižší než 10.2.1 nejsou podporovány.",
+    "error6": "V aktuálním rozsahu nejsou žádné scény.",
+    "error7": "Počet zvolených obrysů je větší než 20. Bude zobrazeno pouze prvních 20. Aby se toto varování již nezobrazovalo, stiskněte OK.",
+    "slider": "Zobrazit snímky na posuvníku."
   },
   "changeDetection": {
-    "title": "Ř_Change Detection______ů",
-    "mode": "Ř_Mode__ů",
-    "method": "Ř_Method___ů",
-    "positive": "Ř_Positive Difference_______ů",
-    "negative": "Ř_Negative Difference_______ů",
-    "threshold": "Ř_Threshold____ů",
-    "difference": "Ř_Difference____ů",
-    "apply": "Ř_Apply___ů",
-    "error": "Ř_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ů."
+    "title": "Detekování změn",
+    "mode": "Režim",
+    "method": "Metoda",
+    "positive": "Pozitivní rozdíl",
+    "negative": "Negativní rozdíl",
+    "threshold": "Práh",
+    "difference": "Rozdíl",
+    "apply": "Použít",
+    "error": "Funkce detekování změn pracuje se dvěma snímky s různými daty ze stejné služby.<br />Nejprve použijte nástroj pro volbu snímků pro volbu jednoho snímku a poté <br />klikněte na tlačítko <img src='images/down.png' height='14'/> a zvolte druhý snímek. <br />Poté se vraťte k tomuto ovladači pro pokračování v detekování změn."
   },
   "editor": {
-    "title": "Ř_Editor___ů",
-    "error": "Ř_No Edit Layer selected________ů.",
-    "error1": "Ř_Access denied. Layers cannot be edited_____________ů."
+    "title": "Editor",
+    "error": "Není vybrána žádná vrstva pro úpravu.",
+    "error1": "Přístup odepřen. Vrstvy nelze editovat."
   },
   "measurement": {
-    "title": "Ř_Image Measurement______ů",
-    "error": "Ř_Mensuration Capabilities not supported_____________ů."
+    "title": "Měření snímku",
+    "error": "Funkcionalita měření není povolena."
   },
   "export": {
-    "title": "Ř_Export___ů",
-    "mode": "Ř_Mode__ů",
-    "titleText": "Ř_Title___ů",
-    "description": "Ř_Description____ů",
-    "tags": "Ř_Tags__ů",
-    "submit": "Ř_Submit___ů",
-    "pixel": "Ř_Pixel Size____ů",
-    "outsr": "Ř_Output Spatial Reference________ů",
-    "renderer": "Ř_Current Renderer______ů",
-    "extent": "Ř_Define Extent_____ů",
-    "text": "Ř_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ů.",
-    "error": "Ř_No visible imagery layers on the map____________ů.",
-    "error1": "Ř_Title is required______ů.",
-    "error2": "Ř_Tag(s) is required_______ů."
+    "title": "Exportovat",
+    "mode": "Režim",
+    "titleText": "Název",
+    "description": "Popis",
+    "tags": "Štítky",
+    "submit": "Odeslat",
+    "pixel": "Velikost pixelu",
+    "outsr": "Výstupní souřadnicový systém",
+    "renderer": "Aktuální vykreslovač",
+    "extent": "Definovat rozsah",
+    "text": "Pokud je zaškrtnuto pole Aktuální vykreslovač,<br /> vykreslení se vyexportuje, jinak se vyexportují hodnoty <br/> původních dat.",
+    "error": "V mapě nejsou viditelné žádné vrstvy imagery.",
+    "error1": "Je požadován název.",
+    "error2": "Je požadován tag(tagy)."
   },
   "compare": {
-    "title": "Ř_Compare___ů",
-    "slider": "Ř_Transparency Slider_______ů",
-    "hSwipe": "Ř_Horizontal Swipe______ů",
-    "vSwipe": "Ř_Vertical Swipe_____ů",
-    "error": "Ř_No visible Imagery Layers available for comparison________________ů."
+    "title": "Porovnání",
+    "slider": "Ovladač průhlednosti",
+    "hSwipe": "Horizontální překrytí",
+    "vSwipe": "Vertikální překrytí",
+    "error": "V mapě nejsou dostupné žádné vrstvy imagery pro porovnání."
   }
 });

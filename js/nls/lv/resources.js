@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ķ_Unable to create map_______ū"
+    "error": "Nevar izveidot karti"
   },
   "nav": {
-    "close": "ķ_Close___ū"
+    "close": "Aizvērt"
   },
   "basemap": {
-    "title": "ķ_Basemap Gallery______ū"
+    "title": "Pamatkaršu galerija"
   },
   "operationalLayers": {
-    "title": "ķ_Operational Layers______ū",
-    "error": "ķ_No operational layers in the map___________ū."
+    "title": "Operāciju slāņi",
+    "error": "Kartē nav darbības slāņu."
   },
   "layerSelector": {
-    "active": "ķ_Active Layer_____ū",
-    "comparison": "ķ_Comparison Layer______ū",
-    "other": "ķ_Other___ū",
-    "result": "ķ_Result___ū",
-    "title": "ķ_Layer Selector_____ū",
-    "resultSave": "ķ_Add the Result layer in the comparison layer list________________ū",
-    "copy": "ķ_Copy active layer to comparison layer____________ū.",
-    "swap": "ķ_Swap active and comparison layer___________ū."
+    "active": "Aktīvais slānis",
+    "comparison": "Salīdzināšanas slānis",
+    "other": "Citi",
+    "result": "Rezultāts",
+    "title": "Slāņu izvēle",
+    "resultSave": "Pievienojiet rezultāta slāni salīdzināšanas slāņa sarakstam",
+    "copy": "Kopējiet aktīvo slāni salīdzināšanas slānī.",
+    "swap": "Samainiet aktīvo slāni un salīdzināšanas slāni."
   },
   "renderer": {
-    "title": "ķ_Renderer___ū",
-    "stretch": "ķ_Stretch Parameters______ū",
-    "stretchType": "ķ_Stretch Type_____ū",
-    "dra": "ķ_DRA__ū",
-    "draText": "ķ_Dynamic Range Adjustment updates enhancement based on current view_____________________ū",
-    "gamma": "ķ_Gamma___ū",
-    "apply": "ķ_Apply___ū",
-    "top": "ķ_Exclude top____ū",
-    "bottom": "ķ_Exclude bottom_____ū",
-    "topText": " ķ_Exclude top x percentage of histogram____________ū",
-    "bottomText": " ķ_Exclude bottom x percentage of histogram_____________ū",
-    "stdDev": "ķ_# of Std. Dev_____ū",
-    "layer": "ķ_Current Layer_____ū",
-    "error": "ķ_No visible Imagery Layers in the map____________ū."
+    "title": "Renderētājs",
+    "stretch": "Izstiepšanas parametri",
+    "stretchType": "Izstiepšanas tips",
+    "dra": "DRA",
+    "draText": "Dinamisko diapazona regulējumu atjaunojumi ir uzlaboti, pamatojoties uz pašreizējo skatu",
+    "gamma": "Gamma",
+    "apply": "Lietot",
+    "top": "Izslēgt pirmos",
+    "bottom": "Izslēgt pēdējos",
+    "topText": " Izslēgt pirmos x % no histogrammas",
+    "bottomText": " Izslēgt pēdējos x % no histogrammas",
+    "stdDev": "# stand. nov.",
+    "layer": "Pašreizējais slānis",
+    "error": "Kartē nav redzamu attēlu slāņu."
   },
   "imageSelector": {
-    "title": "ķ_Image Selector_____ū",
-    "enable": "ķ_Enable Image Selector_______ū",
-    "secondary": "ķ_Set Active as Comparison Layer__________ū.",
-    "dropDown": "ķ_Show images in drop down list__________ū.",
-    "refresh": "ķ_Refresh query based on current extent____________ū.",
-    "show": "ķ_Show__ū",
-    "age": "ķ_Age__ū",
-    "zoom": "ķ_Zoom in to select images_________ū.",
-    "error": "ķ_No visible Imagery Layers in the map____________ū.",
-    "error1": "ķ_Field is not specified________ū.",
-    "error2": "ķ_No OBJECTID field______ū.",
-    "error3": "ķ_No Category field______ū.",
-    "error4": "ķ_Cannot perform action for layer___________ū.",
-    "error5": "ķ_Services pre 10.2.1 not supported___________ū.",
-    "error6": "ķ_No scenes in current extent_________ū.",
-    "error7": "ķ_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ū.",
-    "slider": "ķ_Show images on slider________ū."
+    "title": "Attēlu izvēle",
+    "enable": "Iespējot attēlu izvēli",
+    "secondary": "Iestatiet aktīvo slāni kā salīdzināšanas slāni.",
+    "dropDown": "Rādiet attēlus izvelkamajā sarakstā.",
+    "refresh": "Atjaunojiet vaicājumu atkarībā no pašreizējā pārklājuma.",
+    "show": "Parādīt",
+    "age": "Vecums",
+    "zoom": "Pietuviniet, lai izvēlētos attēlus.",
+    "error": "Kartē nav redzamu attēlu slāņu.",
+    "error1": "Lauks nav norādīts.",
+    "error2": "Trūkst OBJECTID lauka.",
+    "error3": "Trūkst kategorijas lauka.",
+    "error4": "Nevar veikt darbību slānim.",
+    "error5": "Pakalpojumi versijām pirms 10.2.1 netiek atbalstīti.",
+    "error6": "Pašreizējā pārklājumā nav scēnu.",
+    "error7": "Izvēlēto nospiedumu skaits pārsniedz 20. Tiks parādīti tikai pirmie 20 nospiedumi. Lai vēlreiz netiktu rādīts šis brīdinājums, nospiediet Labi.",
+    "slider": "Rādīt attēlus slīdnī."
   },
   "changeDetection": {
-    "title": "ķ_Change Detection______ū",
-    "mode": "ķ_Mode__ū",
-    "method": "ķ_Method___ū",
-    "positive": "ķ_Positive Difference_______ū",
-    "negative": "ķ_Negative Difference_______ū",
-    "threshold": "ķ_Threshold____ū",
-    "difference": "ķ_Difference____ū",
-    "apply": "ķ_Apply___ū",
-    "error": "ķ_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ū."
+    "title": "Mainīt noteikšanu",
+    "mode": "Veids",
+    "method": "Metode",
+    "positive": "Pozitīva atšķirība",
+    "negative": "Negatīva atšķirība",
+    "threshold": "Slieksnis",
+    "difference": "Atšķirība",
+    "apply": "Lietot",
+    "error": "Funkcija Mainīt noteikšanu darbojas ar diviem attēliem no dažādiem datumiem un viena un tā paša servisa.<br />Vispirms izmantojiet attēlu izvēli, lai definētu vienu attēlu,<br />pēc tam noklikšķiniet uz <img src='images/down.png' height='14'/> pogas un izvēlieties otro attēlu.<br />Lai turpinātu mainīt noteikšanu, atgriezieties pie šīs vadīklas."
   },
   "editor": {
-    "title": "ķ_Editor___ū",
-    "error": "ķ_No Edit Layer selected________ū.",
-    "error1": "ķ_Access denied. Layers cannot be edited_____________ū."
+    "title": "Redaktors",
+    "error": "Nav izvēlēts neviens labošanas slānis.",
+    "error1": "Piekļuve liegta. Slāņus nevar labot."
   },
   "measurement": {
-    "title": "ķ_Image Measurement______ū",
-    "error": "ķ_Mensuration Capabilities not supported_____________ū."
+    "title": "Attēla mērījums",
+    "error": "Mērīšanas iespējas netiek atbalstītas."
   },
   "export": {
-    "title": "ķ_Export___ū",
-    "mode": "ķ_Mode__ū",
-    "titleText": "ķ_Title___ū",
-    "description": "ķ_Description____ū",
-    "tags": "ķ_Tags__ū",
-    "submit": "ķ_Submit___ū",
-    "pixel": "ķ_Pixel Size____ū",
-    "outsr": "ķ_Output Spatial Reference________ū",
-    "renderer": "ķ_Current Renderer______ū",
-    "extent": "ķ_Define Extent_____ū",
-    "text": "ķ_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ū.",
-    "error": "ķ_No visible imagery layers on the map____________ū.",
-    "error1": "ķ_Title is required______ū.",
-    "error2": "ķ_Tag(s) is required_______ū."
+    "title": "Eksportēt",
+    "mode": "Veids",
+    "titleText": "Nosaukums",
+    "description": "Apraksts",
+    "tags": "Atslēgas vārdi",
+    "submit": "Iesniegt",
+    "pixel": "Pikseļu izmērs",
+    "outsr": "Izvades telpiskā atskaite",
+    "renderer": "Pašreizējais renderētājs",
+    "extent": "Definēt pārklājumu",
+    "text": "Ja ir atzīmēts pašreizējais renderētājs, renderēšana<br /> tiek eksportēta; pretējā gadījumā tiek eksportētas sākotnējās datu vērtības<br/>.",
+    "error": "Kartē nav redzamu attēlu slāņu.",
+    "error1": "Nosaukums jānorāda obligāti.",
+    "error2": "Atslēgas vārds(-i) jānorāda obligāti."
   },
   "compare": {
-    "title": "ķ_Compare___ū",
-    "slider": "ķ_Transparency Slider_______ū",
-    "hSwipe": "ķ_Horizontal Swipe______ū",
-    "vSwipe": "ķ_Vertical Swipe_____ū",
-    "error": "ķ_No visible Imagery Layers available for comparison________________ū."
+    "title": "Salīdzināt",
+    "slider": "Caurspīdīguma slīdnis",
+    "hSwipe": "Horizontālā pārvilkšana",
+    "vSwipe": "Vertikālā pārvilkšana",
+    "error": "Neviens redzams attēlu slānis nav pieejams salīdzināšanai."
   }
 });

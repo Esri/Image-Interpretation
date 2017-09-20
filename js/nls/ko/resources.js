@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "한_Unable to create map_______빠"
+    "error": "맵을 생성할 수 없음"
   },
   "nav": {
-    "close": "한_Close___빠"
+    "close": "닫기"
   },
   "basemap": {
-    "title": "한_Basemap Gallery______빠"
+    "title": "베이스맵 갤러리"
   },
   "operationalLayers": {
-    "title": "한_Operational Layers______빠",
-    "error": "한_No operational layers in the map___________빠."
+    "title": "운영 레이어",
+    "error": "맵에 운영 레이어가 없습니다."
   },
   "layerSelector": {
-    "active": "한_Active Layer_____빠",
-    "comparison": "한_Comparison Layer______빠",
-    "other": "한_Other___빠",
-    "result": "한_Result___빠",
-    "title": "한_Layer Selector_____빠",
-    "resultSave": "한_Add the Result layer in the comparison layer list________________빠",
-    "copy": "한_Copy active layer to comparison layer____________빠.",
-    "swap": "한_Swap active and comparison layer___________빠."
+    "active": "활성 레이어",
+    "comparison": "비교 레이어",
+    "other": "기타",
+    "result": "결과",
+    "title": "레이어 선택기",
+    "resultSave": "비교 레이어 목록에서 결과 레이어 추가",
+    "copy": "활성 레이어를 비교 레이어에 복사합니다.",
+    "swap": "활성 레이어와 비교 레이어를 서로 바꿉니다."
   },
   "renderer": {
-    "title": "한_Renderer___빠",
-    "stretch": "한_Stretch Parameters______빠",
-    "stretchType": "한_Stretch Type_____빠",
-    "dra": "한_DRA__빠",
-    "draText": "한_Dynamic Range Adjustment updates enhancement based on current view_____________________빠",
-    "gamma": "한_Gamma___빠",
-    "apply": "한_Apply___빠",
-    "top": "한_Exclude top____빠",
-    "bottom": "한_Exclude bottom_____빠",
-    "topText": " 한_Exclude top x percentage of histogram____________빠",
-    "bottomText": " 한_Exclude bottom x percentage of histogram_____________빠",
-    "stdDev": "한_# of Std. Dev_____빠",
-    "layer": "한_Current Layer_____빠",
-    "error": "한_No visible Imagery Layers in the map____________빠."
+    "title": "렌더러",
+    "stretch": "스트래치 매개변수",
+    "stretchType": "스트래치 유형",
+    "dra": "DRA",
+    "draText": "현재 뷰를 기반으로 한 동적 범위 조정 업데이트 개선 사항",
+    "gamma": "감마",
+    "apply": "적용",
+    "top": "위쪽 제외",
+    "bottom": "아래쪽 제외",
+    "topText": " 히스토그램의 상위 x 백분율(%) 제외",
+    "bottomText": " 히스토그램의 하위 x 백분율(%) 제외",
+    "stdDev": "표준 편차의 수",
+    "layer": "현재 레이어",
+    "error": "맵에 보이는 이미지 레이어가 없습니다."
   },
   "imageSelector": {
-    "title": "한_Image Selector_____빠",
-    "enable": "한_Enable Image Selector_______빠",
-    "secondary": "한_Set Active as Comparison Layer__________빠.",
-    "dropDown": "한_Show images in drop down list__________빠.",
-    "refresh": "한_Refresh query based on current extent____________빠.",
-    "show": "한_Show__빠",
-    "age": "한_Age__빠",
-    "zoom": "한_Zoom in to select images_________빠.",
-    "error": "한_No visible Imagery Layers in the map____________빠.",
-    "error1": "한_Field is not specified________빠.",
-    "error2": "한_No OBJECTID field______빠.",
-    "error3": "한_No Category field______빠.",
-    "error4": "한_Cannot perform action for layer___________빠.",
-    "error5": "한_Services pre 10.2.1 not supported___________빠.",
-    "error6": "한_No scenes in current extent_________빠.",
-    "error7": "한_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________빠.",
-    "slider": "한_Show images on slider________빠."
+    "title": "이미지 선택기",
+    "enable": "이미지 선택기 활성화",
+    "secondary": "활성 레이어를 비교 레이어로 설정합니다.",
+    "dropDown": "이미지를 드롭다운 목록으로 보여줍니다.",
+    "refresh": "현재 범위를 기반으로 쿼리를 새로 고침합니다.",
+    "show": "보기",
+    "age": "나이",
+    "zoom": "확대하여 이미지를 선택합니다.",
+    "error": "맵에 보이는 이미지 레이어가 없습니다.",
+    "error1": "필드가 지정되지 않았습니다.",
+    "error2": "OBJECTID 필드가 없습니다.",
+    "error3": "범주 필드가 없습니다.",
+    "error4": "레이어에 대해 작업을 수행할 수 없습니다.",
+    "error5": "버전 10.2.1 이전 서비스는 지원되지 않습니다.",
+    "error6": "현재 범위에 씬이 없습니다.",
+    "error7": "선택한 풋프린트의 수가 20개를 넘습니다. 처음 20개만 표시됩니다. 경고 메시지를 다시 보지 않으려면 확인을 누르세요.",
+    "slider": "슬라이더의 이미지를 표시합니다."
   },
   "changeDetection": {
-    "title": "한_Change Detection______빠",
-    "mode": "한_Mode__빠",
-    "method": "한_Method___빠",
-    "positive": "한_Positive Difference_______빠",
-    "negative": "한_Negative Difference_______빠",
-    "threshold": "한_Threshold____빠",
-    "difference": "한_Difference____빠",
-    "apply": "한_Apply___빠",
-    "error": "한_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________빠."
+    "title": "변경 감지",
+    "mode": "모드",
+    "method": "메소드",
+    "positive": "양의 차이",
+    "negative": "음의 차이",
+    "threshold": "임계치",
+    "difference": "차이",
+    "apply": "적용",
+    "error": "변경 감지는 서비스는 동일하지만 날짜가 다른 2개의 이미지에 사용됩니다.<br />먼저, 이미지 선택기를 사용하여 첫 번째 이미지를 선택합니다.<br />그런 다음, <img src='images/down.png' height='14'/> 버튼을 클릭하여 두 번째 이미지를 선택합니다.<br />이 컨트롤로 돌아가서 변경 감지를 진행합니다."
   },
   "editor": {
-    "title": "한_Editor___빠",
-    "error": "한_No Edit Layer selected________빠.",
-    "error1": "한_Access denied. Layers cannot be edited_____________빠."
+    "title": "편집자",
+    "error": "편집 레이어를 선택하지 않았습니다.",
+    "error1": "접근이 거부되었습니다. 레이어를 편집할 수 없습니다."
   },
   "measurement": {
-    "title": "한_Image Measurement______빠",
-    "error": "한_Mensuration Capabilities not supported_____________빠."
+    "title": "이미지 측정",
+    "error": "측정 기능이 지원되지 않습니다."
   },
   "export": {
-    "title": "한_Export___빠",
-    "mode": "한_Mode__빠",
-    "titleText": "한_Title___빠",
-    "description": "한_Description____빠",
-    "tags": "한_Tags__빠",
-    "submit": "한_Submit___빠",
-    "pixel": "한_Pixel Size____빠",
-    "outsr": "한_Output Spatial Reference________빠",
-    "renderer": "한_Current Renderer______빠",
-    "extent": "한_Define Extent_____빠",
-    "text": "한_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________빠.",
-    "error": "한_No visible imagery layers on the map____________빠.",
-    "error1": "한_Title is required______빠.",
-    "error2": "한_Tag(s) is required_______빠."
+    "title": "내보내기",
+    "mode": "모드",
+    "titleText": "제목",
+    "description": "Description",
+    "tags": "태그",
+    "submit": "제출",
+    "pixel": "픽셀 크기",
+    "outsr": "결과 공간 참조",
+    "renderer": "현재 렌더러",
+    "extent": "범위 정의",
+    "text": "현재 렌더러를 선택한 경우 렌더링이<br /> 내보내지며 , 선택하지 않은 경우에는 원본 데이터 값이<br/> 내보내집니다.",
+    "error": "맵에 보이는 이미지 레이어가 없습니다.",
+    "error1": "제목이 필요합니다.",
+    "error2": "태그가 필요합니다."
   },
   "compare": {
-    "title": "한_Compare___빠",
-    "slider": "한_Transparency Slider_______빠",
-    "hSwipe": "한_Horizontal Swipe______빠",
-    "vSwipe": "한_Vertical Swipe_____빠",
-    "error": "한_No visible Imagery Layers available for comparison________________빠."
+    "title": "비교",
+    "slider": "투명도 슬라이더",
+    "hSwipe": "수평 스와이프",
+    "vSwipe": "수직 스와이프",
+    "error": "비교할 이미지 레이어가 보이지 않습니다."
   }
 });

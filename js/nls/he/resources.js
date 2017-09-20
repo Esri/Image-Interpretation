@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "כן_Unable to create map_______ש"
+    "error": "לא ניתן ליצור מפה"
   },
   "nav": {
-    "close": "כן_Close___ש"
+    "close": "סגור"
   },
   "basemap": {
-    "title": "כן_Basemap Gallery______ש"
+    "title": "גלרית מפות בסיס"
   },
   "operationalLayers": {
-    "title": "כן_Operational Layers______ש",
-    "error": "כן_No operational layers in the map___________ש."
+    "title": "שכבות תפעוליות",
+    "error": "אין שכבות פעילות במפה."
   },
   "layerSelector": {
-    "active": "כן_Active Layer_____ש",
-    "comparison": "כן_Comparison Layer______ש",
-    "other": "כן_Other___ש",
-    "result": "כן_Result___ש",
-    "title": "כן_Layer Selector_____ש",
-    "resultSave": "כן_Add the Result layer in the comparison layer list________________ש",
-    "copy": "כן_Copy active layer to comparison layer____________ש.",
-    "swap": "כן_Swap active and comparison layer___________ש."
+    "active": "שכבה פעילה",
+    "comparison": "שכבה להשוואה",
+    "other": "אחר",
+    "result": "תוצאה",
+    "title": "בורר שכבות",
+    "resultSave": "הוסף את שכבת התוצאה לרשימת השכבות להשוואה",
+    "copy": "העתק שכבה פעילה לשכבה להשוואה.",
+    "swap": "החלף בין השכבה הפעילה לבין השכבה להשוואה."
   },
   "renderer": {
-    "title": "כן_Renderer___ש",
-    "stretch": "כן_Stretch Parameters______ש",
-    "stretchType": "כן_Stretch Type_____ש",
-    "dra": "כן_DRA__ש",
-    "draText": "כן_Dynamic Range Adjustment updates enhancement based on current view_____________________ש",
-    "gamma": "כן_Gamma___ש",
-    "apply": "כן_Apply___ש",
-    "top": "כן_Exclude top____ש",
-    "bottom": "כן_Exclude bottom_____ש",
-    "topText": " כן_Exclude top x percentage of histogram____________ש",
-    "bottomText": " כן_Exclude bottom x percentage of histogram_____________ש",
-    "stdDev": "כן_# of Std. Dev_____ש",
-    "layer": "כן_Current Layer_____ש",
-    "error": "כן_No visible Imagery Layers in the map____________ש."
+    "title": "Renderer",
+    "stretch": "פרמטרים של מתיחה",
+    "stretchType": "סוג מתיחה",
+    "dra": "DRA",
+    "draText": "שיפור בעדכוני התאמת טווח דינאמית בהתאם לתצוגה הנוכחית",
+    "gamma": "גמא",
+    "apply": "בצע",
+    "top": "בלי לכלול את החלק העליון",
+    "bottom": "בלי לכלול את החלק התחתון",
+    "topText": " בלי לכלול את החלק העליון x אחוזים מההיסטוגרמה",
+    "bottomText": " בלי לכלול את החלק התחתון x אחוזים מההיסטוגרמה",
+    "stdDev": "# של סטיית תקן",
+    "layer": "שכבה נוכחית",
+    "error": "אין שכבות גלויות של תצלומים במפה."
   },
   "imageSelector": {
-    "title": "כן_Image Selector_____ש",
-    "enable": "כן_Enable Image Selector_______ש",
-    "secondary": "כן_Set Active as Comparison Layer__________ש.",
-    "dropDown": "כן_Show images in drop down list__________ש.",
-    "refresh": "כן_Refresh query based on current extent____________ש.",
-    "show": "כן_Show__ש",
-    "age": "כן_Age__ש",
-    "zoom": "כן_Zoom in to select images_________ש.",
-    "error": "כן_No visible Imagery Layers in the map____________ש.",
-    "error1": "כן_Field is not specified________ש.",
-    "error2": "כן_No OBJECTID field______ש.",
-    "error3": "כן_No Category field______ש.",
-    "error4": "כן_Cannot perform action for layer___________ש.",
-    "error5": "כן_Services pre 10.2.1 not supported___________ש.",
-    "error6": "כן_No scenes in current extent_________ש.",
-    "error7": "כן_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ש.",
-    "slider": "כן_Show images on slider________ש."
+    "title": "בורר תמונות",
+    "enable": "הפעל בורר תמונות",
+    "secondary": "הגדר את השכבה הפעילה כשכבה להשוואה.",
+    "dropDown": "הצג תמונות ברשימה נפתחת.",
+    "refresh": "רענן את השאילתה בהתאם לתיחום הנוכחי.",
+    "show": "הצג",
+    "age": "גיל",
+    "zoom": "התמקד בתמונות מסוימות.",
+    "error": "אין שכבות גלויות של תצלומים במפה.",
+    "error1": "השדה לא צוין.",
+    "error2": "אין שדה OBJECTID.",
+    "error3": "אין שדה קטגוריה.",
+    "error4": "לא ניתן לבצע פעולה על שכבה.",
+    "error5": "שירותים לפני 10.2.1 לא נתמכים.",
+    "error6": "אין סצנות בתיחום הנוכחי.",
+    "error7": "מספר העקבות שנבחרו גדול מ-20. רק ה-20 הראשונות יוצגו. לחץ על 'אישור' כדי שהאזהרה לא תופיע שוב.",
+    "slider": "הצג תמונות בסרגל."
   },
   "changeDetection": {
-    "title": "כן_Change Detection______ש",
-    "mode": "כן_Mode__ש",
-    "method": "כן_Method___ש",
-    "positive": "כן_Positive Difference_______ש",
-    "negative": "כן_Negative Difference_______ש",
-    "threshold": "כן_Threshold____ש",
-    "difference": "כן_Difference____ש",
-    "apply": "כן_Apply___ש",
-    "error": "כן_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ש."
+    "title": "זיהוי שינויים",
+    "mode": "מוד",
+    "method": "שיטה",
+    "positive": "הפרש חיובי",
+    "negative": "הפרש שלילי",
+    "threshold": "ערך סף",
+    "difference": "שונות",
+    "apply": "בצע",
+    "error": "'זיהוי שינויים' פועל עם שתי תמונות מתאריכים שונים ומאותו שירות.<br />ראשית השתמש בבורר התמונות כדי להגדיר תמונה אחת,<br />לאחר מכן לחץ על הלחצן <img src='images/down.png' height='14'/> ובחר את התמונה השנייה.<br />חזור לכאן כדי להמשיך עם זיהוי השינויים."
   },
   "editor": {
-    "title": "כן_Editor___ש",
-    "error": "כן_No Edit Layer selected________ש.",
-    "error1": "כן_Access denied. Layers cannot be edited_____________ש."
+    "title": "עריכה",
+    "error": "לא נבחרה שכבה לעריכה!",
+    "error1": "אין גישה. לא ניתן לערוך שכבות."
   },
   "measurement": {
-    "title": "כן_Image Measurement______ש",
-    "error": "כן_Mensuration Capabilities not supported_____________ש."
+    "title": "מדידת תמונות",
+    "error": "אפשרויות מדידה אינן נתמכות."
   },
   "export": {
-    "title": "כן_Export___ש",
-    "mode": "כן_Mode__ש",
-    "titleText": "כן_Title___ש",
-    "description": "כן_Description____ש",
-    "tags": "כן_Tags__ש",
-    "submit": "כן_Submit___ש",
-    "pixel": "כן_Pixel Size____ש",
-    "outsr": "כן_Output Spatial Reference________ש",
-    "renderer": "כן_Current Renderer______ש",
-    "extent": "כן_Define Extent_____ש",
-    "text": "כן_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ש.",
-    "error": "כן_No visible imagery layers on the map____________ש.",
-    "error1": "כן_Title is required______ש.",
-    "error2": "כן_Tag(s) is required_______ש."
+    "title": "ייצא",
+    "mode": "מוד",
+    "titleText": "כותרת",
+    "description": "תאור",
+    "tags": "תגיות",
+    "submit": "שלח",
+    "pixel": "גודל פיקסל",
+    "outsr": "יחוס מרחבי לנתוני הפלט",
+    "renderer": "מעבד נוכחי",
+    "extent": "הגדר תיחום",
+    "text": "אם המעבד הנוכחי מסומן, מבוצע ייצוא של העיבוד<br />, אם לא יבוצע ייצוא של <br/>ערכי התאריכים המקוריים.",
+    "error": "אין שכבות גלויות של תצלומים במפה.",
+    "error1": "הכותרת היא שדה חובה.",
+    "error2": "התגים נדרשים."
   },
   "compare": {
-    "title": "כן_Compare___ש",
-    "slider": "כן_Transparency Slider_______ש",
-    "hSwipe": "כן_Horizontal Swipe______ש",
-    "vSwipe": "כן_Vertical Swipe_____ש",
-    "error": "כן_No visible Imagery Layers available for comparison________________ש."
+    "title": "השוואה",
+    "slider": "סרגל שקיפות",
+    "hSwipe": "החלקה לרוחב",
+    "vSwipe": "החלקה לאורך",
+    "error": "אין שכבות גלויות של תצלומים לצורך השוואה."
   }
 });

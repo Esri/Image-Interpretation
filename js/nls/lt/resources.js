@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "Į_Unable to create map_______š"
+    "error": "Žemėlapio sukurti nepavyko"
   },
   "nav": {
-    "close": "Į_Close___š"
+    "close": "Uždaryti"
   },
   "basemap": {
-    "title": "Į_Basemap Gallery______š"
+    "title": "Pagrindo žemėlapiai"
   },
   "operationalLayers": {
-    "title": "Į_Operational Layers______š",
-    "error": "Į_No operational layers in the map___________š."
+    "title": "Darbiniai sluoksniai",
+    "error": "Žemėlapyje darbinių sluoksnių nėra."
   },
   "layerSelector": {
-    "active": "Į_Active Layer_____š",
-    "comparison": "Į_Comparison Layer______š",
-    "other": "Į_Other___š",
-    "result": "Į_Result___š",
-    "title": "Į_Layer Selector_____š",
-    "resultSave": "Į_Add the Result layer in the comparison layer list________________š",
-    "copy": "Į_Copy active layer to comparison layer____________š.",
-    "swap": "Į_Swap active and comparison layer___________š."
+    "active": "Aktyvus sluoksnis",
+    "comparison": "Palyginimo sluoksnis",
+    "other": "Kita",
+    "result": "Rezultatas",
+    "title": "Sluoksnių pasirinkimo priemonė",
+    "resultSave": "Įtraukti rezultatų sluoksnį į palyginimo sluoksnių sąrašą",
+    "copy": "Nukopijuoti aktyvų sluoksnį į palyginimo sluoksnį.",
+    "swap": "Sukeisti aktyvų sluoksnį su palyginimo sluoksniu."
   },
   "renderer": {
-    "title": "Į_Renderer___š",
-    "stretch": "Į_Stretch Parameters______š",
-    "stretchType": "Į_Stretch Type_____š",
-    "dra": "Į_DRA__š",
-    "draText": "Į_Dynamic Range Adjustment updates enhancement based on current view_____________________š",
-    "gamma": "Į_Gamma___š",
-    "apply": "Į_Apply___š",
-    "top": "Į_Exclude top____š",
-    "bottom": "Į_Exclude bottom_____š",
-    "topText": " Į_Exclude top x percentage of histogram____________š",
-    "bottomText": " Į_Exclude bottom x percentage of histogram_____________š",
-    "stdDev": "Į_# of Std. Dev_____š",
-    "layer": "Į_Current Layer_____š",
-    "error": "Į_No visible Imagery Layers in the map____________š."
+    "title": "Vaizdavimas",
+    "stretch": "Ištempimo parametrai",
+    "stretchType": "Ištempimo tipas",
+    "dra": "DRA",
+    "draText": "Dinamiškai keičiamas rėžis atnaujina išplėtimą, pagrįstą esamu rodiniu",
+    "gamma": "Gama",
+    "apply": "Taikyti",
+    "top": "Pašalinti didžiausius",
+    "bottom": "Pašalinti mažiausius",
+    "topText": " Pašalinti histogramos x didžiausius proc.",
+    "bottomText": " Pašalinti histogramos x mažiausius proc.",
+    "stdDev": "# stand. nuokr.",
+    "layer": "Esamas sluoksnis",
+    "error": "Žemėlapyje matomų atvaizdų sluoksnių nėra."
   },
   "imageSelector": {
-    "title": "Į_Image Selector_____š",
-    "enable": "Į_Enable Image Selector_______š",
-    "secondary": "Į_Set Active as Comparison Layer__________š.",
-    "dropDown": "Į_Show images in drop down list__________š.",
-    "refresh": "Į_Refresh query based on current extent____________š.",
-    "show": "Į_Show__š",
-    "age": "Į_Age__š",
-    "zoom": "Į_Zoom in to select images_________š.",
-    "error": "Į_No visible Imagery Layers in the map____________š.",
-    "error1": "Į_Field is not specified________š.",
-    "error2": "Į_No OBJECTID field______š.",
-    "error3": "Į_No Category field______š.",
-    "error4": "Į_Cannot perform action for layer___________š.",
-    "error5": "Į_Services pre 10.2.1 not supported___________š.",
-    "error6": "Į_No scenes in current extent_________š.",
-    "error7": "Į_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________š.",
-    "slider": "Į_Show images on slider________š."
+    "title": "Atvaizdų pasirinkimo priemonė",
+    "enable": "Įgalinti atvaizdų pasirinkimo priemonę",
+    "secondary": "Nustatyti aktyvų sluoksnį kaip pasirinkimo sluoksnį.",
+    "dropDown": "Rodyti atvaizdus išplečiamajame sąraše.",
+    "refresh": "Atnaujinti užklausą pagal esamą aprėptį.",
+    "show": "Rodyti",
+    "age": "Naujumas",
+    "zoom": "Didinti, norint pasirinkti atvaizdus.",
+    "error": "Žemėlapyje matomų atvaizdų sluoksnių nėra.",
+    "error1": "Nenurodytas laukas.",
+    "error2": "Nėra lauko OBJECTID.",
+    "error3": "Nėra kategorijos lauko.",
+    "error4": "Nepavyko atlikti veiksmo sluoksnyje.",
+    "error5": "Paslaugos, kurių versija ankstesnė negu 10.2.1, nepalaikomos.",
+    "error6": "Esamoje aprėptyje scenų nėra.",
+    "error7": "Pasirinktas kontūrų skaičius viršija 20. Bus rodomi tik pirmieji 20. Jei tolesnių priminimų nereikia, paspauskite Gerai.",
+    "slider": "Rodyti atvaizdus slankiklyje."
   },
   "changeDetection": {
-    "title": "Į_Change Detection______š",
-    "mode": "Į_Mode__š",
-    "method": "Į_Method___š",
-    "positive": "Į_Positive Difference_______š",
-    "negative": "Į_Negative Difference_______š",
-    "threshold": "Į_Threshold____š",
-    "difference": "Į_Difference____š",
-    "apply": "Į_Apply___š",
-    "error": "Į_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________š."
+    "title": "Keisti kryptį",
+    "mode": "Režimas",
+    "method": "Būdas",
+    "positive": "Teigiamas skirtumas",
+    "negative": "Neigiamas skirtumas",
+    "threshold": "Ribinė vertė",
+    "difference": "Skirtumas",
+    "apply": "Taikyti",
+    "error": "Parinktis Keisti kryptį veikia su dviem skirtingų datų atvaizdais iš tos pačios paslaugos.<br />Pirmiausia, naudodami atvaizdų pasirinkimo priemonę, nurodykite vieną atvaizdą,<br />tada spustelėkite mygtuką <img src='images/down.png' height='14'/> ir pasirinkite antrąjį atvaizdą.<br />Grįžkite į šį valdiklį, kai norėsite pakeisti kryptį."
   },
   "editor": {
-    "title": "Į_Editor___š",
-    "error": "Į_No Edit Layer selected________š.",
-    "error1": "Į_Access denied. Layers cannot be edited_____________š."
+    "title": "Redaktorius",
+    "error": "Nepasirinktas redagavimo sluoksnis.",
+    "error1": "Prieiga nesuteikta. Sluoksnių redaguoti negalima."
   },
   "measurement": {
-    "title": "Į_Image Measurement______š",
-    "error": "Į_Mensuration Capabilities not supported_____________š."
+    "title": "Atvaizdo matavimas",
+    "error": "Matavimas nepalaikomas."
   },
   "export": {
-    "title": "Į_Export___š",
-    "mode": "Į_Mode__š",
-    "titleText": "Į_Title___š",
-    "description": "Į_Description____š",
-    "tags": "Į_Tags__š",
-    "submit": "Į_Submit___š",
-    "pixel": "Į_Pixel Size____š",
-    "outsr": "Į_Output Spatial Reference________š",
-    "renderer": "Į_Current Renderer______š",
-    "extent": "Į_Define Extent_____š",
-    "text": "Į_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________š.",
-    "error": "Į_No visible imagery layers on the map____________š.",
-    "error1": "Į_Title is required______š.",
-    "error2": "Į_Tag(s) is required_______š."
+    "title": "Eksportuoti",
+    "mode": "Režimas",
+    "titleText": "Pavadinimas",
+    "description": "Aprašymas",
+    "tags": "Raktažodžiai",
+    "submit": "Pateikti",
+    "pixel": "Pikselių dydis",
+    "outsr": "Išvesties koordinačių sistema",
+    "renderer": "Dabartinė atvaizdavimo priemonė",
+    "extent": "Nurodykite aprėptį",
+    "text": "Jei Dabartinė atvaizdavimo priemonė yra pažymėta, eksportuojamas atvaizdavimas<br />. Kitu atveju bus eksportuotos pradinės duomenų reikšmės<br/>.",
+    "error": "Žemėlapyje matomų atvaizdų sluoksnių nėra.",
+    "error1": "Būtinas pavadinimas.",
+    "error2": "Būtinas raktažodis (-iai)."
   },
   "compare": {
-    "title": "Į_Compare___š",
-    "slider": "Į_Transparency Slider_______š",
-    "hSwipe": "Į_Horizontal Swipe______š",
-    "vSwipe": "Į_Vertical Swipe_____š",
-    "error": "Į_No visible Imagery Layers available for comparison________________š."
+    "title": "Palyginimas",
+    "slider": "Skaidrus slankiklis",
+    "hSwipe": "Horizontalus slankiklis",
+    "vSwipe": "Vertikalus slankiklis",
+    "error": "Matomų atvaizdų sluoksnių palyginimui nėra."
   }
 });

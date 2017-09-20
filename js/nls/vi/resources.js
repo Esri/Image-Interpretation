@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "Đ_Unable to create map_______ớ"
+    "error": "Không thể tạo bản đồ"
   },
   "nav": {
-    "close": "Đ_Close___ớ"
+    "close": "Đóng"
   },
   "basemap": {
-    "title": "Đ_Basemap Gallery______ớ"
+    "title": "Bộ sưu tập bản đồ nền"
   },
   "operationalLayers": {
-    "title": "Đ_Operational Layers______ớ",
-    "error": "Đ_No operational layers in the map___________ớ."
+    "title": "Các lớp hoạt động",
+    "error": "Không có lớp hoạt động nào trong bản đồ."
   },
   "layerSelector": {
-    "active": "Đ_Active Layer_____ớ",
-    "comparison": "Đ_Comparison Layer______ớ",
-    "other": "Đ_Other___ớ",
-    "result": "Đ_Result___ớ",
-    "title": "Đ_Layer Selector_____ớ",
-    "resultSave": "Đ_Add the Result layer in the comparison layer list________________ớ",
-    "copy": "Đ_Copy active layer to comparison layer____________ớ.",
-    "swap": "Đ_Swap active and comparison layer___________ớ."
+    "active": "Lớp hoạt động",
+    "comparison": "Lớp so sánh",
+    "other": "Khác",
+    "result": "Kết quả",
+    "title": "Trình lựa chọn lớp",
+    "resultSave": "Thêm lớp Kết quả trong danh sách lớp so sánh",
+    "copy": "Sao chép lớp hoạt động vào lớp so sánh.",
+    "swap": "Hoán đổi lớp hoạt động và lớp so sánh."
   },
   "renderer": {
-    "title": "Đ_Renderer___ớ",
-    "stretch": "Đ_Stretch Parameters______ớ",
-    "stretchType": "Đ_Stretch Type_____ớ",
-    "dra": "Đ_DRA__ớ",
-    "draText": "Đ_Dynamic Range Adjustment updates enhancement based on current view_____________________ớ",
-    "gamma": "Đ_Gamma___ớ",
-    "apply": "Đ_Apply___ớ",
-    "top": "Đ_Exclude top____ớ",
-    "bottom": "Đ_Exclude bottom_____ớ",
-    "topText": " Đ_Exclude top x percentage of histogram____________ớ",
-    "bottomText": " Đ_Exclude bottom x percentage of histogram_____________ớ",
-    "stdDev": "Đ_# of Std. Dev_____ớ",
-    "layer": "Đ_Current Layer_____ớ",
-    "error": "Đ_No visible Imagery Layers in the map____________ớ."
+    "title": "Trình kết xuất",
+    "stretch": "Các thông số kéo giãn",
+    "stretchType": "Loại Kéo giãn",
+    "dra": "DRA",
+    "draText": "Chức năng Điều chỉnh Phạm vi Động được cải tiến dựa trên trình xem hiện tại",
+    "gamma": "Gamma",
+    "apply": "Áp dụng",
+    "top": "Loại trừ đỉnh",
+    "bottom": "Loại trừ đáy",
+    "topText": " Loại trừ tỷ lệ phần trăm đỉnh x của biểu đồ tần số",
+    "bottomText": " Loại trừ tỷ lệ phần trăm đáy x của biểu đồ tần số",
+    "stdDev": "# của độ lệch chuẩn",
+    "layer": "Lớp hiện tại",
+    "error": "Không có Lớp Hình ảnh hiển thị nào trong bản đồ."
   },
   "imageSelector": {
-    "title": "Đ_Image Selector_____ớ",
-    "enable": "Đ_Enable Image Selector_______ớ",
-    "secondary": "Đ_Set Active as Comparison Layer__________ớ.",
-    "dropDown": "Đ_Show images in drop down list__________ớ.",
-    "refresh": "Đ_Refresh query based on current extent____________ớ.",
-    "show": "Đ_Show__ớ",
-    "age": "Đ_Age__ớ",
-    "zoom": "Đ_Zoom in to select images_________ớ.",
-    "error": "Đ_No visible Imagery Layers in the map____________ớ.",
-    "error1": "Đ_Field is not specified________ớ.",
-    "error2": "Đ_No OBJECTID field______ớ.",
-    "error3": "Đ_No Category field______ớ.",
-    "error4": "Đ_Cannot perform action for layer___________ớ.",
-    "error5": "Đ_Services pre 10.2.1 not supported___________ớ.",
-    "error6": "Đ_No scenes in current extent_________ớ.",
-    "error7": "Đ_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ớ.",
-    "slider": "Đ_Show images on slider________ớ."
+    "title": "Trình lựa chọn hình ảnh",
+    "enable": "Bật Trình lựa chọn Hình ảnh",
+    "secondary": "Thiết lập lớp hoạt động thành Lớp So sánh.",
+    "dropDown": "Hiển thị hình ảnh trong danh sách xổ xuống.",
+    "refresh": "Làm mới lại câu truy vấn dựa trên phạm vi hiện tại.",
+    "show": "Hiển thị",
+    "age": "Tuổi",
+    "zoom": "Phóng to để chọn hình ảnh.",
+    "error": "Không có Lớp Hình ảnh hiển thị nào trong bản đồ.",
+    "error1": "Trường không được chỉ định.",
+    "error2": "Không có trường OBJECTID.",
+    "error3": "Không có trường Thể loại.",
+    "error4": "Không thể thực hiện hoạt động cho lớp dữ liệu.",
+    "error5": "Các dịch vụ trước phiên bản 10.2.1 sẽ không được hỗ trợ.",
+    "error6": "Không có scene nào trong phạm vi hiện tại.",
+    "error7": "Số điểm được chọn vượt quá 20 điểm. Chỉ 20 điểm đầu tiên mới được hiển thị. Nhấn OK để không bị cảnh bảo lại.",
+    "slider": "Hiển thị hình ảnh trên thanh trượt."
   },
   "changeDetection": {
-    "title": "Đ_Change Detection______ớ",
-    "mode": "Đ_Mode__ớ",
-    "method": "Đ_Method___ớ",
-    "positive": "Đ_Positive Difference_______ớ",
-    "negative": "Đ_Negative Difference_______ớ",
-    "threshold": "Đ_Threshold____ớ",
-    "difference": "Đ_Difference____ớ",
-    "apply": "Đ_Apply___ớ",
-    "error": "Đ_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ớ."
+    "title": "Phát hiện Thay đổi",
+    "mode": "Chế độ",
+    "method": "Phương pháp",
+    "positive": "Chênh lệch dương",
+    "negative": "Chênh lệch âm",
+    "threshold": "Ngưỡng",
+    "difference": "Chênh lệch",
+    "apply": "Áp dụng",
+    "error": "Chức năng Phát hiện Thay đổi hoạt động với hai hình ảnh từ các ngày khác nhau từ cùng một dịch vụ.<br />Trước tiên sử dụng Trình lựa chọn Hình ảnh để xác định ra một hình ảnh,<br />sau đó nhấp vào nút <img src='images/down.png' height='14'/> và chọn hình ảnh thứ hai.<br />Trở lại bảng điều khiển này để tiếp tục với việc phát hiện thay đổi."
   },
   "editor": {
-    "title": "Đ_Editor___ớ",
-    "error": "Đ_No Edit Layer selected________ớ.",
-    "error1": "Đ_Access denied. Layers cannot be edited_____________ớ."
+    "title": "Trình biên tập",
+    "error": "Không có Lớp Chỉnh sửa nào được chọn.",
+    "error1": "Truy cập bị từ chối. Không thể chỉnh sửa các lớp."
   },
   "measurement": {
-    "title": "Đ_Image Measurement______ớ",
-    "error": "Đ_Mensuration Capabilities not supported_____________ớ."
+    "title": "Đo lường Hình ảnh",
+    "error": "Khả năng Đo lường không được hỗ trợ."
   },
   "export": {
-    "title": "Đ_Export___ớ",
-    "mode": "Đ_Mode__ớ",
-    "titleText": "Đ_Title___ớ",
-    "description": "Đ_Description____ớ",
-    "tags": "Đ_Tags__ớ",
-    "submit": "Đ_Submit___ớ",
-    "pixel": "Đ_Pixel Size____ớ",
-    "outsr": "Đ_Output Spatial Reference________ớ",
-    "renderer": "Đ_Current Renderer______ớ",
-    "extent": "Đ_Define Extent_____ớ",
-    "text": "Đ_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ớ.",
-    "error": "Đ_No visible imagery layers on the map____________ớ.",
-    "error1": "Đ_Title is required______ớ.",
-    "error2": "Đ_Tag(s) is required_______ớ."
+    "title": "Xuất",
+    "mode": "Chế độ",
+    "titleText": "Tiêu đề",
+    "description": "Mô tả",
+    "tags": "Thẻ",
+    "submit": "Gửi",
+    "pixel": "Kích thước Pixel",
+    "outsr": "Tham chiếu Không gian Đầu ra",
+    "renderer": "Trình kết xuất Hiện tại",
+    "extent": "Xác định Phạm vi",
+    "text": "Nếu Trình kết xuất Hiện tại được đánh dấu chọn, việc kết xuất<br /> sẽ được xuất, nếu không giá trị dữ liệu ban đầu<br/> sẽ được xuất ra.",
+    "error": "Không có lớp hình ảnh hiển thị nào trên bản đồ.",
+    "error1": "Cần có tiêu đề.",
+    "error2": "Cần có (các) Thẻ."
   },
   "compare": {
-    "title": "Đ_Compare___ớ",
-    "slider": "Đ_Transparency Slider_______ớ",
-    "hSwipe": "Đ_Horizontal Swipe______ớ",
-    "vSwipe": "Đ_Vertical Swipe_____ớ",
-    "error": "Đ_No visible Imagery Layers available for comparison________________ớ."
+    "title": "So sánh",
+    "slider": "Thanh trượt Trong suốt",
+    "hSwipe": "Trượt Ngang",
+    "vSwipe": "Trượt dọc",
+    "error": "Không có Lớp Hình ảnh hiển thị nào có sẵn để so sánh."
   }
 });

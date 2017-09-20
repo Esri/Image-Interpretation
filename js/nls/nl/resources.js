@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "Ĳ_Unable to create map_______ä"
+    "error": "Kaart kan niet gemaakt worden"
   },
   "nav": {
-    "close": "Ĳ_Close___ä"
+    "close": "Sluiten"
   },
   "basemap": {
-    "title": "Ĳ_Basemap Gallery______ä"
+    "title": "Basiskaartgalerij"
   },
   "operationalLayers": {
-    "title": "Ĳ_Operational Layers______ä",
-    "error": "Ĳ_No operational layers in the map___________ä."
+    "title": "Operationele lagen",
+    "error": "Geen operationele lagen in de kaart."
   },
   "layerSelector": {
-    "active": "Ĳ_Active Layer_____ä",
-    "comparison": "Ĳ_Comparison Layer______ä",
-    "other": "Ĳ_Other___ä",
-    "result": "Ĳ_Result___ä",
-    "title": "Ĳ_Layer Selector_____ä",
-    "resultSave": "Ĳ_Add the Result layer in the comparison layer list________________ä",
-    "copy": "Ĳ_Copy active layer to comparison layer____________ä.",
-    "swap": "Ĳ_Swap active and comparison layer___________ä."
+    "active": "Actieve laag",
+    "comparison": "Vergelijkingslaag",
+    "other": "Overige",
+    "result": "Resultaat",
+    "title": "Laagselector",
+    "resultSave": "Voeg de resultatenlaag toe aan de vergelijkingslaaglijst",
+    "copy": "Kopieer actieve laag naar vergelijkingslaag.",
+    "swap": "Wissel actieve en vergelijkende laag."
   },
   "renderer": {
-    "title": "Ĳ_Renderer___ä",
-    "stretch": "Ĳ_Stretch Parameters______ä",
-    "stretchType": "Ĳ_Stretch Type_____ä",
-    "dra": "Ĳ_DRA__ä",
-    "draText": "Ĳ_Dynamic Range Adjustment updates enhancement based on current view_____________________ä",
-    "gamma": "Ĳ_Gamma___ä",
-    "apply": "Ĳ_Apply___ä",
-    "top": "Ĳ_Exclude top____ä",
-    "bottom": "Ĳ_Exclude bottom_____ä",
-    "topText": " Ĳ_Exclude top x percentage of histogram____________ä",
-    "bottomText": " Ĳ_Exclude bottom x percentage of histogram_____________ä",
-    "stdDev": "Ĳ_# of Std. Dev_____ä",
-    "layer": "Ĳ_Current Layer_____ä",
-    "error": "Ĳ_No visible Imagery Layers in the map____________ä."
+    "title": "Renderer",
+    "stretch": "Stretchparameters",
+    "stretchType": "Stretchtype",
+    "dra": "DRA",
+    "draText": "Dynamic Range Adjustment werkt verhoging bij op basis van huidige weergave",
+    "gamma": "Gamma",
+    "apply": "Toepassen",
+    "top": "Bovenkant uitsluiten",
+    "bottom": "Onderkant uitsluiten",
+    "topText": " Bovenkant x percentage histogram uitsluiten",
+    "bottomText": " Onderkant x percentage histogram uitsluiten",
+    "stdDev": "# van Std. afwijking",
+    "layer": "Huidige laag",
+    "error": "Geen zichtbare satellietbeeldlagen in de kaart."
   },
   "imageSelector": {
-    "title": "Ĳ_Image Selector_____ä",
-    "enable": "Ĳ_Enable Image Selector_______ä",
-    "secondary": "Ĳ_Set Active as Comparison Layer__________ä.",
-    "dropDown": "Ĳ_Show images in drop down list__________ä.",
-    "refresh": "Ĳ_Refresh query based on current extent____________ä.",
-    "show": "Ĳ_Show__ä",
-    "age": "Ĳ_Age__ä",
-    "zoom": "Ĳ_Zoom in to select images_________ä.",
-    "error": "Ĳ_No visible Imagery Layers in the map____________ä.",
-    "error1": "Ĳ_Field is not specified________ä.",
-    "error2": "Ĳ_No OBJECTID field______ä.",
-    "error3": "Ĳ_No Category field______ä.",
-    "error4": "Ĳ_Cannot perform action for layer___________ä.",
-    "error5": "Ĳ_Services pre 10.2.1 not supported___________ä.",
-    "error6": "Ĳ_No scenes in current extent_________ä.",
-    "error7": "Ĳ_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________ä.",
-    "slider": "Ĳ_Show images on slider________ä."
+    "title": "Image Selector",
+    "enable": "Image Selector inschakelen",
+    "secondary": "Activeer als vergelijkingslaag.",
+    "dropDown": "Toon afbeeldingen in de vervolgkeuzelijst.",
+    "refresh": "Refresh query op basis van huidige omvang.",
+    "show": "Weergeven",
+    "age": "Leeftijd",
+    "zoom": "Inzoomen om afbeeldingen te selecteren.",
+    "error": "Geen zichtbare satellietbeeldlagen in de kaart.",
+    "error1": "Veld is niet gespecificeerd.",
+    "error2": "Geen OBJECTID veld.",
+    "error3": "Geen categorieveld",
+    "error4": "Kan geen actie uitvoeren voor de laag.",
+    "error5": "Services voor 10.2.1 niet ondersteund.",
+    "error6": "Geen scenes in de huidige omvang.",
+    "error7": "Aantal geselecteerde footprints overschrijdt 20. Alleen de eerste 20 worden weergegeven. Druk op OK om niet meer te waarschuwen.",
+    "slider": "Toon afbeeldingen op de schuifregelaar."
   },
   "changeDetection": {
-    "title": "Ĳ_Change Detection______ä",
-    "mode": "Ĳ_Mode__ä",
-    "method": "Ĳ_Method___ä",
-    "positive": "Ĳ_Positive Difference_______ä",
-    "negative": "Ĳ_Negative Difference_______ä",
-    "threshold": "Ĳ_Threshold____ä",
-    "difference": "Ĳ_Difference____ä",
-    "apply": "Ĳ_Apply___ä",
-    "error": "Ĳ_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________ä."
+    "title": "Veranderdetectie",
+    "mode": "Modus",
+    "method": "Methode",
+    "positive": "Positief verschil",
+    "negative": "Negatief verschil",
+    "threshold": "Drempel",
+    "difference": "Verschil",
+    "apply": "Toepassen",
+    "error": "Veranderdetectie werkt met twee afbeeldingen vanaf verschillende data van dezelfde service.<br />Gebruik eerst Image Selector om één afbeelding te definiëren,<br /> klik dan op de knop <img src='images/down.png' height='14'/> knop en selecteer de tweede afbeelding.<br /> Keer terug naar deze controle om door te gaan met veranderdetectie."
   },
   "editor": {
-    "title": "Ĳ_Editor___ä",
-    "error": "Ĳ_No Edit Layer selected________ä.",
-    "error1": "Ĳ_Access denied. Layers cannot be edited_____________ä."
+    "title": "Editor",
+    "error": "Geen bewerkingslaag geselecteerd.",
+    "error1": "Toegang geweigerd. Lagen kunnen niet worden bewerkt."
   },
   "measurement": {
-    "title": "Ĳ_Image Measurement______ä",
-    "error": "Ĳ_Mensuration Capabilities not supported_____________ä."
+    "title": "Beeldmeting",
+    "error": "Mensuratiemogelijkheden niet ondersteund."
   },
   "export": {
-    "title": "Ĳ_Export___ä",
-    "mode": "Ĳ_Mode__ä",
-    "titleText": "Ĳ_Title___ä",
-    "description": "Ĳ_Description____ä",
-    "tags": "Ĳ_Tags__ä",
-    "submit": "Ĳ_Submit___ä",
-    "pixel": "Ĳ_Pixel Size____ä",
-    "outsr": "Ĳ_Output Spatial Reference________ä",
-    "renderer": "Ĳ_Current Renderer______ä",
-    "extent": "Ĳ_Define Extent_____ä",
-    "text": "Ĳ_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________ä.",
-    "error": "Ĳ_No visible imagery layers on the map____________ä.",
-    "error1": "Ĳ_Title is required______ä.",
-    "error2": "Ĳ_Tag(s) is required_______ä."
+    "title": "Exporteren",
+    "mode": "Modus",
+    "titleText": "Titel",
+    "description": "Beschrijving",
+    "tags": "Labels",
+    "submit": "Verzenden",
+    "pixel": "Pixelgrootte",
+    "outsr": "Uitvoer ruimtelijke referentie",
+    "renderer": "Huidige Renderer",
+    "extent": "Extent definiëren",
+    "text": "Als de huidige renderer is gecontroleerd, wordt de rendering<br /> geëxporteerd, anders worden de oorspronkelijke gegevenswaarden<br/> geëxporteerd.",
+    "error": "Geen zichtbare satellietbeeldlagen op de kaart.",
+    "error1": "Titel is vereist.",
+    "error2": "Tag(s) is verplicht."
   },
   "compare": {
-    "title": "Ĳ_Compare___ä",
-    "slider": "Ĳ_Transparency Slider_______ä",
-    "hSwipe": "Ĳ_Horizontal Swipe______ä",
-    "vSwipe": "Ĳ_Vertical Swipe_____ä",
-    "error": "Ĳ_No visible Imagery Layers available for comparison________________ä."
+    "title": "Vergelijken",
+    "slider": "Transparantie-schuifregelaar",
+    "hSwipe": "Horizontale swipe",
+    "vSwipe": "Verticale swipe",
+    "error": "Geen zichtbare satellietbeeldlagen beschikbaar voor vergelijking."
   }
 });

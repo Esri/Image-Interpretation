@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "試_Unable to create map_______驗"
+    "error": "無法建立地圖"
   },
   "nav": {
-    "close": "試_Close___驗"
+    "close": "關閉"
   },
   "basemap": {
-    "title": "試_Basemap Gallery______驗"
+    "title": "底圖庫"
   },
   "operationalLayers": {
-    "title": "試_Operational Layers______驗",
-    "error": "試_No operational layers in the map___________驗."
+    "title": "操作圖層",
+    "error": "地圖中沒有操作圖層。"
   },
   "layerSelector": {
-    "active": "試_Active Layer_____驗",
-    "comparison": "試_Comparison Layer______驗",
-    "other": "試_Other___驗",
-    "result": "試_Result___驗",
-    "title": "試_Layer Selector_____驗",
-    "resultSave": "試_Add the Result layer in the comparison layer list________________驗",
-    "copy": "試_Copy active layer to comparison layer____________驗.",
-    "swap": "試_Swap active and comparison layer___________驗."
+    "active": "作用中圖層",
+    "comparison": "比較圖層",
+    "other": "其他",
+    "result": "結果",
+    "title": "圖層選擇器",
+    "resultSave": "在比較圖層清單中新增結果圖層",
+    "copy": "將作用中圖層複製到比較圖層。",
+    "swap": "交換作用中和比較圖層。"
   },
   "renderer": {
-    "title": "試_Renderer___驗",
-    "stretch": "試_Stretch Parameters______驗",
-    "stretchType": "試_Stretch Type_____驗",
-    "dra": "試_DRA__驗",
-    "draText": "試_Dynamic Range Adjustment updates enhancement based on current view_____________________驗",
-    "gamma": "試_Gamma___驗",
-    "apply": "試_Apply___驗",
-    "top": "試_Exclude top____驗",
-    "bottom": "試_Exclude bottom_____驗",
-    "topText": " 試_Exclude top x percentage of histogram____________驗",
-    "bottomText": " 試_Exclude bottom x percentage of histogram_____________驗",
-    "stdDev": "試_# of Std. Dev_____驗",
-    "layer": "試_Current Layer_____驗",
-    "error": "試_No visible Imagery Layers in the map____________驗."
+    "title": "渲染器",
+    "stretch": "縮放參數",
+    "stretchType": "縮放類型",
+    "dra": "DRA",
+    "draText": "根據目前視圖的動態範圍調整更新增強功能",
+    "gamma": "Gamma",
+    "apply": "套用",
+    "top": "排除頂部",
+    "bottom": "排除底部",
+    "topText": " 直方圖的排除頂部 x 百分比",
+    "bottomText": " 直方圖的排除底部 x 百分比",
+    "stdDev": "標準差的數量",
+    "layer": "目前圖層",
+    "error": "地圖中沒有可見的影像圖層。"
   },
   "imageSelector": {
-    "title": "試_Image Selector_____驗",
-    "enable": "試_Enable Image Selector_______驗",
-    "secondary": "試_Set Active as Comparison Layer__________驗.",
-    "dropDown": "試_Show images in drop down list__________驗.",
-    "refresh": "試_Refresh query based on current extent____________驗.",
-    "show": "試_Show__驗",
-    "age": "試_Age__驗",
-    "zoom": "試_Zoom in to select images_________驗.",
-    "error": "試_No visible Imagery Layers in the map____________驗.",
-    "error1": "試_Field is not specified________驗.",
-    "error2": "試_No OBJECTID field______驗.",
-    "error3": "試_No Category field______驗.",
-    "error4": "試_Cannot perform action for layer___________驗.",
-    "error5": "試_Services pre 10.2.1 not supported___________驗.",
-    "error6": "試_No scenes in current extent_________驗.",
-    "error7": "試_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________驗.",
-    "slider": "試_Show images on slider________驗."
+    "title": "圖片選擇器",
+    "enable": "啟用圖片選擇器",
+    "secondary": "將作用中設為比較圖層。",
+    "dropDown": "在下拉式清單中顯示圖片。",
+    "refresh": "根據目前的範圍重新整理查詢。",
+    "show": "顯示",
+    "age": "年齡",
+    "zoom": "放大以選擇圖片。",
+    "error": "地圖中沒有可見的影像圖層。",
+    "error1": "欄位未指定。",
+    "error2": "無 OBJECTID 欄位。",
+    "error3": "無類別欄位。",
+    "error4": "無法執行圖層的動作。",
+    "error5": "不支援依照 10.2.1 的服務。",
+    "error6": "目前的範圍中沒有場景。",
+    "error7": "選擇的輪廓數量超過 20。只會顯示前 20 個。按下「確定」不會再次警告。",
+    "slider": "在滑桿上顯示圖片。"
   },
   "changeDetection": {
-    "title": "試_Change Detection______驗",
-    "mode": "試_Mode__驗",
-    "method": "試_Method___驗",
-    "positive": "試_Positive Difference_______驗",
-    "negative": "試_Negative Difference_______驗",
-    "threshold": "試_Threshold____驗",
-    "difference": "試_Difference____驗",
-    "apply": "試_Apply___驗",
-    "error": "試_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________驗."
+    "title": "變更偵測",
+    "mode": "模式",
+    "method": "方法",
+    "positive": "正差異",
+    "negative": "負差異",
+    "threshold": "閾值",
+    "difference": "差異",
+    "apply": "套用",
+    "error": "「變更偵測」使用來自相同服務的不同日期的兩張圖片。<br />首先使用「圖片選擇器」定義一張圖片，<br />然後按一下 <img src='images/down.png' height='14'/> 按鈕並選擇第二張圖片。<br />返回此控制項以繼續變更偵測。"
   },
   "editor": {
-    "title": "試_Editor___驗",
-    "error": "試_No Edit Layer selected________驗.",
-    "error1": "試_Access denied. Layers cannot be edited_____________驗."
+    "title": "編輯器",
+    "error": "未選擇「編輯圖層」。",
+    "error1": "拒絕存取。圖層無法編輯。"
   },
   "measurement": {
-    "title": "試_Image Measurement______驗",
-    "error": "試_Mensuration Capabilities not supported_____________驗."
+    "title": "圖像測量",
+    "error": "不支援「測量能力」。"
   },
   "export": {
-    "title": "試_Export___驗",
-    "mode": "試_Mode__驗",
-    "titleText": "試_Title___驗",
-    "description": "試_Description____驗",
-    "tags": "試_Tags__驗",
-    "submit": "試_Submit___驗",
-    "pixel": "試_Pixel Size____驗",
-    "outsr": "試_Output Spatial Reference________驗",
-    "renderer": "試_Current Renderer______驗",
-    "extent": "試_Define Extent_____驗",
-    "text": "試_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________驗.",
-    "error": "試_No visible imagery layers on the map____________驗.",
-    "error1": "試_Title is required______驗.",
-    "error2": "試_Tag(s) is required_______驗."
+    "title": "匯出",
+    "mode": "模式",
+    "titleText": "標題",
+    "description": "說明",
+    "tags": "標記",
+    "submit": "提交",
+    "pixel": "像素大小",
+    "outsr": "輸出空間參考",
+    "renderer": "目前渲染器",
+    "extent": "定義範圍",
+    "text": "若勾選「目前渲染器」，則會匯出<br />渲染，否則將匯出<br/>原始資料值。",
+    "error": "地圖上沒有可見的影像圖層。",
+    "error1": "標題為必填項。",
+    "error2": "標記為必填項。"
   },
   "compare": {
-    "title": "試_Compare___驗",
-    "slider": "試_Transparency Slider_______驗",
-    "hSwipe": "試_Horizontal Swipe______驗",
-    "vSwipe": "試_Vertical Swipe_____驗",
-    "error": "試_No visible Imagery Layers available for comparison________________驗."
+    "title": "比較",
+    "slider": "透明度滑桿",
+    "hSwipe": "水平撥動",
+    "vSwipe": "垂直撥動",
+    "error": "沒有可供比較的可見影像圖層。"
   }
 });

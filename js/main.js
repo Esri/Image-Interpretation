@@ -176,7 +176,7 @@ define([
                 this.map.on("update-end", lang.hitch(this, this.hideLoading));
                 this.findAndReplaceCacheImageService();
                 window.addEventListener("resize", lang.hitch(this, this.resizeTemplate));
-                if (!this.config.basemapFlag) {
+                if (this.config.basemapFlag) {
                     domStyle.set("basemapContainer", "display", "block");
                     this.setupBasemap();
                 } else
@@ -236,11 +236,8 @@ define([
                 this._updateTheme();
                 registry.byId("toolsContentContainer").show();
                 domConstruct.destroy("toolsContentContainer_underlay");
-<<<<<<< HEAD
                 domStyle.set("toolsContentContainer", "z-index", "1");
                 domStyle.set("toolsContentContainer", "left", "");
-=======
->>>>>>> origin/master
                 this.resizeTemplate();
                 this.setCloseEvent();
                 dojo.connect(registry.byId("toolsContentContainer"), "hide", lang.hitch(this, function (event) {
@@ -253,7 +250,6 @@ define([
                     domStyle.set("toolsContentContainer", "opacity", "");
                     var toolNodesActive = document.getElementsByClassName("selected-widget");
                     if (toolNodesActive.length > 1) {
-
                         for (var a = 0; a < toolNodesActive.length; a++) {
                             if (!event) {
                                 if (toolNodesActive[a].id !== "compareContainer")
@@ -261,7 +257,7 @@ define([
                                 setTimeout(function () {
                                     focus.focus(dom.byId("compareContainer"));
                                 }, 100);
-                            } else if ((toolNodesActive[a].id).includes((event.split(" ")[0]).toLowerCase())) {
+                            } else if ((toolNodesActive[a].id).includes((event.split(" ")[0]).toLowerCase()) || (event === "Image Measurement" && (toolNodesActive[a].id).includes("measurement"))) {
                                 toolNodesActive[a].click();
                             }
                         }

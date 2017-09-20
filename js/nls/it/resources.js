@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "é_Unable to create map_______È"
+    "error": "Impossibile creare la mappa"
   },
   "nav": {
-    "close": "é_Close___È"
+    "close": "Chiudi"
   },
   "basemap": {
-    "title": "é_Basemap Gallery______È"
+    "title": "Galleria di mappe di base"
   },
   "operationalLayers": {
-    "title": "é_Operational Layers______È",
-    "error": "é_No operational layers in the map___________È."
+    "title": "Layer operativi",
+    "error": "Nessun layer operativo nella mappa."
   },
   "layerSelector": {
-    "active": "é_Active Layer_____È",
-    "comparison": "é_Comparison Layer______È",
-    "other": "é_Other___È",
-    "result": "é_Result___È",
-    "title": "é_Layer Selector_____È",
-    "resultSave": "é_Add the Result layer in the comparison layer list________________È",
-    "copy": "é_Copy active layer to comparison layer____________È.",
-    "swap": "é_Swap active and comparison layer___________È."
+    "active": "Layer attivo",
+    "comparison": "Layer di confronto",
+    "other": "Altro",
+    "result": "Risultato",
+    "title": "Selettore layer",
+    "resultSave": "Aggiungi il layer del risultato nell’elenco dei layer di confronto",
+    "copy": "Copia layer attivo nel layer di confronto.",
+    "swap": "Passa al layer attivo e di confronto."
   },
   "renderer": {
-    "title": "é_Renderer___È",
-    "stretch": "é_Stretch Parameters______È",
-    "stretchType": "é_Stretch Type_____È",
-    "dra": "é_DRA__È",
-    "draText": "é_Dynamic Range Adjustment updates enhancement based on current view_____________________È",
-    "gamma": "é_Gamma___È",
-    "apply": "é_Apply___È",
-    "top": "é_Exclude top____È",
-    "bottom": "é_Exclude bottom_____È",
-    "topText": " é_Exclude top x percentage of histogram____________È",
-    "bottomText": " é_Exclude bottom x percentage of histogram_____________È",
-    "stdDev": "é_# of Std. Dev_____È",
-    "layer": "é_Current Layer_____È",
-    "error": "é_No visible Imagery Layers in the map____________È."
+    "title": "Renderer",
+    "stretch": "Parametri di estensione",
+    "stretchType": "Tipo di estensione",
+    "dra": "DRA",
+    "draText": "La regolazione dell’intervallo dinamico aggiorna i miglioramenti sulla base della vista attuale",
+    "gamma": "Gamma",
+    "apply": "Applica",
+    "top": "Escludi parte superiore",
+    "bottom": "Escludi parte inferiore",
+    "topText": " Escludi parte superiore per percentuale di istogramma",
+    "bottomText": " Escludi parte inferiore per percentuale di istogramma",
+    "stdDev": "# di dev. std.",
+    "layer": "Layer corrente",
+    "error": "Nessun layer di immagine visibile nella mappa."
   },
   "imageSelector": {
-    "title": "é_Image Selector_____È",
-    "enable": "é_Enable Image Selector_______È",
-    "secondary": "é_Set Active as Comparison Layer__________È.",
-    "dropDown": "é_Show images in drop down list__________È.",
-    "refresh": "é_Refresh query based on current extent____________È.",
-    "show": "é_Show__È",
-    "age": "é_Age__È",
-    "zoom": "é_Zoom in to select images_________È.",
-    "error": "é_No visible Imagery Layers in the map____________È.",
-    "error1": "é_Field is not specified________È.",
-    "error2": "é_No OBJECTID field______È.",
-    "error3": "é_No Category field______È.",
-    "error4": "é_Cannot perform action for layer___________È.",
-    "error5": "é_Services pre 10.2.1 not supported___________È.",
-    "error6": "é_No scenes in current extent_________È.",
-    "error7": "é_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________È.",
-    "slider": "é_Show images on slider________È."
+    "title": "Selettore immagini",
+    "enable": "Attiva selettore immagini",
+    "secondary": "Imposta attivo come layer di confronto.",
+    "dropDown": "Mostra immagini nell’elenco a discesa.",
+    "refresh": "Aggiorna query sulla base dell'estensione attuale.",
+    "show": "Mostra",
+    "age": "Età",
+    "zoom": "Effettua uno zoom in sulle immagini selezionate.",
+    "error": "Nessun layer di immagine visibile nella mappa.",
+    "error1": "Campo non specificato.",
+    "error2": "Nessun campo OBJECTID.",
+    "error3": "Nessun campo categoria.",
+    "error4": "Impossibile eseguire un’azione per il layer.",
+    "error5": "Servizi precedenti alla versione 10.2.1 non supportati.",
+    "error6": "Nessuna scena nell’estensione attuale.",
+    "error7": "Il numero di footprint selezionati supera 20. Solo i primi 20 vengono visualizzati. Premere OK per non mostrare più l'avviso.",
+    "slider": "Mostra immagini sul cursore."
   },
   "changeDetection": {
-    "title": "é_Change Detection______È",
-    "mode": "é_Mode__È",
-    "method": "é_Method___È",
-    "positive": "é_Positive Difference_______È",
-    "negative": "é_Negative Difference_______È",
-    "threshold": "é_Threshold____È",
-    "difference": "é_Difference____È",
-    "apply": "é_Apply___È",
-    "error": "é_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________È."
+    "title": "Modifica rilevamento",
+    "mode": "Modalità",
+    "method": "Metodo",
+    "positive": "Differenza positiva",
+    "negative": "Differenza negativa",
+    "threshold": "Soglia",
+    "difference": "Differenza",
+    "apply": "Applica",
+    "error": "L’opzione Modifica rilevamento funziona con due immagini di date diverse dallo stesso servizio.<br />Utilizzare prima il Selettore immagini per definire un’immagine,<br />quindi fare clic sul tasto <img src='images/down.png' height='14'/> e selezionare la seconda immagine.<br />Tornare in questa impostazione per procedere con la modifica."
   },
   "editor": {
-    "title": "é_Editor___È",
-    "error": "é_No Edit Layer selected________È.",
-    "error1": "é_Access denied. Layers cannot be edited_____________È."
+    "title": "Editor",
+    "error": "Nessun layer di modifica selezionato.",
+    "error1": "Accesso negato. I layer non possono essere modificati."
   },
   "measurement": {
-    "title": "é_Image Measurement______È",
-    "error": "é_Mensuration Capabilities not supported_____________È."
+    "title": "Misurazione immagine",
+    "error": "Funzioni di misurazione non supportate."
   },
   "export": {
-    "title": "é_Export___È",
-    "mode": "é_Mode__È",
-    "titleText": "é_Title___È",
-    "description": "é_Description____È",
-    "tags": "é_Tags__È",
-    "submit": "é_Submit___È",
-    "pixel": "é_Pixel Size____È",
-    "outsr": "é_Output Spatial Reference________È",
-    "renderer": "é_Current Renderer______È",
-    "extent": "é_Define Extent_____È",
-    "text": "é_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________È.",
-    "error": "é_No visible imagery layers on the map____________È.",
-    "error1": "é_Title is required______È.",
-    "error2": "é_Tag(s) is required_______È."
+    "title": "Esporta",
+    "mode": "Modalità",
+    "titleText": "Titolo",
+    "description": "Descrizione",
+    "tags": "Tag",
+    "submit": "Invia",
+    "pixel": "Dimensione pixel",
+    "outsr": "Riferimento spaziale di output",
+    "renderer": "Renderer attuale",
+    "extent": "Definisci estensione",
+    "text": "Se il Renderer attuale viene selezionato, il rendering<br /> viene esportato, insieme ai valori dei dati originali<br/>.",
+    "error": "Nessun layer di immagine visibile nella mappa.",
+    "error1": "Titolo obbligatorio.",
+    "error2": "Tag obbligatori."
   },
   "compare": {
-    "title": "é_Compare___È",
-    "slider": "é_Transparency Slider_______È",
-    "hSwipe": "é_Horizontal Swipe______È",
-    "vSwipe": "é_Vertical Swipe_____È",
-    "error": "é_No visible Imagery Layers available for comparison________________È."
+    "title": "Confronta",
+    "slider": "Cursore trasparenza",
+    "hSwipe": "Scorrimento orizzontale",
+    "vSwipe": "Scorrimento verticale",
+    "error": "Nessun layer di immagine visibile disponibile per il confronto."
   }
 });

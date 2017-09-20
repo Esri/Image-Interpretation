@@ -16,104 +16,104 @@
  */
 define({
   "map": {
-    "error": "ø_Unable to create map_______å"
+    "error": "Kan ikke oprette kort"
   },
   "nav": {
-    "close": "ø_Close___å"
+    "close": "Luk"
   },
   "basemap": {
-    "title": "ø_Basemap Gallery______å"
+    "title": "Galleri over baggrundskort"
   },
   "operationalLayers": {
-    "title": "ø_Operational Layers______å",
-    "error": "ø_No operational layers in the map___________å."
+    "title": "Operationelle lag",
+    "error": "Ingen operationelle lag i kortet."
   },
   "layerSelector": {
-    "active": "ø_Active Layer_____å",
-    "comparison": "ø_Comparison Layer______å",
-    "other": "ø_Other___å",
-    "result": "ø_Result___å",
-    "title": "ø_Layer Selector_____å",
-    "resultSave": "ø_Add the Result layer in the comparison layer list________________å",
-    "copy": "ø_Copy active layer to comparison layer____________å.",
-    "swap": "ø_Swap active and comparison layer___________å."
+    "active": "Aktivt lag",
+    "comparison": "Sammenligningslag",
+    "other": "Andet",
+    "result": "Resultat",
+    "title": "Lagvælger",
+    "resultSave": "Tilføj resultatlaget i listen med sammenligningslag",
+    "copy": "Kopiér det aktive lag til sammenligningslaget.",
+    "swap": "Ombyt det aktive lag og sammenligningslaget."
   },
   "renderer": {
-    "title": "ø_Renderer___å",
-    "stretch": "ø_Stretch Parameters______å",
-    "stretchType": "ø_Stretch Type_____å",
-    "dra": "ø_DRA__å",
-    "draText": "ø_Dynamic Range Adjustment updates enhancement based on current view_____________________å",
-    "gamma": "ø_Gamma___å",
-    "apply": "ø_Apply___å",
-    "top": "ø_Exclude top____å",
-    "bottom": "ø_Exclude bottom_____å",
-    "topText": " ø_Exclude top x percentage of histogram____________å",
-    "bottomText": " ø_Exclude bottom x percentage of histogram_____________å",
-    "stdDev": "ø_# of Std. Dev_____å",
-    "layer": "ø_Current Layer_____å",
-    "error": "ø_No visible Imagery Layers in the map____________å."
+    "title": "Gengivelsesværktøj",
+    "stretch": "Stretch-parametre",
+    "stretchType": "Stretch-type:",
+    "dra": "DRA",
+    "draText": "Forbedrede Dynamisk justering af område-opdateringer baseret på den aktuelle visning",
+    "gamma": "Gamma",
+    "apply": "Anvend",
+    "top": "Udeluk top",
+    "bottom": "Udeluk bund",
+    "topText": " Udeluk top x-procent af histogram",
+    "bottomText": " Udeluk bund x-procent af histogram",
+    "stdDev": "# af std.-afvigelse",
+    "layer": "Aktuelt lag",
+    "error": "Ingen synlige billedlag i kortet."
   },
   "imageSelector": {
-    "title": "ø_Image Selector_____å",
-    "enable": "ø_Enable Image Selector_______å",
-    "secondary": "ø_Set Active as Comparison Layer__________å.",
-    "dropDown": "ø_Show images in drop down list__________å.",
-    "refresh": "ø_Refresh query based on current extent____________å.",
-    "show": "ø_Show__å",
-    "age": "ø_Age__å",
-    "zoom": "ø_Zoom in to select images_________å.",
-    "error": "ø_No visible Imagery Layers in the map____________å.",
-    "error1": "ø_Field is not specified________å.",
-    "error2": "ø_No OBJECTID field______å.",
-    "error3": "ø_No Category field______å.",
-    "error4": "ø_Cannot perform action for layer___________å.",
-    "error5": "ø_Services pre 10.2.1 not supported___________å.",
-    "error6": "ø_No scenes in current extent_________å.",
-    "error7": "ø_Number of footprints selected exceed 20. Only first 20 will be displayed. Press OK not to warn again_______________________________å.",
-    "slider": "ø_Show images on slider________å."
+    "title": "Billedvælger",
+    "enable": "Aktivér billedvælger",
+    "secondary": "Indstil det aktive lag som sammenligningslag.",
+    "dropDown": "Vis billeder i rulleliste.",
+    "refresh": "Opdatér forespørgsel baseret på den aktuelle udstrækning.",
+    "show": "Vis",
+    "age": "Alder",
+    "zoom": "Zoom ind for at vælge billeder.",
+    "error": "Ingen synlige billedlag i kortet.",
+    "error1": "Felt er ikke specificeret.",
+    "error2": "Intet OBJECTID-felt.",
+    "error3": "Intet kategorifelt.",
+    "error4": "Kan ikke udføre handling for laget.",
+    "error5": "Tjenester før version 10.2.1 understøttes ikke.",
+    "error6": "Ingen scener i aktuel udstrækning.",
+    "error7": "Det valgte antal fodaftryk overskrider 20. Kun de første 20 fodaftryk vises. Tryk på OK for ikke at advare igen.",
+    "slider": "Vis billeder på skyder."
   },
   "changeDetection": {
-    "title": "ø_Change Detection______å",
-    "mode": "ø_Mode__å",
-    "method": "ø_Method___å",
-    "positive": "ø_Positive Difference_______å",
-    "negative": "ø_Negative Difference_______å",
-    "threshold": "ø_Threshold____å",
-    "difference": "ø_Difference____å",
-    "apply": "ø_Apply___å",
-    "error": "ø_Change Detection works with two image from different dates from the same service.<br />First use Image Selector to define one image,<br />then click on the <img src='images/down.png' height='14'/> button and select the second image.<br />Return to this control to proceed with change detection_________________________________________________________________________________________å."
+    "title": "Ændringsdetektering",
+    "mode": "Tilstand",
+    "method": "Metode",
+    "positive": "Positiv forskel",
+    "negative": "Negativ forskel",
+    "threshold": "Tærskel",
+    "difference": "Forskel",
+    "apply": "Anvend",
+    "error": "Ændringsdetektering arbejder med to billeder fra forskellige datoer fra den samme tjeneste.<br />Brug først Billedvælgeren til at definere det ene billede,<br />klik derefter på knappen <img src='images/down.png' height='14'/>, og vælg det andet billede.<br />Returnér til dette kontrolelement for at fortsætte med ændringsdetektering."
   },
   "editor": {
-    "title": "ø_Editor___å",
-    "error": "ø_No Edit Layer selected________å.",
-    "error1": "ø_Access denied. Layers cannot be edited_____________å."
+    "title": "Redigering",
+    "error": "Intet redigeringslag valgt.",
+    "error1": "Adgang nægtet. Lagene kan ikke redigeres."
   },
   "measurement": {
-    "title": "ø_Image Measurement______å",
-    "error": "ø_Mensuration Capabilities not supported_____________å."
+    "title": "Billedmåling",
+    "error": "Målefunktioner understøttes ikke."
   },
   "export": {
-    "title": "ø_Export___å",
-    "mode": "ø_Mode__å",
-    "titleText": "ø_Title___å",
-    "description": "ø_Description____å",
-    "tags": "ø_Tags__å",
-    "submit": "ø_Submit___å",
-    "pixel": "ø_Pixel Size____å",
-    "outsr": "ø_Output Spatial Reference________å",
-    "renderer": "ø_Current Renderer______å",
-    "extent": "ø_Define Extent_____å",
-    "text": "ø_If Current Renderer is checked, the rendering<br /> is exported, else the original data values<br/>will be exported____________________________________å.",
-    "error": "ø_No visible imagery layers on the map____________å.",
-    "error1": "ø_Title is required______å.",
-    "error2": "ø_Tag(s) is required_______å."
+    "title": "Eksportér",
+    "mode": "Tilstand",
+    "titleText": "Titel",
+    "description": "Beskrivelse",
+    "tags": "\"Tags\"",
+    "submit": "Send",
+    "pixel": "Pixelstørrelse",
+    "outsr": "Output-spatial reference",
+    "renderer": "Aktuelt gengivelsesværktøj",
+    "extent": "Definér udstrækning",
+    "text": "Hvis Aktuelt gengivelsesværktøj markeres, eksporteres gengivelsen<br />, ellers vil de oprindelige dataværdier<br/>blive eksporteret.",
+    "error": "Ingen synlige billedlag på kortet.",
+    "error1": "Titel er påkrævet.",
+    "error2": "Nøgleord er påkrævet."
   },
   "compare": {
-    "title": "ø_Compare___å",
-    "slider": "ø_Transparency Slider_______å",
-    "hSwipe": "ø_Horizontal Swipe______å",
-    "vSwipe": "ø_Vertical Swipe_____å",
-    "error": "ø_No visible Imagery Layers available for comparison________________å."
+    "title": "Sammenlign",
+    "slider": "Skydekontrol for gennemsigtighed",
+    "hSwipe": "Stryg vandret",
+    "vSwipe": "Stryg lodret",
+    "error": "Ingen synlige billedlag findes til sammenligning."
   }
 });
