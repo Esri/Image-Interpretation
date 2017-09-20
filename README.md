@@ -3,7 +3,7 @@
 Imagery Interpretation is a configurable app template that offers a range of tools that enable users to better extract meaning from imagery.
 
 
-![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Screenshots_Combined.png)
+![App](https://github.com/ArcGIS/Image-Interpretation/blob/master/Image-Interpretation.png)
 
 
 ## Features
@@ -23,15 +23,8 @@ Imagery interpretation is of interest to many industries for a wide variety of a
 * An image analyst recording the location of an aircraft identified from high resolution satellite imagery
 * A property appraiser recording notes about newly constructed houses, including calculating building heights in-app
 
-## Requirements
-### Software
-* ArcGIS Online subscription or ArcGIS Portal
-
 ### Supported Devices
 * Apps created with this template are responsively designed for display on desktops, mobile phones, and tablets  using all [browsers supported by ArcGIS Online](http://doc.arcgis.com/en/arcgis-online/reference/browsers.htm).
-
-### Data Requirements
-* Creating an app with this template requires a web map with at least one imagery layer. 
 
 ## Instructions
 1. To deploy this application, download the template from Portal/ArcGIS Online and unzip it.
@@ -49,6 +42,13 @@ Imagery interpretation is of interest to many industries for a wide variety of a
 
 > **Note:** If your application edits features in a feature service, contains secure services or web maps that aren't shared publicly, or generate requests that exceed 200 characters, you may need to set up and use a proxy page. Common situations where you may exceed the URL length are using complex polygons as input to a task or specifying a spatial reference using well-known text (WKT). For details on installing and configuring a proxy page see [Using the proxy](https://developers.arcgis.com/javascript/jshelp/ags_proxy.html). If you do not have an Internet connection, you will need to access and deploy the ArcGIS API for JavaScript documentation from [developers.arcgis.com](https://developers.arcgis.com/).
 
+
+## Requirements
+### Software
+* ArcGIS Online subscription or ArcGIS Portal
+
+### Data
+* Creating an app with this template requires a web map with at least one imagery layer. 
 
 ## Resources
 * Find more information about [Esri's configurable apps](http://www.esri.com/software/configurable-apps).
