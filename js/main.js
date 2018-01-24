@@ -236,15 +236,15 @@ define([
                 this._updateTheme();
                 registry.byId("toolsContentContainer").show();
                 domConstruct.destroy("toolsContentContainer_underlay");
-<<<<<<< HEAD
-                domStyle.set("toolsContentContainer", "z-index", "1");
-                domStyle.set("toolsContentContainer", "left", "");
-=======
 
                 domStyle.set("toolsContentContainer", "z-index", "1");
                 domStyle.set("toolsContentContainer", "left", "");
 
->>>>>>> origin/master
+
+                domStyle.set("toolsContentContainer", "z-index", "1");
+                domStyle.set("toolsContentContainer", "left", "");
+
+
                 this.resizeTemplate();
                 this.setCloseEvent();
                 dojo.connect(registry.byId("toolsContentContainer"), "hide", lang.hitch(this, function (event) {
