@@ -1,4 +1,6 @@
-# Image-Interpretation
+# Image-Interpretation (Mature)
+
+> Note: This configurable app is no longer maintained. There are currently three configurable app templates designed for imagery: [Imagery Viewer](https://github.com/Esri/imagery-viewer-template), [Image Mask](https://github.com/Esri/image-change-detection-template), and [Image Visit](https://github.com/Esri/image-visit-template/). Explore [example applications](http://arcgis.maps.arcgis.com/apps/MinimalGallery/index.html?appid=7207e9505d3e4cd4bf33e81c57190d1d) built with these templates. 
 
 Imagery Interpretation is a configurable app template that offers a range of tools that enable users to better extract meaning from imagery.
 
